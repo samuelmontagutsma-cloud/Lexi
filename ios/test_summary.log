@@ -1,8 +1,8 @@
-LEXI_METRIC newWords_ms=28.944015502929688
-	 Executed 4 tests, with 0 failures (0 unexpected) in 0.090 (0.108) seconds
-	 Executed 5 tests, with 0 failures (0 unexpected) in 7.512 (7.513) seconds
-	 Executed 3 tests, with 0 failures (0 unexpected) in 0.058 (0.068) seconds
-	 Executed 12 tests, with 0 failures (0 unexpected) in 7.660 (7.691) seconds
-	 Executed 12 tests, with 0 failures (0 unexpected) in 7.660 (7.692) seconds
+LEXI_METRIC newWords_ms=10.61391830444336
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.048 (0.275) seconds
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.221 (0.223) seconds
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.064 (1.222) seconds
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.332 (1.721) seconds
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.332 (1.722) seconds
 ** TEST SUCCEEDED **
 tests: success
