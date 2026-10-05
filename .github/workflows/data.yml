@@ -1,0 +1,61 @@
+name: Build lexicon
+on:
+  workflow_dispatch:
+    inputs:
+      probe_only:
+        description: "Only check sources (fast)"
+        type: boolean
+        default: false
+  push:
+    paths: ["tools/build_db.py", "tools/requirements.txt", ".github/workflows/data.yml"]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r tools/requirements.txt
+      - name: Unit tests
+        working-directory: tools
+        run: python -m unittest test_build_db -v
+      - name: Probe sources
+        working-directory: tools
+        run: python build_db.py --probe | tee probe.txt
+      - name: Cache downloads
+        if: ${{ !inputs.probe_only }}
+        uses: actions/cache@v4
+        with:
+          path: tools/.cache
+          key: lexi-sources-${{ hashFiles('tools/build_db.py') }}
+          restore-keys: lexi-sources-
+      - name: Build database
+        if: ${{ !inputs.probe_only }}
+        working-directory: tools
+        run: python build_db.py --out ../Resources/lexi.sqlite --report coverage_report.md
+      - name: Report to job summary
+        if: always()
+        run: |
+          { echo '## Probe'; echo '```'; cat tools/probe.txt || true; echo '```';
+            cat tools/coverage_report.md 2>/dev/null || true; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lexicon
+          path: |
+            Resources/lexi.sqlite
+            tools/coverage_report.md
+            tools/probe.txt
+          if-no-files-found: ignore
+      - name: Commit database
+        if: ${{ !inputs.probe_only && success() }}
+        run: |
+          size=$(stat -c %s Resources/lexi.sqlite)
+          test "$size" -lt 95000000 || { echo "DB is $size bytes, over GitHub's 100 MB file limit"; exit 1; }
+          git config user.name "lexi-bot"; git config user.email "lexi-bot@users.noreply.github.com"
+          git add Resources/lexi.sqlite tools/coverage_report.md
+          git commit -m "Rebuild lexicon [skip ci]" || echo "no change"
+          git push

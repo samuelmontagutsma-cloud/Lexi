@@ -1,0 +1,2 @@
+# build-time only; nothing here ships in the app
+wordfreq>=3.1,<4
