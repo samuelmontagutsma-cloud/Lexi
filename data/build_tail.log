@@ -1,46 +1,41 @@
-06:32:52 WordNet 3.1
-06:32:54 en: scanning English Wiktionary
-06:33:53 en: 31353 entries, 20299 form redirects, 109333 translation groups
-06:34:09 en: 19259 name-like forms
-06:34:11 es: scanning Spanish Wiktionary
-06:34:48 es: 20616 entries, 24799 redirects, 570 zh entries with es glosses
-06:34:53 zh: 121423 CC-CEDICT headwords
-06:34:54 zh: 4991 HSK 2.0 words
-06:34:54 zh: scanning Chinese entries in English Wiktionary
-06:35:20 zh: Tatoeba sentence pairs
-06:35:28 mt: 6909 glosses + 5274 sentences en->es
-06:35:30 mt: Argos en->es model 1.0 installed
-06:35:31 mt: 64/12170
-06:36:10 mt: 2112/12170
-06:36:51 mt: 4160/12170
-06:37:11 mt: 6208/12170
-06:37:42 mt: 8256/12170
-06:38:00 mt: 10304/12170
-06:38:16 mt: filled 3249 zh->es glosses, 5994 es example translations
+06:40:27 WordNet 3.1
+06:40:29 en: scanning English Wiktionary
+06:41:35 en: 31353 entries, 20299 form redirects, 109333 translation groups
+06:41:52 en: 19259 name-like forms
+06:41:55 es: scanning Spanish Wiktionary
+06:42:37 es: 20616 entries, 24799 redirects, 570 zh entries with es glosses
+06:42:43 zh: 121423 CC-CEDICT headwords
+06:42:43 zh: 4991 HSK 2.0 words
+06:42:43 zh: scanning Chinese entries in English Wiktionary
+06:43:15 zh: Tatoeba sentence pairs
+06:43:24 mt: 6442 glosses + 5274 sentences en->es
+06:43:25 mt: 64/2836
+06:43:46 mt: 2112/2836
+06:43:55 mt: filled 3211 zh->es glosses, 5965 es example translations
 # Lexi lexicon coverage report
 
-Built 2026-10-05 06:38 UTC. Database size: 15.8 MB.
+Built 2026-10-05 06:43 UTC. Database size: 15.7 MB.
 
 | Lang | Metric | Count | % | Flag |
 |---|---|---|---|---|
 | en | word count | 10,000 | |  |
 | en | monolingual definition (en) | 10,000 / 10,000 | 100.0% |  |
-| en | example sentence | 9,912 / 10,000 | 99.1% |  |
-| en | ≥1 topic category | 2,009 / 10,000 | 20.1% | info |
+| en | example sentence | 9,913 / 10,000 | 99.1% |  |
+| en | ≥1 topic category | 2,010 / 10,000 | 20.1% | info |
 | en | IPA | 8,772 / 10,000 | 87.7% |  |
 | es | word count | 10,000 | |  |
 | es | monolingual definition (es) | 10,000 / 10,000 | 100.0% |  |
-| es | example sentence | 9,407 / 10,000 | 94.1% |  |
-| es | ≥1 topic category | 2,791 / 10,000 | 27.9% | info |
+| es | example sentence | 9,406 / 10,000 | 94.1% |  |
+| es | ≥1 topic category | 2,790 / 10,000 | 27.9% | info |
 | es | IPA | 9,998 / 10,000 | 100.0% |  |
 | zh | word count | 10,000 | |  |
 | zh | pinyin | 10,000 / 10,000 | 100.0% |  |
-| zh | translation zh→en | 9,990 / 10,000 | 99.9% |  |
+| zh | translation zh→en | 10,000 / 10,000 | 100.0% |  |
 | zh | zh example + en translation | 8,376 / 10,000 | 83.8% |  |
-| zh | translation zh→es | 9,992 / 10,000 | 99.9% |  |
-| zh | zh example + es translation | 8,400 / 10,000 | 84.0% |  |
-| zh | zh→es translation that is machine translated | 3,241 / 10,000 | 32.4% | info |
-| zh | es example translation that is machine translated | 5,994 / 10,000 | 59.9% | info |
+| zh | translation zh→es | 9,962 / 10,000 | 99.6% |  |
+| zh | zh example + es translation | 8,371 / 10,000 | 83.7% |  |
+| zh | zh→es translation that is machine translated | 3,211 / 10,000 | 32.1% | info |
+| zh | es example translation that is machine translated | 5,965 / 10,000 | 59.6% | info |
 | zh | zh example (any) | 8,400 / 10,000 | 84.0% |  |
 | zh | part of speech | 8,849 / 10,000 | 88.5% |  |
 | zh | HSK 1–6 words included (of HSK list) | 4,931 / 4,991 | 98.8% |  |
@@ -50,4 +45,4 @@ Built 2026-10-05 06:38 UTC. Database size: 15.8 MB.
 
 - none
 
-06:38:18 done in 5.4 min -> ../Resources/lexi.sqlite
+06:43:57 done in 3.5 min -> ../Resources/lexi.sqlite
