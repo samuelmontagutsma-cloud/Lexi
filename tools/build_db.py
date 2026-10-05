@@ -951,14 +951,37 @@ def probe():
     return ok
 
 
+def inspect(words: list[str], out_path: str):
+    """Dump raw source records for given words (debug aid)."""
+    want = set(words)
+    with open(out_path, "w", encoding="utf-8") as out:
+        for src, lang in (("wikt_en_English", "en"), ("wikt_es_raw", "es"), ("wikt_en_Chinese", "zh")):
+            n = collections.Counter()
+            for e in iter_jsonl(fetch(src)):
+                w = e.get("word")
+                if w in want and n[w] < 3 and (lang != "es" or e.get("lang_code") == "es"):
+                    n[w] += 1
+                    e.pop("translations", None); e.pop("etymology_templates", None); e.pop("descendants", None)
+                    e.pop("derived", None); e.pop("related", None); e.pop("forms", None)
+                    for s_ in e.get("senses", [])[:4]:
+                        s_.pop("links", None); s_.pop("translations", None)
+                    e["senses"] = e.get("senses", [])[:4]
+                    out.write(f"### {src} {w}\n" + json.dumps(e, ensure_ascii=False, indent=1)[:6000] + "\n")
+    log(f"inspect -> {out_path}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--probe", action="store_true")
+    ap.add_argument("--inspect", nargs="*")
     ap.add_argument("--out", default=str(HERE.parent / "Resources" / "lexi.sqlite"))
     ap.add_argument("--report", default=str(HERE / "coverage_report.md"))
     a = ap.parse_args()
     if a.probe:
         sys.exit(0 if probe() else 1)
+    if a.inspect:
+        inspect(a.inspect, str(HERE / "inspect.txt"))
+        return
     t0 = time.time()
     log("WordNet 3.1")
     wordnet = parse_wordnet(fetch("wordnet31"))

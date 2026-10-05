@@ -2,6 +2,10 @@ name: Build lexicon
 on:
   workflow_dispatch:
     inputs:
+      inspect_words:
+        description: "Space-separated words to dump raw records for"
+        type: string
+        default: ""
       probe_only:
         description: "Only check sources (fast)"
         type: boolean
@@ -34,6 +38,10 @@ jobs:
           path: tools/.cache
           key: lexi-sources-${{ hashFiles('tools/build_db.py') }}
           restore-keys: lexi-sources-
+      - name: Inspect raw records
+        if: ${{ inputs.inspect_words != '' || contains(github.event.head_commit.message, '[inspect]') }}
+        working-directory: tools
+        run: python build_db.py --inspect ${{ inputs.inspect_words || 'the años fue casas hablamos naturaleza 的 让 讓 周期 週期 常年 financial' }}
       - name: Build database
         if: ${{ !inputs.probe_only }}
         working-directory: tools
@@ -49,7 +57,7 @@ jobs:
         env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", JOB_STATUS: "${{ job.status }}" }
         run: |
           tail -n 200 tools/build.log > tools/build_tail.log 2>/dev/null || true
-          .github/scripts/publish_results.sh data tools/probe.txt tools/coverage_report.md tools/build_tail.log
+          .github/scripts/publish_results.sh data tools/probe.txt tools/coverage_report.md tools/build_tail.log tools/inspect.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
