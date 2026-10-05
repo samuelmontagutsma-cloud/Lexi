@@ -7,9 +7,11 @@ on:
         type: boolean
         default: false
   push:
-    paths: ["tools/build_db.py", "tools/requirements.txt", ".github/workflows/data.yml"]
+    paths: ["tools/build_db.py", "tools/requirements.txt"]
+    branches: [main]
 permissions:
   contents: write
+concurrency: { group: data, cancel-in-progress: false }
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,12 +37,19 @@ jobs:
       - name: Build database
         if: ${{ !inputs.probe_only }}
         working-directory: tools
-        run: python build_db.py --out ../Resources/lexi.sqlite --report coverage_report.md
+        run: python build_db.py --out ../Resources/lexi.sqlite --report coverage_report.md 2>&1 | tee build.log; exit ${PIPESTATUS[0]}
+        shell: bash
       - name: Report to job summary
         if: always()
         run: |
           { echo '## Probe'; echo '```'; cat tools/probe.txt || true; echo '```';
             cat tools/coverage_report.md 2>/dev/null || true; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish results
+        if: always()
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", JOB_STATUS: "${{ job.status }}" }
+        run: |
+          tail -n 200 tools/build.log > tools/build_tail.log 2>/dev/null || true
+          .github/scripts/publish_results.sh data tools/probe.txt tools/coverage_report.md tools/build_tail.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -58,4 +67,4 @@ jobs:
           git config user.name "lexi-bot"; git config user.email "lexi-bot@users.noreply.github.com"
           git add Resources/lexi.sqlite tools/coverage_report.md
           git commit -m "Rebuild lexicon [skip ci]" || echo "no change"
-          git push
+          git pull -q --rebase origin main && git push

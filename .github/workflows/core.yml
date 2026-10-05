@@ -1,0 +1,31 @@
+name: Core tests (FSRS)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["Packages/**", "tools/fsrs_vectors.py", ".github/workflows/core.yml"]
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Reference vectors from official py-fsrs
+        run: |
+          pip install "fsrs>=6,<7"
+          python tools/fsrs_vectors.py Packages/LexiCore/Tests/FSRSTests/vectors.json | tee vectors.log
+      - name: Swift tests (Linux)
+        shell: bash
+        run: |
+          swift --version
+          cd Packages/LexiCore && swift test 2>&1 | tee ../../swift_test.log; exit ${PIPESTATUS[0]}
+      - name: Publish results
+        if: always()
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", JOB_STATUS: "${{ job.status }}" }
+        run: |
+          grep -E "error|failed|passed|FSRS:|Executed|warning: " swift_test.log | head -150 > swift_summary.log || true
+          .github/scripts/publish_results.sh core vectors.log swift_summary.log
