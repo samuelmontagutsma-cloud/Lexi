@@ -1,1 +1,1 @@
-run: https://github.com/samuelmontagutsma-cloud/Lexi/actions/runs/37250699585  sha: 4dffbb91dcb5e9fd11f0d9d7f093ec2fb308f027  status: success
+run: https://github.com/samuelmontagutsma-cloud/Lexi/actions/runs/37275374719  sha: 37278c5d6a1f266680bbc0466e859439654f9125  status: failure
