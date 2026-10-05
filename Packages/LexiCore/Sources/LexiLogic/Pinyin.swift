@@ -83,13 +83,29 @@ public enum Pinyin {
         let answer = syllables(marked: answerMarked)
         guard !answer.isEmpty else { return false }
         let t = normalizeTyped(typed)
-        // typed with tone marks: compare syllable by syllable after stripping spaces
+        // typed with tone marks: map each mark to the answer syllable that contains it
         if t.contains(where: { toneVowels[$0] != nil }) {
-            let typedSyl = syllables(marked: typed.lowercased())
-            let joinedT = typedSyl.map(\.letters).joined()
-            let joinedA = answer.map(\.letters).joined()
-            guard loose(joinedT) == loose(joinedA) else { return false }
-            return typedSyl.map(\.tone) == answer.map(\.tone)
+            var letters = ""
+            var marksAt: [(index: Int, tone: Int)] = []
+            for ch in t {
+                if let (base, tone) = toneVowels[ch] {
+                    marksAt.append((letters.count, tone))
+                    letters.append(Character(base.lowercased()))
+                } else if ch.isLetter {
+                    letters.append(ch)
+                }
+            }
+            let joined = answer.map(\.letters).joined()
+            guard loose(letters) == loose(joined) else { return false }
+            var typedTones = Array(repeating: 5, count: answer.count)
+            var start = 0
+            var bounds: [Range<Int>] = []
+            for syl in answer { bounds.append(start..<(start + syl.letters.count)); start += syl.letters.count }
+            for m in marksAt {
+                guard let i = bounds.firstIndex(where: { $0.contains(m.index) }), typedTones[i] == 5 else { return false }
+                typedTones[i] = m.tone
+            }
+            return typedTones == answer.map(\.tone)
         }
         // letters + optional digits
         var letters = ""
