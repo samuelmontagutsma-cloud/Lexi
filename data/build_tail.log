@@ -1,32 +1,31 @@
-06:40:27 WordNet 3.1
-06:40:29 en: scanning English Wiktionary
-06:41:35 en: 31353 entries, 20299 form redirects, 109333 translation groups
-06:41:52 en: 19259 name-like forms
-06:41:55 es: scanning Spanish Wiktionary
-06:42:37 es: 20616 entries, 24799 redirects, 570 zh entries with es glosses
-06:42:43 zh: 121423 CC-CEDICT headwords
-06:42:43 zh: 4991 HSK 2.0 words
-06:42:43 zh: scanning Chinese entries in English Wiktionary
-06:43:15 zh: Tatoeba sentence pairs
-06:43:24 mt: 6442 glosses + 5274 sentences en->es
-06:43:25 mt: 64/2836
-06:43:46 mt: 2112/2836
-06:43:55 mt: filled 3211 zh->es glosses, 5965 es example translations
+06:45:12 WordNet 3.1
+06:45:14 en: scanning English Wiktionary
+06:46:08 en: 31353 entries, 20299 form redirects, 109333 translation groups
+06:46:20 en: 19259 name-like forms
+06:46:23 es: scanning Spanish Wiktionary
+06:46:56 es: 20616 entries, 24799 redirects, 570 zh entries with es glosses
+06:47:01 zh: 121423 CC-CEDICT headwords
+06:47:01 zh: 4991 HSK 2.0 words
+06:47:01 zh: scanning Chinese entries in English Wiktionary
+06:47:30 zh: Tatoeba sentence pairs
+06:47:37 mt: 6439 glosses + 5274 sentences en->es
+06:47:37 mt: 13/13
+06:47:37 mt: filled 3211 zh->es glosses, 5965 es example translations
 # Lexi lexicon coverage report
 
-Built 2026-10-05 06:43 UTC. Database size: 15.7 MB.
+Built 2026-10-05 06:47 UTC. Database size: 15.7 MB.
 
 | Lang | Metric | Count | % | Flag |
 |---|---|---|---|---|
 | en | word count | 10,000 | |  |
 | en | monolingual definition (en) | 10,000 / 10,000 | 100.0% |  |
-| en | example sentence | 9,913 / 10,000 | 99.1% |  |
-| en | ≥1 topic category | 2,010 / 10,000 | 20.1% | info |
-| en | IPA | 8,772 / 10,000 | 87.7% |  |
+| en | example sentence | 9,910 / 10,000 | 99.1% |  |
+| en | ≥1 topic category | 2,008 / 10,000 | 20.1% | info |
+| en | IPA | 8,771 / 10,000 | 87.7% |  |
 | es | word count | 10,000 | |  |
 | es | monolingual definition (es) | 10,000 / 10,000 | 100.0% |  |
 | es | example sentence | 9,406 / 10,000 | 94.1% |  |
-| es | ≥1 topic category | 2,790 / 10,000 | 27.9% | info |
+| es | ≥1 topic category | 2,792 / 10,000 | 27.9% | info |
 | es | IPA | 9,998 / 10,000 | 100.0% |  |
 | zh | word count | 10,000 | |  |
 | zh | pinyin | 10,000 / 10,000 | 100.0% |  |
@@ -45,4 +44,4 @@ Built 2026-10-05 06:43 UTC. Database size: 15.7 MB.
 
 - none
 
-06:43:57 done in 3.5 min -> ../Resources/lexi.sqlite
+06:47:39 done in 2.5 min -> ../Resources/lexi.sqlite
