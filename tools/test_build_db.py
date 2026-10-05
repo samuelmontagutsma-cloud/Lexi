@@ -111,7 +111,8 @@ class Pipeline(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "en.jsonl.gz"
             jsonl_gz(p, recs)
-            entries, redirects, tables = b.collect_wiktionary(p, "en", {"run", "ran", "Paris"})
+            entries, redirects, tables, names = b.collect_wiktionary(p, "en", {"run", "ran", "paris"})
+            self.assertEqual(names, {"paris"})
             self.assertEqual(redirects, {"ran": "run"})
             self.assertNotIn("Paris", entries)
             self.assertIn(("run", "move fast", {"es": ["correr"], "zh": ["跑"]}), tables)
@@ -164,11 +165,17 @@ class RealShapes(unittest.TestCase):
         entries = {"años": [{"pos": "noun", "pos_title": "Sustantivo masculino y plural",
                              "senses": [{"glosses": ["Día en que se cumplen años."]}]}],
                    "año": [{"pos": "noun", "pos_title": "Sustantivo masculino", "senses": [{"glosses": ["x"]}]}],
-                   "left": [{"pos": "noun", "senses": [{"glosses": ["The left side."]}]}],
+                   "left": [{"pos": "adj", "senses": [{"glosses": ["On the west side when facing north."]},
+                                                      {"glosses": ["Anticlockwise."]},
+                                                      {"glosses": ["Politically left-wing."]}]}],
+                   "rode": [{"pos": "noun", "senses": [{"glosses": ["An anchor rope."]}]}],
+                   "ride": [{"pos": "verb", "senses": [{"glosses": ["To travel on."]}]}],
                    "leave": [{"pos": "verb", "senses": [{"glosses": ["To go away."]}]}]}
-        redirects = {"años": "año", "left": "leave", "fue": "ir"}
+        redirects = {"años": "año", "left": "leave", "fue": "ir", "rode": "ride"}
+        entries["leave"] = entries.pop("leave")
         self.assertEqual(b.choose_lemma("años", entries, redirects), "año")
         self.assertEqual(b.choose_lemma("left", entries, redirects), "left")
+        self.assertEqual(b.choose_lemma("rode", entries, redirects), "ride")
         self.assertIsNone(b.choose_lemma("fue", entries, redirects))  # 'ir' not collected
 
     def test_zh_pos_and_example(self):

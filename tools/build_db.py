@@ -286,11 +286,19 @@ class WNSense:
 
 
 WN_POS = {"noun": "noun", "verb": "verb", "adj": "adj", "adv": "adv"}
+# Fixed lexicographer file numbers (WordNet lexnames(5WN)). Used if the tarball has no 'lexnames' file.
+WN_LEXNAMES = ("adj.all adj.pert adv.all noun.Tops noun.act noun.animal noun.artifact noun.attribute noun.body "
+               "noun.cognition noun.communication noun.event noun.feeling noun.food noun.group noun.location "
+               "noun.motive noun.object noun.person noun.phenomenon noun.plant noun.possession noun.process "
+               "noun.quantity noun.relation noun.shape noun.state noun.substance noun.time verb.body verb.change "
+               "verb.cognition verb.communication verb.competition verb.consumption verb.contact verb.creation "
+               "verb.emotion verb.motion verb.perception verb.possession verb.social verb.stative verb.weather "
+               "adj.ppl").split()
 
 
 def parse_wordnet(tar_path: Path) -> dict[str, list[WNSense]]:
     """lemma -> senses in WordNet sense-frequency order."""
-    lexnames: dict[int, str] = {}
+    lexnames: dict[int, str] = dict(enumerate(WN_LEXNAMES))
     data: dict[tuple[str, int], WNSense] = {}
     index: dict[str, list[tuple[str, int]]] = collections.defaultdict(list)
     with tarfile.open(tar_path, "r:gz") as tf:
@@ -446,7 +454,8 @@ def sense_gloss(sense: dict) -> str | None:
     return text or None
 
 
-SKIP_SENSE_TAGS = {"obsolete", "archaic", "rare", "no-gloss"}
+SKIP_SENSE_TAGS = {"obsolete", "archaic", "rare", "no-gloss", "abbreviation", "initialism", "acronym",
+                   "misspelling", "nonstandard"}
 
 
 def sense_labels(sense: dict) -> list[str]:
@@ -592,9 +601,10 @@ def rank_band_level(rank: int) -> int:
 
 # ---------------------------------------------------------------- language builders
 def collect_wiktionary(path: Path, lang_code: str, candidates: set[str]):
-    """Return (entries_by_word, redirects, translation_tables)."""
+    """Return (entries_by_word, redirects, translation_tables, lowercase proper-name forms)."""
     entries = collections.defaultdict(list)
     redirects: dict[str, str] = {}
+    names: set[str] = set()
     tables = []  # list of (english sense label, {lang: [words]}) for bridging
     for e in iter_jsonl(path):
         if e.get("lang_code") != lang_code:
@@ -620,6 +630,8 @@ def collect_wiktionary(path: Path, lang_code: str, candidates: set[str]):
                     groups[t.get("sense") or ""]["es"].append(tw)
             for sense_label, g in groups.items():
                 tables.append((w, sense_label, dict(g)))
+        if pos in ("name", "proper noun") and w[:1].isupper() and w.lower() in candidates:
+            names.add(w.lower())
         if w not in candidates or pos in EXCLUDED_POS:
             continue
         senses = e.get("senses") or []
@@ -628,7 +640,7 @@ def collect_wiktionary(path: Path, lang_code: str, candidates: set[str]):
             redirects.setdefault(w, next(iter(targets)))
             continue
         entries[w].append(e)
-    return entries, redirects, tables
+    return entries, redirects, tables, names
 
 
 def choose_lemma(w: str, entries, redirects) -> str | None:
@@ -637,7 +649,9 @@ def choose_lemma(w: str, entries, redirects) -> str | None:
     own, red = entries.get(w), redirects.get(w)
     if own and red and red in entries and red != w:
         plural_only = all("plural" in (e.get("pos_title") or "").lower() for e in own)
-        return red if plural_only else w
+        n_own = sum(1 for e in own for s in e.get("senses") or [] if not is_form_of(s) and sense_gloss(s))
+        # a form with a tiny separate entry ('rode' = anchor rope) is learned as its lemma ('ride')
+        return red if plural_only or n_own <= 2 else w
     if own:
         return w
     if red and red in entries:
@@ -645,8 +659,10 @@ def choose_lemma(w: str, entries, redirects) -> str | None:
     return None
 
 
-def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba_best):
-    """Walk the frequency list; map forms to lemmas; keep the first TOP_N lemmas with a definition."""
+def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba_best, names=frozenset()):
+    """Walk the frequency list; map forms to lemmas; keep the first TOP_N lemmas with a definition.
+    `names`: lowercase forms of proper names (wordfreq lowercases 'York'); such words are kept only
+    if their common-noun entry is substantial (> 2 senses)."""
     seen: set[str] = set()
     out: list[Word] = []
     for w in freq_list:
@@ -657,6 +673,8 @@ def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba
             continue
         seen.add(lemma)
         if not re.fullmatch(r"[^\W\d_]+(?:[-'’ ][^\W\d_]+)*", lemma):
+            continue
+        if lemma in names and sum(len(e.get("senses") or []) for e in entries.get(lemma, [])) <= 2:
             continue
         senses: list[Sense] = []
         cats: set[str] = set()
@@ -709,11 +727,12 @@ def build_english(wordnet, tables_out: list) -> list[Word]:
     import wordfreq
     freq = wordfreq.top_n_list("en", 60_000)
     log("en: scanning English Wiktionary")
-    entries, redirects, tables = collect_wiktionary(fetch("wikt_en_English"), "en", set(freq))
+    entries, redirects, tables, names = collect_wiktionary(fetch("wikt_en_English"), "en", set(freq))
     tables_out.extend(tables)
     log(f"en: {len(entries)} entries, {len(redirects)} form redirects, {len(tables)} translation groups")
     tat = best_monolingual_examples(load_tatoeba_sentences(fetch("tatoeba_eng")), {w.lower() for w in freq})
-    words = build_dictionary_words("en", freq, entries, redirects, wordnet, tat)
+    log(f"en: {len(names)} name-like forms")
+    words = build_dictionary_words("en", freq, entries, redirects, wordnet, tat, names)
     return words
 
 
@@ -722,7 +741,7 @@ def build_spanish(en_words: list[Word], tables) -> tuple[list[Word], dict[str, l
     freq = wordfreq.top_n_list("es", 60_000)
     log("es: scanning Spanish Wiktionary")
     path = fetch("wikt_es_raw")
-    entries, redirects, _ = collect_wiktionary(path, "es", set(freq))
+    entries, redirects, _, names = collect_wiktionary(path, "es", set(freq))
     zh_es = collections.defaultdict(list)  # zh word -> Spanish glosses from es-wiktionary
     for e in iter_jsonl(path):
         if e.get("lang_code") in ("zh", "cmn") and e.get("word"):
@@ -732,7 +751,7 @@ def build_spanish(en_words: list[Word], tables) -> tuple[list[Word], dict[str, l
                     zh_es[e["word"]].append(g)
     log(f"es: {len(entries)} entries, {len(redirects)} redirects, {len(zh_es)} zh entries with es glosses")
     tat = best_monolingual_examples(load_tatoeba_sentences(fetch("tatoeba_spa")), {w.lower() for w in freq})
-    words = build_dictionary_words("es", freq, entries, redirects, None, tat)
+    words = build_dictionary_words("es", freq, entries, redirects, None, tat, names)
     # categories bridged from English via translation tables
     en_cats = {w.lemma: w.categories for w in en_words}
     es_cats = collections.defaultdict(set)
