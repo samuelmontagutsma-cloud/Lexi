@@ -209,3 +209,66 @@ class ExampleFilter(unittest.TestCase):
         self.assertTrue(b.example_has_word("Rotate the bolt to the left.", "left"))
         self.assertTrue(b.example_has_word("Dejé de fumar hace un año.", "año"))
         self.assertTrue(b.example_has_word("They were running late.", "run"))
+
+
+class MachineTranslationFill(unittest.TestCase):
+    def test_fills_gaps_and_marks_mt(self):
+        orig = b.machine_translate_en_es
+        b.machine_translate_en_es = lambda texts: {t: (f"Quiero es-{t[10:]}" if t.startswith("I want to ") else f"es-{t}")
+                                                    for t in texts}
+        try:
+            no_es = b.Word("zh", "清楚", None, 1, 3, None, "qīng chu", None, set(),
+                           [b.Sense(None, "en", "clear; to understand", "我听不清楚。",
+                                    "I can't hear clearly.", "en", "tatoeba")], {"en": ["clear"]})
+            has_es = b.Word("zh", "好", None, 2, 1, None, "hǎo", None, set(),
+                            [b.Sense(None, "en", "good", "很好。", "Very good.", "en", "tatoeba"),
+                             b.Sense(None, "es", "bueno", None, None, None, None)],
+                            {"en": ["good"], "es": ["bueno"]})
+            b.fill_spanish_with_mt([no_es, has_es])
+        finally:
+            b.machine_translate_en_es = orig
+        self.assertEqual(no_es.translations["es"], ["es-clear", "es-understand"])
+        self.assertIn("es", no_es.translations_mt)
+        es = no_es.senses[1]
+        self.assertTrue(es.definition_mt and es.example_translation_mt)
+        self.assertEqual(es.example, "我听不清楚。")
+        self.assertEqual(es.example_translation, "es-I can't hear clearly.")
+        # human gloss kept, only the example translation is machine made
+        self.assertEqual(has_es.translations["es"], ["bueno"])
+        self.assertNotIn("es", has_es.translations_mt)
+        self.assertFalse(has_es.senses[1].definition_mt)
+        self.assertTrue(has_es.senses[1].example_translation_mt)
+
+
+class GlossCleanup(unittest.TestCase):
+    def test_nested_parens(self):
+        self.assertEqual(b.short_gloss("we or us (including both the speaker and the person(s) spoken to)"),
+                         "we or us")
+        self.assertEqual(b.strip_parens("to go (to a place"), "to go")
+        self.assertEqual(b.strip_parens("spoken to) then"), "then")
+
+    def test_mt_source(self):
+        self.assertEqual(b.split_gloss("to discipline sb"), "I want to discipline someone.")
+        self.assertEqual(b.split_gloss("and its ..."), "and its")
+        self.assertEqual(b.split_gloss("method"), "method")
+
+    def test_clean_mt(self):
+        self.assertEqual(b.clean_mt("I want to discipline someone.", "Quiero disciplinar a alguien."),
+                         "disciplinar a alguien")
+        self.assertIsNone(b.clean_mt("I want to choose.", "Para elegir."))   # frame lost -> reject
+        self.assertEqual(b.clean_mt("certainly", "Ciertamente."), "ciertamente")
+        self.assertIsNone(b.clean_mt("method", "method"))                     # untranslated
+        self.assertIsNone(b.clean_mt("and its", "y su .., y su"))             # garbage
+        self.assertEqual(b.clean_mt("China", "China"), None)
+
+
+class Clitics(unittest.TestCase):
+    def test_strip_added_pronoun(self):
+        self.assertEqual(b.clean_mt("I want to wear.", "Quiero llevarme."), "llevar")
+        self.assertEqual(b.clean_mt("I want to refuse politely.", "Quiero rechazarla educadamente."),
+                         "rechazar educadamente")
+        self.assertEqual(b.clean_mt("I want to help someone.", "Quiero ayudarle."), "ayudarle")  # real object
+
+    def test_truncation_at_word_end(self):
+        g = "pitchpipe one of the twelve semitones in the traditional tone system of the ancient world"
+        self.assertEqual(b.clean_glosses([g])[0], "pitchpipe one of the twelve semitones in the traditional tone system")
