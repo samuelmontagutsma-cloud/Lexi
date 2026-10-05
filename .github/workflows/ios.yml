@@ -1,0 +1,69 @@
+name: iOS app
+on:
+  workflow_dispatch:
+  push:
+    paths: ["App/**", "Shared/**", "Features/**", "Widgets/**", "Tests/**", "Resources/**", "Packages/**",
+            "project.yml", ".github/workflows/ios.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: ios-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tools
+        run: |
+          brew install xcodegen
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | sort -V | tail -1)"
+          xcodebuild -version | tee versions.log
+      - name: Generate project
+        run: xcodegen generate
+      - name: Build for device (unsigned)
+        run: |
+          set -o pipefail
+          xcodebuild -project Lexi.xcodeproj -scheme Lexi -configuration Release \
+            -destination 'generic/platform=iOS' -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log | grep -E "error:|warning: unre|BUILD" || true
+          test -d build/Build/Products/Release-iphoneos/Lexi.app
+      - name: Unit tests (simulator)
+        id: tests
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          SIM=$(xcrun simctl list devices available -j | python3 -c "import json,sys; d=json.load(sys.stdin)['devices']; print(next(x['udid'] for k,v in d.items() if 'iOS' in k for x in v if x['name'].startswith('iPhone')))")
+          xcodebuild -project Lexi.xcodeproj -scheme Lexi -destination "id=$SIM" -derivedDataPath build-sim \
+            CODE_SIGNING_ALLOWED=NO test 2>&1 | tee test.log | grep -E "error:|Test Case.*(passed|failed)|LEXI_METRIC|TEST (SUCCEEDED|FAILED)" || true
+          grep -q "TEST SUCCEEDED" test.log
+      - name: Package .ipa (ad-hoc signature carries the entitlements for SideStore)
+        run: |
+          rm -rf Payload && mkdir Payload
+          cp -R build/Build/Products/Release-iphoneos/Lexi.app Payload/
+          for ext in Payload/Lexi.app/PlugIns/*.appex; do
+            [ -d "$ext" ] || continue
+            ent="Widgets/LexiWidgets.entitlements"; [ -f "$ent" ] && codesign -f -s - --entitlements "$ent" "$ext"
+          done
+          codesign -f -s - --entitlements App/Lexi.entitlements Payload/Lexi.app
+          codesign -d --entitlements - Payload/Lexi.app 2>&1 | tail -5
+          zip -qry Lexi.ipa Payload
+          ls -l Lexi.ipa
+      - uses: actions/upload-artifact@v4
+        with: { name: Lexi-ipa, path: Lexi.ipa }
+      - name: Publish release (main only)
+        if: github.ref == 'refs/heads/main'
+        env: { GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+        run: |
+          gh release delete latest --yes --cleanup-tag 2>/dev/null || true
+          gh release create latest Lexi.ipa --prerelease --title "Lexi (latest build)" \
+            --notes "Built from ${GITHUB_SHA::7}. Install with SideStore: open this .ipa link in SideStore, or download it and use + in SideStore."
+      - name: Publish results
+        if: always()
+        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}", JOB_STATUS: "${{ job.status }}" }
+        run: |
+          grep -E "error:" build.log | sort -u | head -80 > build_errors.log || true
+          grep -E "error:|failed|LEXI_METRIC|Executed|TEST (SUCCEEDED|FAILED)" test.log 2>/dev/null | head -80 > test_summary.log || true
+          echo "tests: ${{ steps.tests.outcome }}" >> test_summary.log
+          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log

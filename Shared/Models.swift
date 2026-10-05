@@ -221,3 +221,8 @@ enum LexiStore {
     }()
     nonisolated(unsafe) static var lastError: String?
 }
+
+extension LexiStore {
+    /// Placeholder for future schema migrations (SwiftData lightweight migration covers additive changes).
+    static func migrateIfNeeded() {}
+}

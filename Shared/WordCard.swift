@@ -28,6 +28,10 @@ struct WordCard: Identifiable, Hashable, Sendable {
     /// True when the explanation language had no data and English was shown instead.
     let usedFallback: Bool
     let isCustom: Bool
+    /// The translations / definitions in the explanation language are machine translated.
+    var meaningMT: Bool = false
+    /// The example's translation is machine translated.
+    var exampleMT: Bool = false
 
     var id: String { key }
 
@@ -141,6 +145,8 @@ struct CardFactory {
         var examples: [WordCard.Example] = []
         var translations: [String] = []
         var usedFallback = false
+        var meaningMT = false
+        var exampleMT = false
 
         switch mode {
         case .dictionary:
@@ -149,18 +155,21 @@ struct CardFactory {
                 if let e = s.example, !e.isEmpty, examples.count < 2 { examples.append(.init(text: e, translation: nil)) }
             }
         case .learn:
-            translations = lexicon.translations(wordID: word.id, to: explanation)
+            let tr = lexicon.translationsWithMT(wordID: word.id, to: explanation)
+            translations = tr.map(\.gloss)
+            meaningMT = tr.contains { $0.mt }
             var pick = senses.filter { $0.defLang == explanation }
             if translations.isEmpty || pick.isEmpty {
                 // No data in the chosen language: show English, and say so on the card.
                 if explanation != .en {
                     usedFallback = true
-                    if translations.isEmpty { translations = lexicon.translations(wordID: word.id, to: .en) }
+                    if translations.isEmpty { translations = lexicon.translations(wordID: word.id, to: .en); meaningMT = false }
                     if pick.isEmpty { pick = senses.filter { $0.defLang == .en } }
                 }
             }
             for s in pick {
                 if let d = s.definition, !d.isEmpty { defs.append(.init(pos: s.pos, text: d)) }
+                if s.definitionMT { meaningMT = true }
             }
             // Prefer an example translated into the explanation language, then English, then untranslated.
             let ordered = senses.filter { $0.example != nil }.sorted { a, b in
@@ -169,14 +178,18 @@ struct CardFactory {
             if let s = ordered.first, let e = s.example {
                 let tr = s.exampleTranslation
                 if s.exampleTranslationLang != explanation, tr != nil { usedFallback = true }
+                exampleMT = s.exampleTranslationMT
                 examples.append(.init(text: e, translation: tr))
             }
         }
         let pron = word.lang == .zh ? word.pinyin : word.ipa
-        return WordCard(key: word.key, lang: word.lang, lemma: word.lemma, traditional: word.traditional,
-                        pos: word.pos, pronunciation: pron, level: word.level, rank: word.rank,
-                        definitions: defs, translations: translations, examples: examples,
-                        usedFallback: usedFallback, isCustom: false)
+        var card = WordCard(key: word.key, lang: word.lang, lemma: word.lemma, traditional: word.traditional,
+                            pos: word.pos, pronunciation: pron, level: word.level, rank: word.rank,
+                            definitions: defs, translations: translations, examples: examples,
+                            usedFallback: usedFallback, isCustom: false)
+        card.meaningMT = meaningMT
+        card.exampleMT = exampleMT
+        return card
     }
 
     private func score(_ s: LexSense, _ explanation: Lang) -> Int {

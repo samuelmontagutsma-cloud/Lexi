@@ -39,6 +39,8 @@ struct LexSense: Hashable, Sendable {
     let exampleTranslation: String?
     let exampleTranslationLang: Lang?
     let exampleSource: String?
+    let definitionMT: Bool
+    let exampleTranslationMT: Bool
 }
 
 struct LexCredit: Hashable, Sendable { let name, license, url: String }
@@ -176,17 +178,31 @@ final class Lexicon: @unchecked Sendable {
     // MARK: details
 
     func senses(wordID: Int64) -> [LexSense] {
-        query("SELECT pos, def_lang, definition, example, example_translation, example_translation_lang, example_source FROM sense WHERE word_id = ? ORDER BY sense_order",
+        query("SELECT pos, def_lang, definition, example, example_translation, example_translation_lang, example_source, definition_mt, example_translation_mt FROM sense WHERE word_id = ? ORDER BY sense_order",
               [.int(wordID)]) { s in
             LexSense(pos: Self.text(s, 0), defLang: Lang(rawValue: Self.text(s, 1) ?? "en") ?? .en,
                      definition: Self.text(s, 2), example: Self.text(s, 3), exampleTranslation: Self.text(s, 4),
-                     exampleTranslationLang: Self.text(s, 5).flatMap(Lang.init(rawValue:)), exampleSource: Self.text(s, 6))
+                     exampleTranslationLang: Self.text(s, 5).flatMap(Lang.init(rawValue:)), exampleSource: Self.text(s, 6),
+                     definitionMT: sqlite3_column_int(s, 7) != 0, exampleTranslationMT: sqlite3_column_int(s, 8) != 0)
         }
     }
 
     func translations(wordID: Int64, to lang: Lang) -> [String] {
-        query("SELECT gloss FROM translation WHERE word_id = ? AND target_lang = ? ORDER BY gloss_order",
-              [.int(wordID), .text(lang.rawValue)]) { Self.text($0, 0) ?? "" }
+        translationsWithMT(wordID: wordID, to: lang).map(\.gloss)
+    }
+
+    /// Glosses plus whether they are machine translated.
+    func translationsWithMT(wordID: Int64, to lang: Lang) -> [(gloss: String, mt: Bool)] {
+        query("SELECT gloss, mt FROM translation WHERE word_id = ? AND target_lang = ? ORDER BY gloss_order",
+              [.int(wordID), .text(lang.rawValue)]) { (Self.text($0, 0) ?? "", sqlite3_column_int($0, 1) != 0) }
+    }
+
+    /// Words with a given key prefix list, in frequency order (category/collection practice).
+    func words(lang: Lang, category: String, limit: Int) -> [LexWord] {
+        query("""
+            SELECT \(Self.wordCols) FROM word w JOIN word_category wc ON wc.word_id = w.id
+            JOIN category c ON c.id = wc.category_id WHERE w.lang = ? AND c.key = ? ORDER BY w.freq_rank LIMIT ?
+            """, [.text(lang.rawValue), .text(category), .int(Int64(limit))], row: Self.word)
     }
 
     func categories(wordID: Int64) -> [String] {
