@@ -161,7 +161,7 @@ public struct FSRS: Sendable {
 
     func shortTermStability(_ s: Double, _ g: Rating) -> Double {
         var inc = exp(p.w[17] * (Double(g.rawValue) - 3.0 + p.w[18])) * pow(s, -p.w[19])
-        if g == .good || g == .easy { inc = max(inc, 1.0) }
+        if g != .again { inc = max(inc, 1.0) }   // py-fsrs: Hard, Good, Easy never shrink S same-day
         return Self.clampS(s * inc)
     }
 

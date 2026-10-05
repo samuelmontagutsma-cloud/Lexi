@@ -5,3 +5,4 @@ build/
 DerivedData/
 *.ipa
 .DS_Store
+Packages/LexiCore/Tests/FSRSTests/vectors.json

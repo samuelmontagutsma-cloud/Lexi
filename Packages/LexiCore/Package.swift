@@ -10,6 +10,6 @@ let package = Package(
     targets: [
         // Pure Foundation. Builds and tests on Linux CI and on iOS.
         .target(name: "FSRS"),
-        .testTarget(name: "FSRSTests", dependencies: ["FSRS"]),
+        .testTarget(name: "FSRSTests", dependencies: ["FSRS"], exclude: ["vectors.json"]),
     ]
 )

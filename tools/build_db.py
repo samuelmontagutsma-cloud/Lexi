@@ -852,7 +852,7 @@ def write_db(path: Path, words: list[Word]):
                  glosses.lower()]
         db.execute("INSERT INTO word_search VALUES(?,?)", (wid, " | ".join(p for p in parts if p)))
     db.executemany("INSERT INTO meta VALUES(?,?)", [
-        ("schema_version", "1"), ("built_at", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())),
+        ("schema_version", "1"), ("builder_version", "1.0.1"), ("built_at", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())),
         ("top_n", str(TOP_N)), ("sources", json.dumps(SOURCES)),
     ])
     db.commit()
