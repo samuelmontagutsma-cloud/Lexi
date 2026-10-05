@@ -1,27 +1,15 @@
-warning: 'lexicore': found 1 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
 Test Case 'FSRSPropertyTests.testFuzzStaysInRange' passed (0.002 seconds)
-Test Case 'FSRSPropertyTests.testLapseCountsOnlyFromReview' passed (0.004 seconds)
+Test Case 'FSRSPropertyTests.testLapseCountsOnlyFromReview' passed (0.005 seconds)
 Test Case 'FSRSPropertyTests.testRetentionTargetMeansIntervalGetsLonger' passed (0.0 seconds)
-Test Suite 'FSRSPropertyTests' passed at 2026-10-05 01:13:00.364
-	 Executed 3 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'FSRSPropertyTests' passed at 2026-10-05 01:15:56.153
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.007 (0.007) seconds
 Test Case 'FSRSReferenceTests.testDefaultWeightsMatchReference' passed (0.012 seconds)
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.17621409384205303 vs 0.264322849372037, case 0 [default_r090] review 3 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.12065173293372902 vs 0.264322849372037, case 0 [default_r090] review 4 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.04923186596315118 vs 0.10243205472621913, case 0 [default_r090] review 5 rating 1
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.059954958669435864 vs 0.08335671711031604, case 1 [default_r090] review 2 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.044068332055031995 vs 0.08335671711031604, case 1 [default_r090] review 3 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:52: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - R before, case 1 [default_r090] review 4 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.3121682613005604 vs 0.49888434516043617, case 1 [default_r090] review 4 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 0.20584501942727979 vs 0.49888434516043617, case 1 [default_r090] review 5 rating 2
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:52: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - R before, case 1 [default_r090] review 6 rating 3
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 1.2275530880673085 vs 2.2470296523069058, case 1 [default_r090] review 6 rating 3
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:56: error: FSRSReferenceTests.testMatchesReference : XCTAssertTrue failed - S 1.2725316310731372 vs 2.2470296523069058, case 1 [default_r090] review 7 rating 3
-/home/runner/work/Lexi/Lexi/Packages/LexiCore/Tests/FSRSTests/FSRSReferenceTests.swift:58: error: FSRSReferenceTests.testMatchesReference : XCTAssertEqual failed: ("1769893830.0") is not equal to ("1769980230.0") +/- ("0.001") - due, case 1 [default_r090] review 7 rating 3
-Test Case 'FSRSReferenceTests.testMatchesReference' failed (0.111 seconds)
-Test Suite 'FSRSReferenceTests' failed at 2026-10-05 01:13:00.487
-	 Executed 2 tests, with 12 failures (0 unexpected) in 0.123 (0.123) seconds
-Test Suite 'Debug-linux-x86_64.xctest' failed at 2026-10-05 01:13:00.487
-	 Executed 5 tests, with 12 failures (0 unexpected) in 0.129 (0.129) seconds
-Test Suite 'All tests' failed at 2026-10-05 01:13:00.487
-	 Executed 5 tests, with 12 failures (0 unexpected) in 0.129 (0.129) seconds
+FSRS: 1771 reviews match py-fsrs 6.3.2
+Test Case 'FSRSReferenceTests.testMatchesReference' passed (0.015 seconds)
+Test Suite 'FSRSReferenceTests' passed at 2026-10-05 01:15:56.180
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.027 (0.027) seconds
+Test Suite 'Debug-linux-x86_64.xctest' passed at 2026-10-05 01:15:56.180
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.033 (0.033) seconds
+Test Suite 'All tests' passed at 2026-10-05 01:15:56.180
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.033 (0.033) seconds
 ✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
