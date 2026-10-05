@@ -35,7 +35,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 CACHE = Path(os.environ.get("LEXI_CACHE", HERE / ".cache"))
 TOP_N = 10_000
-INCLUDE_ALL_HSK = False  # decision pending: include all HSK 1-6 words in the zh list
+INCLUDE_ALL_HSK = True  # approved 2026-10-04: every HSK 1-6 word is in the zh list
+USE_MT = True  # approved 2026-10-04: offline en->es machine translation fills zh->es gaps
 UA = {"User-Agent": "Lexi-build/1.0 (personal offline vocabulary app)"}
 
 # ---------------------------------------------------------------- sources
@@ -81,6 +82,8 @@ CREDITS = [
      "https://github.com/rspeer/wordfreq"),
     ("complete-hsk-vocabulary (drkameleon)", "MIT",
      "https://github.com/drkameleon/complete-hsk-vocabulary"),
+    ("Argos Translate en→es model (machine translation, marked in app)", "MIT (software); model per argospm-index",
+     "https://github.com/argosopentech/argos-translate"),
 ]
 
 EXCLUDED_POS = {"name", "proper noun", "prefix", "suffix", "infix", "interfix", "affix",
@@ -570,6 +573,8 @@ class Sense:
     example_translation: str | None = None
     example_translation_lang: str | None = None
     example_source: str | None = None
+    definition_mt: bool = False
+    example_translation_mt: bool = False
 
 
 @dataclass
@@ -585,6 +590,7 @@ class Word:
     categories: set = field(default_factory=set)
     senses: list = field(default_factory=list)
     translations: dict = field(default_factory=dict)  # lang -> [gloss]
+    translations_mt: set = field(default_factory=set)  # langs whose glosses are machine translated
 
     @property
     def key(self):
@@ -859,7 +865,100 @@ def build_chinese(en_words, tables, zh_es_wikt) -> list[Word]:
         if es_gl:
             word.translations["es"] = [short_gloss(g) for g in es_gl[:3]]
         out.append(word)
+    if USE_MT:
+        fill_spanish_with_mt(out)
     return out
+
+
+def fill_spanish_with_mt(words: list[Word]):
+    """Fill missing zh->es glosses and es example translations from the English side (en->es MT)."""
+    gloss_jobs, sent_jobs = set(), set()
+    for w in words:
+        en = next(s for s in w.senses if s.def_lang == "en")
+        es = next((s for s in w.senses if s.def_lang == "es"), None)
+        if "es" not in w.translations:
+            gloss_jobs.update(split_gloss(g) for g in en.definition.split("; ") if g)
+        if en.example_translation and (es is None or not es.example_translation):
+            sent_jobs.add(en.example_translation)
+    log(f"mt: {len(gloss_jobs)} glosses + {len(sent_jobs)} sentences en->es")
+    tr = machine_translate_en_es(sorted(gloss_jobs | sent_jobs))
+    n_g = n_s = 0
+    for w in words:
+        en = next(s for s in w.senses if s.def_lang == "en")
+        es = next((s for s in w.senses if s.def_lang == "es"), None)
+        if "es" not in w.translations:
+            gl = dedupe([tr.get(split_gloss(g)) for g in en.definition.split("; ") if g])
+            if gl:
+                w.translations["es"] = [short_gloss(g) for g in gl[:3]]
+                w.translations_mt.add("es")
+                es = Sense(en.pos, "es", "; ".join(gl[:3]), definition_mt=True)
+                w.senses.append(es)
+                n_g += 1
+        if es is not None and not es.example_translation and en.example_translation:
+            t = tr.get(en.example_translation)
+            if t:
+                es.example, es.example_source = en.example, en.example_source
+                es.example_translation, es.example_translation_lang = t, "es"
+                es.example_translation_mt = True
+                n_s += 1
+    log(f"mt: filled {n_g} zh->es glosses, {n_s} es example translations")
+
+
+def split_gloss(g: str) -> str:
+    return g.strip()
+
+
+def dedupe(items):
+    out = []
+    for x in items:
+        if x and x.lower() not in {o.lower() for o in out}:
+            out.append(x)
+    return out
+
+
+ARGOS_INDEX = "https://raw.githubusercontent.com/argosopentech/argospm-index/main/index.json"
+
+
+def machine_translate_en_es(texts: list[str]) -> dict[str, str]:
+    """Offline en->es with the Argos Translate model (CTranslate2 + SentencePiece). Results are cached."""
+    cache = CACHE / "mt_en_es.json"
+    done = json.loads(cache.read_text(encoding="utf-8")) if cache.exists() else {}
+    todo = [t for t in texts if t not in done]
+    if todo:
+        import ctranslate2
+        import sentencepiece
+        import zipfile
+        model_dir = CACHE / "argos_en_es"
+        if not model_dir.exists():
+            index = json.loads(urllib.request.urlopen(urllib.request.Request(ARGOS_INDEX, headers=UA),
+                                                      timeout=60).read())
+            pkg = next(p for p in index if p.get("from_code") == "en" and p.get("to_code") == "es")
+            zpath = CACHE / "translate-en_es.argosmodel"
+            for link in pkg["links"]:
+                try:
+                    with urllib.request.urlopen(urllib.request.Request(link, headers=UA), timeout=300) as r:
+                        zpath.write_bytes(r.read())
+                    break
+                except Exception as e:
+                    log(f"mt: {link} failed: {e}")
+            with zipfile.ZipFile(zpath) as z:
+                z.extractall(model_dir)
+            log(f"mt: Argos en->es model {pkg.get('package_version')} installed")
+        root = next(p.parent for p in model_dir.rglob("sentencepiece.model"))
+        sp = sentencepiece.SentencePieceProcessor(model_file=str(root / "sentencepiece.model"))
+        tr = ctranslate2.Translator(str(root / "model"), device="cpu", inter_threads=4)
+        for i in range(0, len(todo), 64):
+            batch = todo[i:i + 64]
+            toks = sp.encode(batch, out_type=str)
+            res = tr.translate_batch(toks, beam_size=4, max_decoding_length=256)
+            for src, r in zip(batch, res):
+                out = sp.decode(r.hypotheses[0]).replace("▁", " ").strip()
+                done[src] = out
+            if i % 2048 == 0:
+                log(f"mt: {i + len(batch)}/{len(todo)}")
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_text(json.dumps(done, ensure_ascii=False), encoding="utf-8")
+    return {t: done[t] for t in texts if done.get(t)}
 
 
 def clean_glosses(glosses: list[str]) -> list[str]:
@@ -926,7 +1025,9 @@ CREATE TABLE sense(
   example TEXT,
   example_translation TEXT,
   example_translation_lang TEXT,
-  example_source TEXT
+  example_source TEXT,
+  definition_mt INTEGER NOT NULL DEFAULT 0,          -- 1 = machine translated (en->es)
+  example_translation_mt INTEGER NOT NULL DEFAULT 0
 );
 CREATE INDEX sense_word ON sense(word_id, def_lang, sense_order);
 CREATE TABLE translation(
@@ -934,7 +1035,8 @@ CREATE TABLE translation(
   word_id INTEGER NOT NULL REFERENCES word(id),
   target_lang TEXT NOT NULL,
   gloss_order INTEGER NOT NULL,
-  gloss TEXT NOT NULL
+  gloss TEXT NOT NULL,
+  mt INTEGER NOT NULL DEFAULT 0                      -- 1 = machine translated (en->es)
 );
 CREATE INDEX translation_word ON translation(word_id, target_lang, gloss_order);
 -- search: ~30k rows; a LIKE scan is a few ms. FTS5 trigram cannot match 1-2 character zh words.
@@ -958,12 +1060,14 @@ def write_db(path: Path, words: list[Word], extra_meta: dict | None = None):
                        [(wid, cat_id[c]) for c in sorted(w.categories) if c in cat_id])
         db.executemany(
             "INSERT INTO sense(word_id,sense_order,pos,def_lang,definition,example,example_translation,"
-            "example_translation_lang,example_source) VALUES(?,?,?,?,?,?,?,?,?)",
+            "example_translation_lang,example_source,definition_mt,example_translation_mt) "
+            "VALUES(?,?,?,?,?,?,?,?,?,?,?)",
             [(wid, i, s.pos, s.def_lang, s.definition, s.example, s.example_translation,
-              s.example_translation_lang, s.example_source) for i, s in enumerate(w.senses)])
+              s.example_translation_lang, s.example_source, int(s.definition_mt),
+              int(s.example_translation_mt)) for i, s in enumerate(w.senses)])
         for lang, gl in w.translations.items():
-            db.executemany("INSERT INTO translation(word_id,target_lang,gloss_order,gloss) VALUES(?,?,?,?)",
-                           [(wid, lang, i, g) for i, g in enumerate(gl) if g])
+            db.executemany("INSERT INTO translation(word_id,target_lang,gloss_order,gloss,mt) VALUES(?,?,?,?,?)",
+                           [(wid, lang, i, g, int(lang in w.translations_mt)) for i, g in enumerate(gl) if g])
         glosses = " ".join(g for gl in w.translations.values() for g in gl)
         parts = [w.lemma.lower(), strip_tones(w.pinyin) if w.pinyin else "", w.traditional or "",
                  glosses.lower()]
@@ -1018,6 +1122,12 @@ def coverage(db_path: Path) -> tuple[str, list[str]]:
         add("zh", f"zh example + {t} translation", q(
             "SELECT COUNT(DISTINCT w.id) FROM word w JOIN sense s ON s.word_id=w.id WHERE w.lang='zh' "
             "AND s.example IS NOT NULL AND s.example_translation_lang=?", t), n)
+    add("zh", "zh→es translation that is machine translated", q(
+        "SELECT COUNT(DISTINCT word_id) FROM translation t JOIN word w ON w.id=t.word_id "
+        "WHERE w.lang='zh' AND t.target_lang='es' AND t.mt=1"), n, flagged=False)
+    add("zh", "es example translation that is machine translated", q(
+        "SELECT COUNT(DISTINCT w.id) FROM word w JOIN sense s ON s.word_id=w.id WHERE w.lang='zh' "
+        "AND s.example_translation_lang='es' AND s.example_translation_mt=1"), n, flagged=False)
     add("zh", "zh example (any)", q(
         "SELECT COUNT(DISTINCT w.id) FROM word w JOIN sense s ON s.word_id=w.id "
         "WHERE w.lang='zh' AND s.example IS NOT NULL"), n)

@@ -209,3 +209,31 @@ class ExampleFilter(unittest.TestCase):
         self.assertTrue(b.example_has_word("Rotate the bolt to the left.", "left"))
         self.assertTrue(b.example_has_word("Dejé de fumar hace un año.", "año"))
         self.assertTrue(b.example_has_word("They were running late.", "run"))
+
+
+class MachineTranslationFill(unittest.TestCase):
+    def test_fills_gaps_and_marks_mt(self):
+        orig = b.machine_translate_en_es
+        b.machine_translate_en_es = lambda texts: {t: f"es-{t}" for t in texts}
+        try:
+            no_es = b.Word("zh", "清楚", None, 1, 3, None, "qīng chu", None, set(),
+                           [b.Sense(None, "en", "clear; to understand", "我听不清楚。",
+                                    "I can't hear clearly.", "en", "tatoeba")], {"en": ["clear"]})
+            has_es = b.Word("zh", "好", None, 2, 1, None, "hǎo", None, set(),
+                            [b.Sense(None, "en", "good", "很好。", "Very good.", "en", "tatoeba"),
+                             b.Sense(None, "es", "bueno", None, None, None, None)],
+                            {"en": ["good"], "es": ["bueno"]})
+            b.fill_spanish_with_mt([no_es, has_es])
+        finally:
+            b.machine_translate_en_es = orig
+        self.assertEqual(no_es.translations["es"], ["es-clear", "es-to understand"])
+        self.assertIn("es", no_es.translations_mt)
+        es = no_es.senses[1]
+        self.assertTrue(es.definition_mt and es.example_translation_mt)
+        self.assertEqual(es.example, "我听不清楚。")
+        self.assertEqual(es.example_translation, "es-I can't hear clearly.")
+        # human gloss kept, only the example translation is machine made
+        self.assertEqual(has_es.translations["es"], ["bueno"])
+        self.assertNotIn("es", has_es.translations_mt)
+        self.assertFalse(has_es.senses[1].definition_mt)
+        self.assertTrue(has_es.senses[1].example_translation_mt)

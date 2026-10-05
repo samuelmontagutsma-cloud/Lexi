@@ -1,2 +1,4 @@
 # build-time only; nothing here ships in the app
 wordfreq>=3.1,<4
+ctranslate2>=4,<5      # offline machine translation runtime (Argos en->es model)
+sentencepiece>=0.2,<1
