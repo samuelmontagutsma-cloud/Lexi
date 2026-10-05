@@ -2,7 +2,7 @@ name: Core tests (FSRS)
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: ["**"]
     paths: ["Packages/**", "tools/fsrs_vectors.py", ".github/workflows/core.yml"]
 permissions:
   contents: write
