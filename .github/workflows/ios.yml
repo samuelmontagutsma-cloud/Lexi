@@ -29,6 +29,12 @@ jobs:
             -destination 'generic/platform=iOS' -derivedDataPath build \
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO build 2>&1 | tee build.log | grep -E "error:|warning: unre|BUILD" || true
           test -d build/Build/Products/Release-iphoneos/Lexi.app
+      - name: Sync String Catalog from compiled code
+        run: |
+          find build -name "*.stringsdata" > stringsdata.txt
+          wc -l stringsdata.txt
+          xcrun xcstringstool sync Resources/Localizable.xcstrings $(sed 's/^/--stringsdata /' stringsdata.txt) || true
+          cp Resources/Localizable.xcstrings synced.xcstrings
       - name: Unit tests (simulator)
         id: tests
         continue-on-error: true
@@ -66,4 +72,4 @@ jobs:
           grep -E "error:" build.log | sort -u | head -80 > build_errors.log || true
           grep -E "error:|failed|LEXI_METRIC|Executed|TEST (SUCCEEDED|FAILED)" test.log 2>/dev/null | head -80 > test_summary.log || true
           echo "tests: ${{ steps.tests.outcome }}" >> test_summary.log
-          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log
+          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log synced.xcstrings
