@@ -1,12 +1,7 @@
-LEXI_METRIC newWords_ms=10.381102561950684
-	 Executed 4 tests, with 0 failures (0 unexpected) in 0.047 (0.752) seconds
-/Users/runner/work/Lexi/Lexi/Tests/LexiTests/LexiAppTests.swift:104: error: -[LexiTests.StudyServiceTests testCSVImport] : XCTAssertEqual failed: ("2") is not equal to ("1")
-Test Case '-[LexiTests.StudyServiceTests testCSVImport]' failed (0.543 seconds).
-Test Suite 'StudyServiceTests' failed at 2026-10-05 07:13:00.907.
-	 Executed 5 tests, with 1 failure (0 unexpected) in 0.896 (0.898) seconds
-Test Suite 'LexiTests.xctest' failed at 2026-10-05 07:13:01.237.
-	 Executed 9 tests, with 1 failure (0 unexpected) in 0.943 (1.979) seconds
-Test Suite 'All tests' failed at 2026-10-05 07:13:01.237.
-	 Executed 9 tests, with 1 failure (0 unexpected) in 0.943 (1.980) seconds
-** TEST FAILED **
-tests: failure
+LEXI_METRIC newWords_ms=10.792016983032227
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.049 (0.204) seconds
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.679 (0.681) seconds
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.728 (0.886) seconds
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.728 (0.886) seconds
+** TEST SUCCEEDED **
+tests: success
