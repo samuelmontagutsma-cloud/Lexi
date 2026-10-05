@@ -4,6 +4,9 @@
     "" : {
       "shouldTranslate" : false
     },
+    "%@" : {
+
+    },
     "%@ %@" : {
       "shouldTranslate" : false
     },
@@ -12,6 +15,16 @@
     },
     "%@ (%lld)" : {
       "shouldTranslate" : false
+    },
+    "%@ · %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
     },
     "%@ · %lld new/day · %lld learned · %lld due" : {
       "localizations" : {
@@ -34,6 +47,16 @@
     },
     "%lld / %lld" : {
       "shouldTranslate" : false
+    },
+    "%lld day streak, %lld of %lld new words today" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld day streak, %2$lld of %3$lld new words today"
+          }
+        }
+      }
     },
     "%lld due" : {
       "localizations" : {
@@ -134,6 +157,9 @@
         }
       }
     },
+    "A word from your deck. Speak it, mark it as known, or go to the next word." : {
+
+    },
     "Aa" : {
       "shouldTranslate" : false
     },
@@ -216,6 +242,9 @@
           }
         }
       }
+    },
+    "All done for today" : {
+
     },
     "All my words" : {
       "localizations" : {
@@ -417,6 +446,9 @@
         }
       }
     },
+    "Choose deck" : {
+
+    },
     "Classic" : {
       "localizations" : {
         "es" : {
@@ -556,6 +588,9 @@
           }
         }
       }
+    },
+    "Deck" : {
+
     },
     "Decks" : {
       "localizations" : {
@@ -836,6 +871,9 @@
           }
         }
       }
+    },
+    "Got it" : {
+
     },
     "Hard" : {
       "localizations" : {
@@ -1176,6 +1214,9 @@
         }
       }
     },
+    "Next word" : {
+
+    },
     "No custom words" : {
       "localizations" : {
         "es" : {
@@ -1276,6 +1317,12 @@
         }
       }
     },
+    "Open Lexi" : {
+
+    },
+    "Open Lexi to set up a deck" : {
+
+    },
     "Paper" : {
       "localizations" : {
         "es" : {
@@ -1305,6 +1352,9 @@
           }
         }
       }
+    },
+    "Pick the deck this widget shows words from." : {
+
     },
     "Pick the meaning" : {
       "localizations" : {
@@ -1752,6 +1802,12 @@
         }
       }
     },
+    "Speak" : {
+
+    },
+    "Speak word" : {
+
+    },
     "Speech speed: %lld %%" : {
       "localizations" : {
         "es" : {
@@ -1822,6 +1878,9 @@
         }
       }
     },
+    "Streak" : {
+
+    },
     "Study" : {
       "localizations" : {
         "es" : {
@@ -1874,6 +1933,9 @@
           }
         }
       }
+    },
+    "Text" : {
+
     },
     "Theme" : {
       "localizations" : {
@@ -2194,6 +2256,9 @@
           }
         }
       }
+    },
+    "Your day streak, with today's new words as a ring." : {
+
     },
     "correct" : {
       "localizations" : {
