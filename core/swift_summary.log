@@ -1,44 +1,50 @@
 Test Case 'CSVTests.testRecordsAndBOM' passed (0.002 seconds)
 Test Case 'CSVTests.testRoundTrip' passed (0.0 seconds)
-Test Suite 'CSVTests' passed at 2026-10-05 07:23:01.203
+Test Suite 'CSVTests' passed at 2026-10-05 16:01:59.159
 	 Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
 Test Case 'GradingTests.testMapping' passed (0.0 seconds)
 Test Case 'GradingTests.testSpellingScalesWithLength' passed (0.0 seconds)
-Test Suite 'GradingTests' passed at 2026-10-05 07:23:01.203
+Test Suite 'GradingTests' passed at 2026-10-05 16:01:59.160
 	 Executed 2 tests, with 0 failures (0 unexpected) in 0.0 (0.0) seconds
-Test Case 'PinyinTests.testAnswerMatching' passed (0.004 seconds)
-Test Case 'PinyinTests.testMarks' passed (0.101 seconds)
+Test Case 'PinyinTests.testAnswerMatching' passed (0.023 seconds)
+Test Case 'PinyinTests.testMarks' passed (0.0 seconds)
 Test Case 'PinyinTests.testNumbered' passed (0.0 seconds)
-Test Case 'PinyinTests.testToneOptions' passed (0.001 seconds)
-Test Suite 'PinyinTests' passed at 2026-10-05 07:23:01.309
-	 Executed 4 tests, with 0 failures (0 unexpected) in 0.106 (0.106) seconds
-Test Case 'StatsTests.testPerDay' passed (0.001 seconds)
-Test Case 'StatsTests.testReminderPlan' passed (0.0 seconds)
+Test Case 'PinyinTests.testToneOptions' passed (0.0 seconds)
+Test Suite 'PinyinTests' passed at 2026-10-05 16:01:59.183
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.023 (0.023) seconds
+Test Case 'StatsTests.testPerDay' passed (0.0 seconds)
+Test Case 'StatsTests.testReminderPlan' passed (0.101 seconds)
 Test Case 'StatsTests.testRetention' passed (0.0 seconds)
 Test Case 'StatsTests.testStreak' passed (0.0 seconds)
-Test Suite 'StatsTests' passed at 2026-10-05 07:23:01.310
-	 Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'StatsTests' passed at 2026-10-05 16:01:59.285
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.102 (0.102) seconds
 Test Case 'TextMatchTests.testBlank' passed (0.0 seconds)
-Test Case 'TextMatchTests.testNormalize' passed (0.004 seconds)
-Test Suite 'TextMatchTests' passed at 2026-10-05 07:23:01.315
-	 Executed 2 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
-Test Suite 'Debug-linux-x86_64.xctest' passed at 2026-10-05 07:23:01.315
-	 Executed 14 tests, with 0 failures (0 unexpected) in 0.114 (0.114) seconds
-Test Suite 'All tests' passed at 2026-10-05 07:23:01.315
-	 Executed 14 tests, with 0 failures (0 unexpected) in 0.114 (0.114) seconds
+Test Case 'TextMatchTests.testNormalize' passed (0.023 seconds)
+Test Suite 'TextMatchTests' passed at 2026-10-05 16:01:59.308
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.023 (0.023) seconds
+Test Case 'WidgetRotationTests.testIndex' passed (0.0 seconds)
+Test Case 'WidgetRotationTests.testScheduleBounds' passed (0.0 seconds)
+Test Case 'WidgetRotationTests.testScheduleHourly' passed (0.0 seconds)
+Test Case 'WidgetRotationTests.testWidgetGradeIsGoodWhenCorrect' passed (0.0 seconds)
+Test Suite 'WidgetRotationTests' passed at 2026-10-05 16:01:59.309
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'Debug-linux-x86_64.xctest' passed at 2026-10-05 16:01:59.309
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.151 (0.151) seconds
+Test Suite 'All tests' passed at 2026-10-05 16:01:59.309
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.151 (0.151) seconds
 Test Case 'FSRSPropertyTests.testFuzzStaysInRange' passed (0.001 seconds)
-Test Case 'FSRSPropertyTests.testLapseCountsOnlyFromReview' passed (0.004 seconds)
-Test Case 'FSRSPropertyTests.testRetentionTargetMeansIntervalGetsLonger' passed (0.0 seconds)
-Test Suite 'FSRSPropertyTests' passed at 2026-10-05 07:23:01.364
-	 Executed 3 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
-Test Case 'FSRSReferenceTests.testDefaultWeightsMatchReference' passed (0.014 seconds)
+Test Case 'FSRSPropertyTests.testLapseCountsOnlyFromReview' passed (0.022 seconds)
+Test Case 'FSRSPropertyTests.testRetentionTargetMeansIntervalGetsLonger' passed (0.1 seconds)
+Test Suite 'FSRSPropertyTests' passed at 2026-10-05 16:01:59.468
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.123 (0.123) seconds
+Test Case 'FSRSReferenceTests.testDefaultWeightsMatchReference' passed (0.012 seconds)
 FSRS: 1771 reviews match py-fsrs 6.3.2
 Test Case 'FSRSReferenceTests.testMatchesReference' passed (0.015 seconds)
-Test Suite 'FSRSReferenceTests' passed at 2026-10-05 07:23:01.393
-	 Executed 2 tests, with 0 failures (0 unexpected) in 0.029 (0.029) seconds
-Test Suite 'Debug-linux-x86_64.xctest' passed at 2026-10-05 07:23:01.393
-	 Executed 5 tests, with 0 failures (0 unexpected) in 0.034 (0.034) seconds
-Test Suite 'All tests' passed at 2026-10-05 07:23:01.393
-	 Executed 5 tests, with 0 failures (0 unexpected) in 0.034 (0.034) seconds
-✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
+Test Suite 'FSRSReferenceTests' passed at 2026-10-05 16:01:59.495
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.026 (0.026) seconds
+Test Suite 'Debug-linux-x86_64.xctest' passed at 2026-10-05 16:01:59.495
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.149 (0.149) seconds
+Test Suite 'All tests' passed at 2026-10-05 16:01:59.495
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.149 (0.149) seconds
+✔ Test run with 0 tests in 0 suites passed after 0.021 seconds.
 ✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
