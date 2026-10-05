@@ -35,6 +35,7 @@ jobs:
           wc -l stringsdata.txt
           xcrun xcstringstool sync Resources/Localizable.xcstrings $(sed 's/^/--stringsdata /' stringsdata.txt) || true
           cp Resources/Localizable.xcstrings synced.xcstrings
+          python3 tools/l10n_es.py synced.xcstrings /tmp/check.xcstrings | tee l10n.log || true
       - name: Unit tests (simulator)
         id: tests
         continue-on-error: true
@@ -72,4 +73,4 @@ jobs:
           grep -E "error:" build.log | sort -u | head -80 > build_errors.log || true
           grep -E "error:|failed|LEXI_METRIC|Executed|TEST (SUCCEEDED|FAILED)" test.log 2>/dev/null | head -80 > test_summary.log || true
           echo "tests: ${{ steps.tests.outcome }}" >> test_summary.log
-          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log synced.xcstrings
+          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log synced.xcstrings l10n.log

@@ -1,0 +1,273 @@
+#!/usr/bin/env python3
+"""Fill Resources/Localizable.xcstrings with Spanish UI strings.
+
+Usage: python tools/l10n_es.py <synced.xcstrings from CI> Resources/Localizable.xcstrings
+Keys with no letters (formats, symbols) and brand names are marked shouldTranslate=false.
+Reports keys still missing a Spanish value.
+"""
+import json, re, sys
+
+ES = {
+    "%@ · %lld new/day · %lld learned · %lld due": "%1$@ · %2$lld nuevas/día · %3$lld aprendidas · %4$lld pendientes",
+    "%lld due": "%lld pendientes",
+    "%lld learned": "%lld aprendidas",
+    "%lld new words per day": "%lld palabras nuevas al día",
+    "%lld reminders per day": "%lld recordatorios al día",
+    "%lld seen": "%lld vistas",
+    "%lld words at this level and above": "%lld palabras en este nivel y superiores",
+    "%lld min": "%lld min",
+    "%lld h": "%lld h",
+    "30 days": "30 días",
+    "7 days": "7 días",
+    "90 days": "90 días",
+    "About 1 in 4 words has a topic tag. With topics selected, the deck only shows tagged words.":
+        "Alrededor de 1 de cada 4 palabras tiene un tema. Con temas elegidos, el mazo solo muestra palabras con esos temas.",
+    "Add": "Añadir",
+    "Add a deck": "Añadir un mazo",
+    "Add a word": "Añadir una palabra",
+    "Add to collection": "Añadir a una colección",
+    "Advanced": "Avanzado",
+    "Again": "Otra vez",
+    "All": "Todos",
+    "All my words": "Todas mis palabras",
+    "All words": "Todas las palabras",
+    "Already know": "Ya la sé",
+    "App Group not available: widgets cannot read your progress.":
+        "App Group no disponible: los widgets no pueden leer tu progreso.",
+    "Appearance": "Apariencia",
+    "Art": "Arte",
+    "Audio": "Audio",
+    "Back": "Atrás",
+    "Backup": "Copia de seguridad",
+    "Backup saved.": "Copia de seguridad guardada.",
+    "Beginner": "Principiante",
+    "Beyond HSK 6": "Más allá de HSK 6",
+    "Body": "Cuerpo",
+    "Business": "Negocios",
+    "CSV columns: word, definition, example, translation, pos, pronunciation. Only “word” and “definition” are required.":
+        "Columnas CSV: word, definition, example, translation, pos, pronunciation. Solo «word» y «definition» son obligatorias.",
+    "Cancel": "Cancelar",
+    "Change word every": "Cambiar la palabra cada",
+    "Check": "Comprobar",
+    "Check the accents.": "Revisa los acentos.",
+    "Chinese": "Chino",
+    "Classic": "Clásico",
+    "Close": "Cerrar",
+    "Collections": "Colecciones",
+    "Correct": "Correcto",
+    "Credits": "Créditos",
+    "Credits and licenses": "Créditos y licencias",
+    "Current deck": "Mazo actual",
+    "Current deck: %@": "Mazo actual: %@",
+    "Custom words": "Palabras propias",
+    "Daily goal": "Meta diaria",
+    "Daily goal done": "Meta diaria cumplida",
+    "Dark": "Oscuro",
+    "Day": "Día",
+    "Day streak": "Racha de días",
+    "Decks": "Mazos",
+    "Definition": "Definición",
+    "Delete %@": "Eliminar %@",
+    "Delete this deck and its progress?": "¿Eliminar este mazo y su progreso?",
+    "Done": "Listo",
+    "Double tap to hear the example": "Toca dos veces para oír el ejemplo",
+    "Due for review": "Pendientes de repaso",
+    "Each reminder shows one word from your deck.": "Cada recordatorio muestra una palabra de tu mazo.",
+    "Easy": "Fácil",
+    "Edit word": "Editar palabra",
+    "Education": "Educación",
+    "Elementary": "Elemental",
+    "Emotions": "Emociones",
+    "English": "Inglés",
+    "Every answer updates the review schedule. Fast and correct = Easy, slow = Hard, wrong = Again.":
+        "Cada respuesta actualiza el plan de repaso. Rápida y correcta = Fácil; lenta = Difícil; incorrecta = Otra vez.",
+    "Example sentence (optional)": "Frase de ejemplo (opcional)",
+    "Export backup (JSON)": "Exportar copia (JSON)",
+    "Export deck words as CSV": "Exportar palabras del mazo (CSV)",
+    "FSRS-6 algorithm, ported from py-fsrs (MIT License), open-spaced-repetition.":
+        "Algoritmo FSRS-6, adaptado de py-fsrs (licencia MIT), open-spaced-repetition.",
+    "Favorite": "Favorita",
+    "Favorites": "Favoritas",
+    "Fill in the blank": "Completa el hueco",
+    "Food": "Comida",
+    "Forest": "Bosque",
+    "Forgot": "La olvidé",
+    "From": "Desde",
+    "Games": "Juegos",
+    "Good": "Bien",
+    "Hard": "Difícil",
+    "Health": "Salud",
+    "Higher retention = shorter intervals and more reviews per day. 90 % is the FSRS default.":
+        "Más retención = intervalos más cortos y más repasos al día. 90 % es el valor por defecto de FSRS.",
+    "Hint": "Pista",
+    "Home": "Hogar",
+    "Import failed: %@": "Error al importar: %@",
+    "Import words from CSV": "Importar palabras (CSV)",
+    "Imported %lld words. Skipped %lld (duplicates or missing word/definition).":
+        "%1$lld palabras importadas. %2$lld omitidas (duplicadas o sin palabra/definición).",
+    "Intermediate": "Intermedio",
+    "Language": "Idioma",
+    "Learn 5 more words": "Aprender 5 palabras más",
+    "Learn new words with translations": "Aprende palabras nuevas con traducciones",
+    "Level": "Nivel",
+    "Lexi is a personal, offline app. Word data comes from these free sources. Text from Wiktionary and CC-CEDICT is shared under CC BY-SA 4.0: you may share and adapt it with attribution, under the same license.":
+        "Lexi es una app personal y sin conexión. Los datos vienen de estas fuentes libres. El texto de Wiktionary y CC-CEDICT se comparte bajo CC BY-SA 4.0: puedes compartirlo y adaptarlo con atribución, bajo la misma licencia.",
+    "Light": "Claro",
+    "Listen": "Escuchar",
+    "Listening": "Comprensión auditiva",
+    "Machine translated": "Traducción automática",
+    "Manage decks": "Gestionar mazos",
+    "Match the pairs": "Une las parejas",
+    "Matching pairs": "Parejas",
+    "Meaning": "Significado",
+    "Meaning → word": "Significado → palabra",
+    "Memory": "Memoria",
+    "Mexico (es-MX)": "México (es-MX)",
+    "Mistakes": "Errores",
+    "Mixed": "Mezcla",
+    "My word": "Mi palabra",
+    "My words": "Mis palabras",
+    "My words (%lld)": "Mis palabras (%lld)",
+    "Nature": "Naturaleza",
+    "New collection": "Nueva colección",
+    "Next": "Siguiente",
+    "No custom words": "Sin palabras propias",
+    "No decks": "No hay mazos",
+    "No reminders": "Sin recordatorios",
+    "No rows found. The first row must be a header.": "No hay filas. La primera fila debe ser el encabezado.",
+    "No topic selected = all words, most common first. With topics, only words tagged with those topics appear.":
+        "Sin temas = todas las palabras, las más comunes primero. Con temas, solo aparecen las palabras con esos temas.",
+    "No words in “%@” yet. Swipe through new words in the feed first.":
+        "Aún no hay palabras en «%@». Primero desliza por las palabras nuevas.",
+    "No words yet": "Aún no hay palabras",
+    "Not quite": "Casi",
+    "Notifications are off. Open iOS Settings": "Las notificaciones están desactivadas. Abrir Ajustes de iOS",
+    "Ocean": "Océano",
+    "Paper": "Papel",
+    "Part of speech (optional)": "Categoría gramatical (opcional)",
+    "Pick the correct tones": "Elige los tonos correctos",
+    "Pick the meaning": "Elige el significado",
+    "Pick the word": "Elige la palabra",
+    "Pinyin (optional)": "Pinyin (opcional)",
+    "Play again": "Reproducir otra vez",
+    "Play pronunciation": "Reproducir pronunciación",
+    "Play the word": "Reproducir la palabra",
+    "Practice": "Practicar",
+    "Practice your words with games, or learn 5 more words today.":
+        "Practica tus palabras con juegos o aprende 5 palabras más hoy.",
+    "Proficient": "Experto",
+    "Prompt": "Pista",
+    "Pronunciation (optional)": "Pronunciación (opcional)",
+    "Range": "Periodo",
+    "Recent mistakes": "Errores recientes",
+    "Reinstall the app. The bundled lexicon could not be opened.":
+        "Reinstala la app. No se pudo abrir el diccionario incluido.",
+    "Remembered": "La recordé",
+    "Reminders": "Recordatorios",
+    "Remove background image": "Quitar imagen de fondo",
+    "Remove favorite": "Quitar de favoritas",
+    "Replace all data with this backup?": "¿Reemplazar todos los datos con esta copia?",
+    "Restore": "Restaurar",
+    "Restore failed: %@": "Error al restaurar: %@",
+    "Restore from backup": "Restaurar copia",
+    "Restore replaces all decks, progress, favorites, collections and custom words on this phone.":
+        "Restaurar reemplaza todos los mazos, el progreso, las favoritas, las colecciones y las palabras propias de este teléfono.",
+    "Restored %lld decks, %lld words and %lld reviews.": "Restaurados %1$lld mazos, %2$lld palabras y %3$lld repasos.",
+    "Retention": "Retención",
+    "Retention = share of reviews of learned words (not learning steps) that you remembered, over the selected range (n = %lld). Your target is set per deck.":
+        "Retención = parte de los repasos de palabras aprendidas (sin pasos de aprendizaje) que recordaste en el periodo elegido (n = %lld). La meta se fija en cada mazo.",
+    "Reviews": "Repasos",
+    "Reviews of words you already saw come on top of this, as the spaced-repetition schedule asks.":
+        "Los repasos de palabras ya vistas se suman a esto, según el plan de repetición espaciada.",
+    "Reviews per day": "Repasos por día",
+    "Rose": "Rosa",
+    "Save": "Guardar",
+    "Science": "Ciencia",
+    "Search": "Buscar",
+    "Settings": "Ajustes",
+    "Share": "Compartir",
+    "Show meaning": "Ver significado",
+    "Shown in English: no data in your language": "Mostrado en inglés: no hay datos en tu idioma",
+    "Simplified: %@": "Simplificado: %@",
+    "Society": "Sociedad",
+    "Sources": "Fuentes",
+    "Spaced repetition": "Repetición espaciada",
+    "Spain (es-ES)": "España (es-ES)",
+    "Spanish": "Español",
+    "Spanish voice": "Voz en español",
+    "Speech speed: %lld %%": "Velocidad de voz: %lld %%",
+    "Spelling": "Ortografía",
+    "Sports": "Deportes",
+    "Start at": "Empezar en",
+    "Start learning": "Empezar",
+    "Stats": "Estadísticas",
+    "Storage error: %@": "Error de almacenamiento: %@",
+    "Study": "Estudio",
+    "Sunset": "Atardecer",
+    "Target retention: %lld %%": "Retención objetivo: %lld %%",
+    "Technology": "Tecnología",
+    "Terminal": "Terminal",
+    "Test voice": "Probar voz",
+    "Theme": "Tema",
+    "Themes": "Temas",
+    "Time": "Tiempo",
+    "To": "Hasta",
+    "Today's new words": "Palabras nuevas de hoy",
+    "Tone trainer": "Entrenador de tonos",
+    "Topics": "Temas",
+    "Topics (optional)": "Temas (opcional)",
+    "Traditional Chinese characters": "Caracteres chinos tradicionales",
+    "Traditional characters": "Caracteres tradicionales",
+    "Traditional: %@": "Tradicional: %@",
+    "Translation (optional)": "Traducción (opcional)",
+    "Travel": "Viajes",
+    "Type the pinyin (tone numbers optional)": "Escribe el pinyin (números de tono opcionales)",
+    "Type the word": "Escribe la palabra",
+    "Undo already know": "Deshacer «ya la sé»",
+    "Upper intermediate": "Intermedio alto",
+    "Use my own background image": "Usar mi propia imagen de fondo",
+    "Welcome to Lexi": "Bienvenido a Lexi",
+    "What do you want to study?": "¿Qué quieres estudiar?",
+    "Which word do you hear?": "¿Qué palabra oyes?",
+    "Widgets": "Widgets",
+    "Word": "Palabra",
+    "Word database": "Base de palabras",
+    "Word database missing": "Falta la base de palabras",
+    "Word not found": "Palabra no encontrada",
+    "Word → meaning": "Palabra → significado",
+    "Word, pinyin or translation": "Palabra, pinyin o traducción",
+    "Words": "Palabras",
+    "Words from": "Palabras de",
+    "Words, definitions and examples in one language": "Palabras, definiciones y ejemplos en un idioma",
+    "You can add or change decks later in Settings.": "Puedes añadir o cambiar mazos luego en Ajustes.",
+    "correct": "correctas",
+    "day": "día",
+    "iOS allows 64 scheduled notifications per app, so Lexi plans about 6 days ahead and refreshes each time you open it.":
+        "iOS permite 64 notificaciones programadas por app, así que Lexi planifica unos 6 días y se actualiza cada vez que la abres.",
+}
+NO_TRANSLATE = {"Lexi", "Aa", "Terminal"}
+
+
+def main(src, dst):
+    cat = json.load(open(src, encoding="utf-8"))
+    missing = []
+    for key, entry in cat["strings"].items():
+        if not re.search(r"[A-Za-z]{2,}", key.replace("%lld", "").replace("%@", "")) or key in NO_TRANSLATE:
+            entry["shouldTranslate"] = False
+            entry.pop("localizations", None)
+            continue
+        es = ES.get(key)
+        if es is None:
+            missing.append(key)
+            continue
+        entry.setdefault("localizations", {})["es"] = {"stringUnit": {"state": "translated", "value": es}}
+        entry.pop("extractionState", None) if entry.get("extractionState") == "stale" else None
+    json.dump(cat, open(dst, "w", encoding="utf-8"), ensure_ascii=False, indent=2, sort_keys=True)
+    print(f"{len(cat['strings'])} keys, {len(missing)} missing Spanish")
+    for m in missing:
+        print("  MISSING:", repr(m))
+    return 1 if missing else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1], sys.argv[2]))

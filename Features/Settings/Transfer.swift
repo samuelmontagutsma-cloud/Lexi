@@ -25,7 +25,7 @@ enum Transfer {
     static func importCSV(text: String, deck: Deck, context: ModelContext) -> String {
         let records = CSV.records(text)
         guard !records.isEmpty else { return String(localized: "No rows found. The first row must be a header.") }
-        let existing = Set(StudyService(context: context).customWords(deck: deck).map { $0.lemma.lowercased() })
+        var existing = Set(StudyService(context: context).customWords(deck: deck).map { $0.lemma.lowercased() })
         var added = 0, skipped = 0
         for r in records {
             guard let word = r["word"] ?? r["lemma"] ?? r["term"],
@@ -39,6 +39,7 @@ enum Transfer {
                 w.pronunciation = deck.studyLang == .zh && p.contains(where: \.isNumber) ? Pinyin.marked(numbered: p) : p
             }
             context.insert(w)
+            existing.insert(word.lowercased())
             added += 1
         }
         try? context.save()

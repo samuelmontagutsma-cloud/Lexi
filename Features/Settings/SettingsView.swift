@@ -71,7 +71,9 @@ struct SettingsView: View {
                 Section("Widgets") {
                     Picker("Change word every", selection: $widgetInterval) {
                         ForEach([15, 30, 60, 120, 240, 480, 1440], id: \.self) { m in
-                            Text(m < 60 ? "\(m) min" : m == 1440 ? String(localized: "day") : "\(m / 60) h").tag(m)
+                            Group {
+                                if m < 60 { Text("\(m) min") } else if m == 1440 { Text("day") } else { Text("\(m / 60) h") }
+                            }.tag(m)
                         }
                     }
                 }
