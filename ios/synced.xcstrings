@@ -1,2301 +1,2405 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-      "shouldTranslate" : false
+  "sourceLanguage": "en",
+  "strings": {
+    "": {
+      "shouldTranslate": false
     },
-    "%@" : {
-
+    "%@": {
+      "shouldTranslate": false
     },
-    "%@ %@" : {
-      "shouldTranslate" : false
+    "%@ %@": {
+      "shouldTranslate": false
     },
-    "%@ %@ → %@" : {
-      "shouldTranslate" : false
+    "%@ %@ → %@": {
+      "shouldTranslate": false
     },
-    "%@ (%lld)" : {
-      "shouldTranslate" : false
+    "%@ (%lld)": {
+      "shouldTranslate": false
     },
-    "%@ · %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$@"
-          }
-        }
-      }
+    "%@ · %@": {
+      "shouldTranslate": false
     },
-    "%@ · %lld new/day · %lld learned · %lld due" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$lld new/day · %3$lld learned · %4$lld due"
+    "%@ · %lld new/day · %lld learned · %lld due": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$@ · %2$lld new/day · %3$lld learned · %4$lld due"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@ · %2$lld nuevas/día · %3$lld aprendidas · %4$lld pendientes"
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$lld nuevas/día · %3$lld aprendidas · %4$lld pendientes"
           }
         }
       }
     },
-    "%lld" : {
-      "shouldTranslate" : false
+    "%lld": {
+      "shouldTranslate": false
     },
-    "%lld / %lld" : {
-      "shouldTranslate" : false
+    "%lld / %lld": {
+      "shouldTranslate": false
     },
-    "%lld day streak, %lld of %lld new words today" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$lld day streak, %2$lld of %3$lld new words today"
-          }
-        }
-      }
-    },
-    "%lld due" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld pendientes"
-          }
-        }
-      }
-    },
-    "%lld h" : {
-
-    },
-    "%lld learned" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld aprendidas"
-          }
-        }
-      }
-    },
-    "%lld min" : {
-
-    },
-    "%lld new words per day" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld palabras nuevas al día"
-          }
-        }
-      }
-    },
-    "%lld reminders per day" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld recordatorios al día"
-          }
-        }
-      }
-    },
-    "%lld seen" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld vistas"
-          }
-        }
-      }
-    },
-    "%lld words at this level and above" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld palabras en este nivel y superiores"
-          }
-        }
-      }
-    },
-    "%lld." : {
-      "shouldTranslate" : false
-    },
-    "30 days" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "30 días"
-          }
-        }
-      }
-    },
-    "7 days" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7 días"
-          }
-        }
-      }
-    },
-    "90 days" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "90 días"
-          }
-        }
-      }
-    },
-    "A word from your deck. Speak it, mark it as known, or go to the next word." : {
-
-    },
-    "Aa" : {
-      "shouldTranslate" : false
-    },
-    "About 1 in 4 words has a topic tag. With topics selected, the deck only shows tagged words." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alrededor de 1 de cada 4 palabras tiene un tema. Con temas elegidos, el mazo solo muestra palabras con esos temas."
-          }
-        }
-      }
-    },
-    "Add" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir"
-          }
-        }
-      }
-    },
-    "Add a deck" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir un mazo"
-          }
-        }
-      }
-    },
-    "Add a word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir una palabra"
-          }
-        }
-      }
-    },
-    "Add to collection" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Añadir a una colección"
-          }
-        }
-      }
-    },
-    "Advanced" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Avanzado"
-          }
-        }
-      }
-    },
-    "Again" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Otra vez"
-          }
-        }
-      }
-    },
-    "All" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todos"
-          }
-        }
-      }
-    },
-    "All done for today" : {
-
-    },
-    "All my words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todas mis palabras"
-          }
-        }
-      }
-    },
-    "All words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Todas las palabras"
-          }
-        }
-      }
-    },
-    "Already know" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ya la sé"
-          }
-        }
-      }
-    },
-    "App Group not available: widgets cannot read your progress." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App Group no disponible: los widgets no pueden leer tu progreso."
-          }
-        }
-      }
-    },
-    "Appearance" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apariencia"
-          }
-        }
-      }
-    },
-    "Art" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Arte"
-          }
-        }
-      }
-    },
-    "Audio" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Audio"
-          }
-        }
-      }
-    },
-    "Back" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atrás"
-          }
-        }
-      }
-    },
-    "Backup" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copia de seguridad"
-          }
-        }
-      }
-    },
-    "Backup saved." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Copia de seguridad guardada."
-          }
-        }
-      }
-    },
-    "Beginner" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Principiante"
-          }
-        }
-      }
-    },
-    "Beyond HSK 6" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más allá de HSK 6"
-          }
-        }
-      }
-    },
-    "Body" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cuerpo"
-          }
-        }
-      }
-    },
-    "Business" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Negocios"
-          }
-        }
-      }
-    },
-    "CSV columns: word, definition, example, translation, pos, pronunciation. Only “word” and “definition” are required." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Columnas CSV: word, definition, example, translation, pos, pronunciation. Solo «word» y «definition» son obligatorias."
-          }
-        }
-      }
-    },
-    "Cancel" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cancelar"
-          }
-        }
-      }
-    },
-    "Change word every" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cambiar la palabra cada"
-          }
-        }
-      }
-    },
-    "Check" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comprobar"
-          }
-        }
-      }
-    },
-    "Check the accents." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Revisa los acentos."
-          }
-        }
-      }
-    },
-    "Chinese" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chino"
-          }
-        }
-      }
-    },
-    "Choose deck" : {
-
-    },
-    "Classic" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Clásico"
-          }
-        }
-      }
-    },
-    "Close" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cerrar"
-          }
-        }
-      }
-    },
-    "Collections" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Colecciones"
-          }
-        }
-      }
-    },
-    "Correct" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Correcto"
-          }
-        }
-      }
-    },
-    "Credits" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Créditos"
-          }
-        }
-      }
-    },
-    "Credits and licenses" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Créditos y licencias"
-          }
-        }
-      }
-    },
-    "Current deck" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mazo actual"
-          }
-        }
-      }
-    },
-    "Current deck: %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mazo actual: %@"
-          }
-        }
-      }
-    },
-    "Custom words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabras propias"
-          }
-        }
-      }
-    },
-    "Daily goal" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meta diaria"
-          }
-        }
-      }
-    },
-    "Daily goal done" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Meta diaria cumplida"
-          }
-        }
-      }
-    },
-    "Dark" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Oscuro"
-          }
-        }
-      }
-    },
-    "Day" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Día"
-          }
-        }
-      }
-    },
-    "Day streak" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Racha de días"
-          }
-        }
-      }
-    },
-    "Deck" : {
-
-    },
-    "Decks" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mazos"
-          }
-        }
-      }
-    },
-    "Definition" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Definición"
-          }
-        }
-      }
-    },
-    "Delete %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Eliminar %@"
-          }
-        }
-      }
-    },
-    "Delete this deck and its progress?" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Eliminar este mazo y su progreso?"
-          }
-        }
-      }
-    },
-    "Done" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Listo"
-          }
-        }
-      }
-    },
-    "Double tap to hear the example" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Toca dos veces para oír el ejemplo"
-          }
-        }
-      }
-    },
-    "Due for review" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pendientes de repaso"
-          }
-        }
-      }
-    },
-    "Each reminder shows one word from your deck." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cada recordatorio muestra una palabra de tu mazo."
-          }
-        }
-      }
-    },
-    "Easy" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fácil"
-          }
-        }
-      }
-    },
-    "Edit word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Editar palabra"
-          }
-        }
-      }
-    },
-    "Education" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Educación"
-          }
-        }
-      }
-    },
-    "Elementary" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elemental"
-          }
-        }
-      }
-    },
-    "Emotions" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Emociones"
-          }
-        }
-      }
-    },
-    "English" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inglés"
-          }
-        }
-      }
-    },
-    "Every answer updates the review schedule. Fast and correct = Easy, slow = Hard, wrong = Again." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Cada respuesta actualiza el plan de repaso. Rápida y correcta = Fácil; lenta = Difícil; incorrecta = Otra vez."
-          }
-        }
-      }
-    },
-    "Example sentence (optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Frase de ejemplo (opcional)"
-          }
-        }
-      }
-    },
-    "Export backup (JSON)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exportar copia (JSON)"
-          }
-        }
-      }
-    },
-    "Export deck words as CSV" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Exportar palabras del mazo (CSV)"
-          }
-        }
-      }
-    },
-    "FSRS-6 algorithm, ported from py-fsrs (MIT License), open-spaced-repetition." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Algoritmo FSRS-6, adaptado de py-fsrs (licencia MIT), open-spaced-repetition."
-          }
-        }
-      }
-    },
-    "Favorite" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favorita"
-          }
-        }
-      }
-    },
-    "Favorites" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Favoritas"
-          }
-        }
-      }
-    },
-    "Fill in the blank" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Completa el hueco"
-          }
-        }
-      }
-    },
-    "Food" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comida"
-          }
-        }
-      }
-    },
-    "Forest" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bosque"
-          }
-        }
-      }
-    },
-    "Forgot" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La olvidé"
-          }
-        }
-      }
-    },
-    "From" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Desde"
-          }
-        }
-      }
-    },
-    "Games" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Juegos"
-          }
-        }
-      }
-    },
-    "Good" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bien"
-          }
-        }
-      }
-    },
-    "Got it" : {
-
-    },
-    "Hard" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Difícil"
-          }
-        }
-      }
-    },
-    "Health" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Salud"
-          }
-        }
-      }
-    },
-    "Higher retention = shorter intervals and more reviews per day. 90 % is the FSRS default." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Más retención = intervalos más cortos y más repasos al día. 90 % es el valor por defecto de FSRS."
-          }
-        }
-      }
-    },
-    "Hint" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pista"
-          }
-        }
-      }
-    },
-    "Home" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hogar"
-          }
-        }
-      }
-    },
-    "Import failed: %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error al importar: %@"
-          }
-        }
-      }
-    },
-    "Import words from CSV" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Importar palabras (CSV)"
-          }
-        }
-      }
-    },
-    "Imported %lld words. Skipped %lld (duplicates or missing word/definition)." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Imported %1$lld words. Skipped %2$lld (duplicates or missing word/definition)."
+    "%lld day streak, %lld of %lld new words today": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld day streak, %2$lld of %3$lld new words today"
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$lld palabras importadas. %2$lld omitidas (duplicadas o sin palabra/definición)."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha de %1$lld días, %2$lld de %3$lld palabras nuevas hoy"
           }
         }
       }
     },
-    "Intermediate" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Intermedio"
+    "%lld due": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld pendientes"
           }
         }
       }
     },
-    "Language" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Idioma"
+    "%lld h": {
+      "shouldTranslate": false
+    },
+    "%lld learned": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld aprendidas"
           }
         }
       }
     },
-    "Learn 5 more words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aprender 5 palabras más"
+    "%lld min": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
           }
         }
       }
     },
-    "Learn new words with translations" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aprende palabras nuevas con traducciones"
+    "%lld new words per day": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld palabras nuevas al día"
           }
         }
       }
     },
-    "Level" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nivel"
+    "%lld reminders per day": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld recordatorios al día"
           }
         }
       }
     },
-    "Lexi" : {
-      "shouldTranslate" : false
-    },
-    "Lexi is a personal, offline app. Word data comes from these free sources. Text from Wiktionary and CC-CEDICT is shared under CC BY-SA 4.0: you may share and adapt it with attribution, under the same license." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lexi es una app personal y sin conexión. Los datos vienen de estas fuentes libres. El texto de Wiktionary y CC-CEDICT se comparte bajo CC BY-SA 4.0: puedes compartirlo y adaptarlo con atribución, bajo la misma licencia."
+    "%lld seen": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld vistas"
           }
         }
       }
     },
-    "Light" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Claro"
+    "%lld words at this level and above": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld palabras en este nivel y superiores"
           }
         }
       }
     },
-    "Listen" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escuchar"
+    "%lld.": {
+      "shouldTranslate": false
+    },
+    "30 days": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 días"
           }
         }
       }
     },
-    "Listening" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Comprensión auditiva"
+    "7 days": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7 días"
           }
         }
       }
     },
-    "Machine translated" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Traducción automática"
+    "90 days": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "90 días"
           }
         }
       }
     },
-    "Manage decks" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gestionar mazos"
+    "A word from your deck. Speak it, mark it as known, or go to the next word.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una palabra de tu mazo. Escúchala, márcala como sabida o pasa a la siguiente."
           }
         }
       }
     },
-    "Match the pairs" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Une las parejas"
+    "Aa": {
+      "shouldTranslate": false
+    },
+    "About 1 in 4 words has a topic tag. With topics selected, the deck only shows tagged words.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alrededor de 1 de cada 4 palabras tiene un tema. Con temas elegidos, el mazo solo muestra palabras con esos temas."
           }
         }
       }
     },
-    "Matching pairs" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Parejas"
+    "Add": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir"
           }
         }
       }
     },
-    "Meaning" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Significado"
+    "Add a deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir un mazo"
           }
         }
       }
     },
-    "Meaning → word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Significado → palabra"
+    "Add a word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir una palabra"
           }
         }
       }
     },
-    "Memory" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Memoria"
+    "Add to collection": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Añadir a una colección"
           }
         }
       }
     },
-    "Mexico (es-MX)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "México (es-MX)"
+    "Advanced": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avanzado"
           }
         }
       }
     },
-    "Mistakes" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Errores"
+    "Again": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otra vez"
           }
         }
       }
     },
-    "Mixed" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mezcla"
+    "All": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todos"
           }
         }
       }
     },
-    "My word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mi palabra"
+    "All done for today": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo listo por hoy"
           }
         }
       }
     },
-    "My words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mis palabras"
+    "All my words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas mis palabras"
           }
         }
       }
     },
-    "My words (%lld)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mis palabras (%lld)"
+    "All words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todas las palabras"
           }
         }
       }
     },
-    "Nature" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Naturaleza"
+    "Already know": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya la sé"
           }
         }
       }
     },
-    "New collection" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nueva colección"
+    "App Group not available: widgets cannot read your progress.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Group no disponible: los widgets no pueden leer tu progreso."
           }
         }
       }
     },
-    "Next" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Siguiente"
+    "Appearance": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apariencia"
           }
         }
       }
     },
-    "Next word" : {
-
-    },
-    "No custom words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin palabras propias"
+    "Art": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arte"
           }
         }
       }
     },
-    "No decks" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No hay mazos"
+    "Audio": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Audio"
           }
         }
       }
     },
-    "No reminders" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin recordatorios"
+    "Back": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atrás"
           }
         }
       }
     },
-    "No rows found. The first row must be a header." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No hay filas. La primera fila debe ser el encabezado."
+    "Backup": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia de seguridad"
           }
         }
       }
     },
-    "No topic selected = all words, most common first. With topics, only words tagged with those topics appear." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sin temas = todas las palabras, las más comunes primero. Con temas, solo aparecen las palabras con esos temas."
+    "Backup saved.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia de seguridad guardada."
           }
         }
       }
     },
-    "No words in “%@” yet. Swipe through new words in the feed first." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay palabras en «%@». Primero desliza por las palabras nuevas."
+    "Beginner": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Principiante"
           }
         }
       }
     },
-    "No words yet" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aún no hay palabras"
+    "Beyond HSK 6": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más allá de HSK 6"
           }
         }
       }
     },
-    "Not quite" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Casi"
+    "Body": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cuerpo"
           }
         }
       }
     },
-    "Notifications are off. Open iOS Settings" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Las notificaciones están desactivadas. Abrir Ajustes de iOS"
+    "Business": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Negocios"
           }
         }
       }
     },
-    "Ocean" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Océano"
+    "CSV columns: word, definition, example, translation, pos, pronunciation. Only “word” and “definition” are required.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Columnas CSV: word, definition, example, translation, pos, pronunciation. Solo «word» y «definition» son obligatorias."
           }
         }
       }
     },
-    "Open Lexi" : {
-
-    },
-    "Open Lexi to set up a deck" : {
-
-    },
-    "Paper" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Papel"
+    "Cancel": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancelar"
           }
         }
       }
     },
-    "Part of speech (optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Categoría gramatical (opcional)"
+    "Change word every": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiar la palabra cada"
           }
         }
       }
     },
-    "Pick the correct tones" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige los tonos correctos"
+    "Check": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprobar"
           }
         }
       }
     },
-    "Pick the deck this widget shows words from." : {
-
-    },
-    "Pick the meaning" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige el significado"
+    "Check the accents.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revisa los acentos."
           }
         }
       }
     },
-    "Pick the word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Elige la palabra"
+    "Chinese": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chino"
           }
         }
       }
     },
-    "Pinyin (optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pinyin (opcional)"
+    "Choose deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elegir mazo"
           }
         }
       }
     },
-    "Play again" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reproducir otra vez"
+    "Classic": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clásico"
           }
         }
       }
     },
-    "Play pronunciation" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reproducir pronunciación"
+    "Close": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cerrar"
           }
         }
       }
     },
-    "Play the word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reproducir la palabra"
+    "Collections": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Colecciones"
           }
         }
       }
     },
-    "Practice" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Practicar"
+    "Correct": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Correcto"
           }
         }
       }
     },
-    "Practice your words with games, or learn 5 more words today." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Practica tus palabras con juegos o aprende 5 palabras más hoy."
+    "Credits": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créditos"
           }
         }
       }
     },
-    "Proficient" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Experto"
+    "Credits and licenses": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Créditos y licencias"
           }
         }
       }
     },
-    "Prompt" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pista"
+    "Current deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mazo actual"
           }
         }
       }
     },
-    "Pronunciation (optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pronunciación (opcional)"
+    "Current deck: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mazo actual: %@"
           }
         }
       }
     },
-    "Range" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Periodo"
+    "Custom words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabras propias"
           }
         }
       }
     },
-    "Recent mistakes" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Errores recientes"
+    "Daily goal": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meta diaria"
           }
         }
       }
     },
-    "Reinstall the app. The bundled lexicon could not be opened." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reinstala la app. No se pudo abrir el diccionario incluido."
+    "Daily goal done": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meta diaria cumplida"
           }
         }
       }
     },
-    "Remembered" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "La recordé"
+    "Dark": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oscuro"
           }
         }
       }
     },
-    "Reminders" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Recordatorios"
+    "Day": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Día"
           }
         }
       }
     },
-    "Remove background image" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quitar imagen de fondo"
+    "Day streak": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha de días"
           }
         }
       }
     },
-    "Remove favorite" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Quitar de favoritas"
+    "Deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mazo"
           }
         }
       }
     },
-    "Replace all data with this backup?" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Reemplazar todos los datos con esta copia?"
+    "Decks": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mazos"
           }
         }
       }
     },
-    "Restore" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restaurar"
+    "Definition": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Definición"
           }
         }
       }
     },
-    "Restore failed: %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error al restaurar: %@"
+    "Delete %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eliminar %@"
           }
         }
       }
     },
-    "Restore from backup" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restaurar copia"
+    "Delete this deck and its progress?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Eliminar este mazo y su progreso?"
           }
         }
       }
     },
-    "Restore replaces all decks, progress, favorites, collections and custom words on this phone." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restaurar reemplaza todos los mazos, el progreso, las favoritas, las colecciones y las palabras propias de este teléfono."
+    "Done": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listo"
           }
         }
       }
     },
-    "Restored %lld decks, %lld words and %lld reviews." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Restored %1$lld decks, %2$lld words and %3$lld reviews."
+    "Double tap to hear the example": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toca dos veces para oír el ejemplo"
+          }
+        }
+      }
+    },
+    "Due for review": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pendientes de repaso"
+          }
+        }
+      }
+    },
+    "Each reminder shows one word from your deck.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada recordatorio muestra una palabra de tu mazo."
+          }
+        }
+      }
+    },
+    "Easy": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fácil"
+          }
+        }
+      }
+    },
+    "Edit word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editar palabra"
+          }
+        }
+      }
+    },
+    "Education": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Educación"
+          }
+        }
+      }
+    },
+    "Elementary": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elemental"
+          }
+        }
+      }
+    },
+    "Emotions": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Emociones"
+          }
+        }
+      }
+    },
+    "English": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inglés"
+          }
+        }
+      }
+    },
+    "Every answer updates the review schedule. Fast and correct = Easy, slow = Hard, wrong = Again.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cada respuesta actualiza el plan de repaso. Rápida y correcta = Fácil; lenta = Difícil; incorrecta = Otra vez."
+          }
+        }
+      }
+    },
+    "Example sentence (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frase de ejemplo (opcional)"
+          }
+        }
+      }
+    },
+    "Export backup (JSON)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportar copia (JSON)"
+          }
+        }
+      }
+    },
+    "Export deck words as CSV": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Exportar palabras del mazo (CSV)"
+          }
+        }
+      }
+    },
+    "FSRS-6 algorithm, ported from py-fsrs (MIT License), open-spaced-repetition.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algoritmo FSRS-6, adaptado de py-fsrs (licencia MIT), open-spaced-repetition."
+          }
+        }
+      }
+    },
+    "Favorite": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorita"
+          }
+        }
+      }
+    },
+    "Favorites": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoritas"
+          }
+        }
+      }
+    },
+    "Fill in the blank": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Completa el hueco"
+          }
+        }
+      }
+    },
+    "Food": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comida"
+          }
+        }
+      }
+    },
+    "Forest": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bosque"
+          }
+        }
+      }
+    },
+    "Forgot": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La olvidé"
+          }
+        }
+      }
+    },
+    "From": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desde"
+          }
+        }
+      }
+    },
+    "Games": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Juegos"
+          }
+        }
+      }
+    },
+    "Good": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bien"
+          }
+        }
+      }
+    },
+    "Got it": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya la sé"
+          }
+        }
+      }
+    },
+    "Hard": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Difícil"
+          }
+        }
+      }
+    },
+    "Health": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salud"
+          }
+        }
+      }
+    },
+    "Higher retention = shorter intervals and more reviews per day. 90 % is the FSRS default.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Más retención = intervalos más cortos y más repasos al día. 90 % es el valor por defecto de FSRS."
+          }
+        }
+      }
+    },
+    "Hint": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pista"
+          }
+        }
+      }
+    },
+    "Home": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hogar"
+          }
+        }
+      }
+    },
+    "Import failed: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error al importar: %@"
+          }
+        }
+      }
+    },
+    "Import words from CSV": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Importar palabras (CSV)"
+          }
+        }
+      }
+    },
+    "Imported %lld words. Skipped %lld (duplicates or missing word/definition).": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Imported %1$lld words. Skipped %2$lld (duplicates or missing word/definition)."
           }
         },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Restaurados %1$lld mazos, %2$lld palabras y %3$lld repasos."
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld palabras importadas. %2$lld omitidas (duplicadas o sin palabra/definición)."
           }
         }
       }
     },
-    "Retention" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retención"
+    "Intermediate": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intermedio"
           }
         }
       }
     },
-    "Retention = share of reviews of learned words (not learning steps) that you remembered, over the selected range (n = %lld). Your target is set per deck." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retención = parte de los repasos de palabras aprendidas (sin pasos de aprendizaje) que recordaste en el periodo elegido (n = %lld). La meta se fija en cada mazo."
+    "Language": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Idioma"
           }
         }
       }
     },
-    "Reviews" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repasos"
+    "Learn 5 more words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aprender 5 palabras más"
           }
         }
       }
     },
-    "Reviews of words you already saw come on top of this, as the spaced-repetition schedule asks." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Los repasos de palabras ya vistas se suman a esto, según el plan de repetición espaciada."
+    "Learn new words with translations": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aprende palabras nuevas con traducciones"
           }
         }
       }
     },
-    "Reviews per day" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repasos por día"
+    "Level": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nivel"
           }
         }
       }
     },
-    "Rose" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rosa"
+    "Lexi": {
+      "shouldTranslate": false
+    },
+    "Lexi is a personal, offline app. Word data comes from these free sources. Text from Wiktionary and CC-CEDICT is shared under CC BY-SA 4.0: you may share and adapt it with attribution, under the same license.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lexi es una app personal y sin conexión. Los datos vienen de estas fuentes libres. El texto de Wiktionary y CC-CEDICT se comparte bajo CC BY-SA 4.0: puedes compartirlo y adaptarlo con atribución, bajo la misma licencia."
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claro"
+          }
+        }
+      }
+    },
+    "Listen": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escuchar"
+          }
+        }
+      }
+    },
+    "Listening": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comprensión auditiva"
+          }
+        }
+      }
+    },
+    "Machine translated": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traducción automática"
+          }
+        }
+      }
+    },
+    "Manage decks": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gestionar mazos"
+          }
+        }
+      }
+    },
+    "Match the pairs": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Une las parejas"
+          }
+        }
+      }
+    },
+    "Matching pairs": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parejas"
+          }
+        }
+      }
+    },
+    "Meaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Significado"
+          }
+        }
+      }
+    },
+    "Meaning → word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Significado → palabra"
+          }
+        }
+      }
+    },
+    "Memory": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memoria"
+          }
+        }
+      }
+    },
+    "Mexico (es-MX)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "México (es-MX)"
+          }
+        }
+      }
+    },
+    "Mistakes": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Errores"
+          }
+        }
+      }
+    },
+    "Mixed": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mezcla"
+          }
+        }
+      }
+    },
+    "My word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mi palabra"
+          }
+        }
+      }
+    },
+    "My words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis palabras"
+          }
+        }
+      }
+    },
+    "My words (%lld)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis palabras (%lld)"
+          }
+        }
+      }
+    },
+    "Nature": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naturaleza"
+          }
+        }
+      }
+    },
+    "New collection": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nueva colección"
+          }
+        }
+      }
+    },
+    "Next": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente"
+          }
+        }
+      }
+    },
+    "Next word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente palabra"
+          }
+        }
+      }
+    },
+    "No custom words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin palabras propias"
+          }
+        }
+      }
+    },
+    "No decks": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay mazos"
+          }
+        }
+      }
+    },
+    "No reminders": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin recordatorios"
+          }
+        }
+      }
+    },
+    "No rows found. The first row must be a header.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay filas. La primera fila debe ser el encabezado."
+          }
+        }
+      }
+    },
+    "No topic selected = all words, most common first. With topics, only words tagged with those topics appear.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sin temas = todas las palabras, las más comunes primero. Con temas, solo aparecen las palabras con esos temas."
+          }
+        }
+      }
+    },
+    "No words in “%@” yet. Swipe through new words in the feed first.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay palabras en «%@». Primero desliza por las palabras nuevas."
+          }
+        }
+      }
+    },
+    "No words yet": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay palabras"
+          }
+        }
+      }
+    },
+    "Not quite": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casi"
+          }
+        }
+      }
+    },
+    "Notifications are off. Open iOS Settings": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Las notificaciones están desactivadas. Abrir Ajustes de iOS"
+          }
+        }
+      }
+    },
+    "Ocean": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Océano"
+          }
+        }
+      }
+    },
+    "Open Lexi": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Lexi"
+          }
+        }
+      }
+    },
+    "Open Lexi to set up a deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre Lexi para crear un mazo"
+          }
+        }
+      }
+    },
+    "Paper": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Papel"
+          }
+        }
+      }
+    },
+    "Part of speech (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Categoría gramatical (opcional)"
+          }
+        }
+      }
+    },
+    "Pick the correct tones": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige los tonos correctos"
+          }
+        }
+      }
+    },
+    "Pick the deck this widget shows words from.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige el mazo del que este widget muestra palabras."
+          }
+        }
+      }
+    },
+    "Pick the meaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige el significado"
+          }
+        }
+      }
+    },
+    "Pick the word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige la palabra"
+          }
+        }
+      }
+    },
+    "Pinyin (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pinyin (opcional)"
+          }
+        }
+      }
+    },
+    "Play again": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reproducir otra vez"
+          }
+        }
+      }
+    },
+    "Play pronunciation": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reproducir pronunciación"
+          }
+        }
+      }
+    },
+    "Play the word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reproducir la palabra"
+          }
+        }
+      }
+    },
+    "Practice": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practicar"
+          }
+        }
+      }
+    },
+    "Practice your words with games, or learn 5 more words today.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Practica tus palabras con juegos o aprende 5 palabras más hoy."
+          }
+        }
+      }
+    },
+    "Proficient": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experto"
+          }
+        }
+      }
+    },
+    "Prompt": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pista"
+          }
+        }
+      }
+    },
+    "Pronunciation (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronunciación (opcional)"
+          }
+        }
+      }
+    },
+    "Range": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Periodo"
+          }
+        }
+      }
+    },
+    "Recent mistakes": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Errores recientes"
+          }
+        }
+      }
+    },
+    "Reinstall the app. The bundled lexicon could not be opened.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reinstala la app. No se pudo abrir el diccionario incluido."
+          }
+        }
+      }
+    },
+    "Remembered": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La recordé"
+          }
+        }
+      }
+    },
+    "Reminders": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recordatorios"
+          }
+        }
+      }
+    },
+    "Remove background image": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar imagen de fondo"
+          }
+        }
+      }
+    },
+    "Remove favorite": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quitar de favoritas"
+          }
+        }
+      }
+    },
+    "Replace all data with this backup?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Reemplazar todos los datos con esta copia?"
+          }
+        }
+      }
+    },
+    "Restore": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar"
+          }
+        }
+      }
+    },
+    "Restore failed: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error al restaurar: %@"
+          }
+        }
+      }
+    },
+    "Restore from backup": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar copia"
+          }
+        }
+      }
+    },
+    "Restore replaces all decks, progress, favorites, collections and custom words on this phone.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurar reemplaza todos los mazos, el progreso, las favoritas, las colecciones y las palabras propias de este teléfono."
+          }
+        }
+      }
+    },
+    "Restored %lld decks, %lld words and %lld reviews.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Restored %1$lld decks, %2$lld words and %3$lld reviews."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Restaurados %1$lld mazos, %2$lld palabras y %3$lld repasos."
+          }
+        }
+      }
+    },
+    "Retention": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retención"
+          }
+        }
+      }
+    },
+    "Retention = share of reviews of learned words (not learning steps) that you remembered, over the selected range (n = %lld). Your target is set per deck.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retención = parte de los repasos de palabras aprendidas (sin pasos de aprendizaje) que recordaste en el periodo elegido (n = %lld). La meta se fija en cada mazo."
+          }
+        }
+      }
+    },
+    "Reviews": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repasos"
+          }
+        }
+      }
+    },
+    "Reviews of words you already saw come on top of this, as the spaced-repetition schedule asks.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Los repasos de palabras ya vistas se suman a esto, según el plan de repetición espaciada."
+          }
+        }
+      }
+    },
+    "Reviews per day": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repasos por día"
+          }
+        }
+      }
+    },
+    "Rose": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rosa"
           }
         }
       }
     },
-    "Save" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Guardar"
+    "Save": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Guardar"
           }
         }
       }
     },
-    "Science" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ciencia"
+    "Science": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ciencia"
           }
         }
       }
     },
-    "Search" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Buscar"
+    "Search": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buscar"
           }
         }
       }
     },
-    "Settings" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajustes"
+    "Settings": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes"
           }
         }
       }
     },
-    "Share" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Compartir"
+    "Share": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Compartir"
           }
         }
       }
     },
-    "Show meaning" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ver significado"
+    "Show meaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ver significado"
           }
         }
       }
     },
-    "Shown in English: no data in your language" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrado en inglés: no hay datos en tu idioma"
+    "Shown in English: no data in your language": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mostrado en inglés: no hay datos en tu idioma"
           }
         }
       }
     },
-    "Simplified: %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Simplificado: %@"
+    "Simplified: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Simplificado: %@"
           }
         }
       }
     },
-    "Society" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sociedad"
+    "Society": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sociedad"
           }
         }
       }
     },
-    "Sources" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fuentes"
+    "Sources": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fuentes"
           }
         }
       }
     },
-    "Spaced repetition" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Repetición espaciada"
+    "Spaced repetition": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Repetición espaciada"
           }
         }
       }
     },
-    "Spain (es-ES)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "España (es-ES)"
+    "Spain (es-ES)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "España (es-ES)"
           }
         }
       }
     },
-    "Spanish" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Español"
+    "Spanish": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Español"
           }
         }
       }
     },
-    "Spanish voice" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Voz en español"
+    "Spanish voice": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voz en español"
           }
         }
       }
     },
-    "Speak" : {
-
+    "Speak": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escuchar"
+          }
+        }
+      }
     },
-    "Speak word" : {
-
+    "Speak word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronunciar palabra"
+          }
+        }
+      }
     },
-    "Speech speed: %lld %%" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Velocidad de voz: %lld %%"
+    "Speech speed: %lld %%": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Velocidad de voz: %lld %%"
           }
         }
       }
     },
-    "Spelling" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ortografía"
+    "Spelling": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ortografía"
           }
         }
       }
     },
-    "Sports" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deportes"
+    "Sports": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deportes"
           }
         }
       }
     },
-    "Start at" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Empezar en"
+    "Start at": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar en"
           }
         }
       }
     },
-    "Start learning" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Empezar"
+    "Start learning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empezar"
           }
         }
       }
     },
-    "Stats" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estadísticas"
+    "Stats": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estadísticas"
           }
         }
       }
     },
-    "Storage error: %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error de almacenamiento: %@"
+    "Storage error: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Error de almacenamiento: %@"
           }
         }
       }
     },
-    "Streak" : {
-
+    "Streak": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha"
+          }
+        }
+      }
     },
-    "Study" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Estudio"
+    "Study": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Estudio"
           }
         }
       }
     },
-    "Sunset" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Atardecer"
+    "Sunset": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atardecer"
           }
         }
       }
     },
-    "Target retention: %lld %%" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Retención objetivo: %lld %%"
+    "Target retention: %lld %%": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retención objetivo: %lld %%"
           }
         }
       }
     },
-    "Technology" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tecnología"
+    "Technology": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tecnología"
           }
         }
       }
     },
-    "Terminal" : {
-      "shouldTranslate" : false
+    "Terminal": {
+      "shouldTranslate": false
     },
-    "Test voice" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Probar voz"
+    "Test voice": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Probar voz"
           }
         }
       }
     },
-    "Text" : {
-
+    "Text": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto"
+          }
+        }
+      }
     },
-    "Theme" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tema"
+    "Theme": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tema"
           }
         }
       }
     },
-    "Themes" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temas"
+    "Themes": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temas"
           }
         }
       }
     },
-    "Time" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tiempo"
+    "Time": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiempo"
           }
         }
       }
     },
-    "To" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hasta"
+    "To": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hasta"
           }
         }
       }
     },
-    "Today's new words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabras nuevas de hoy"
+    "Today's new words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabras nuevas de hoy"
           }
         }
       }
     },
-    "Tone trainer" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entrenador de tonos"
+    "Tone trainer": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrenador de tonos"
           }
         }
       }
     },
-    "Topics" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temas"
+    "Topics": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temas"
           }
         }
       }
     },
-    "Topics (optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Temas (opcional)"
+    "Topics (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temas (opcional)"
           }
         }
       }
     },
-    "Traditional Chinese characters" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Caracteres chinos tradicionales"
+    "Traditional Chinese characters": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caracteres chinos tradicionales"
           }
         }
       }
     },
-    "Traditional characters" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Caracteres tradicionales"
+    "Traditional characters": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caracteres tradicionales"
           }
         }
       }
     },
-    "Traditional: %@" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tradicional: %@"
+    "Traditional: %@": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tradicional: %@"
           }
         }
       }
     },
-    "Translation (optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Traducción (opcional)"
+    "Translation (optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traducción (opcional)"
           }
         }
       }
     },
-    "Travel" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Viajes"
+    "Travel": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Viajes"
           }
         }
       }
     },
-    "Type the pinyin (tone numbers optional)" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escribe el pinyin (números de tono opcionales)"
+    "Type the pinyin (tone numbers optional)": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribe el pinyin (números de tono opcionales)"
           }
         }
       }
     },
-    "Type the word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Escribe la palabra"
+    "Type the word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escribe la palabra"
           }
         }
       }
     },
-    "Undo already know" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Deshacer «ya la sé»"
+    "Undo already know": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deshacer «ya la sé»"
           }
         }
       }
     },
-    "Upper intermediate" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Intermedio alto"
+    "Upper intermediate": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Intermedio alto"
           }
         }
       }
     },
-    "Use my own background image" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Usar mi propia imagen de fondo"
+    "Use my own background image": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usar mi propia imagen de fondo"
           }
         }
       }
     },
-    "Welcome to Lexi" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bienvenido a Lexi"
+    "Welcome to Lexi": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bienvenido a Lexi"
           }
         }
       }
     },
-    "What do you want to study?" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Qué quieres estudiar?"
+    "What do you want to study?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Qué quieres estudiar?"
           }
         }
       }
     },
-    "Which word do you hear?" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¿Qué palabra oyes?"
+    "Which word do you hear?": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "¿Qué palabra oyes?"
           }
         }
       }
     },
-    "Widgets" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Widgets"
+    "Widgets": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widgets"
           }
         }
       }
     },
-    "Word" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabra"
+    "Word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabra"
           }
         }
       }
     },
-    "Word database" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Base de palabras"
+    "Word database": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base de palabras"
           }
         }
       }
     },
-    "Word database missing" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Falta la base de palabras"
+    "Word database missing": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falta la base de palabras"
           }
         }
       }
     },
-    "Word not found" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabra no encontrada"
+    "Word not found": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabra no encontrada"
           }
         }
       }
     },
-    "Word → meaning" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabra → significado"
+    "Word → meaning": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabra → significado"
           }
         }
       }
     },
-    "Word, pinyin or translation" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabra, pinyin o traducción"
+    "Word, pinyin or translation": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabra, pinyin o traducción"
           }
         }
       }
     },
-    "Words" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabras"
+    "Words": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabras"
           }
         }
       }
     },
-    "Words from" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabras de"
+    "Words from": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabras de"
           }
         }
       }
     },
-    "Words, definitions and examples in one language" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Palabras, definiciones y ejemplos en un idioma"
+    "Words, definitions and examples in one language": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Palabras, definiciones y ejemplos en un idioma"
           }
         }
       }
     },
-    "You can add or change decks later in Settings." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Puedes añadir o cambiar mazos luego en Ajustes."
+    "You can add or change decks later in Settings.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puedes añadir o cambiar mazos luego en Ajustes."
           }
         }
       }
     },
-    "Your day streak, with today's new words as a ring." : {
-
+    "Your day streak, with today's new words as a ring.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu racha de días, con las palabras nuevas de hoy como anillo."
+          }
+        }
+      }
     },
-    "correct" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "correctas"
+    "correct": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "correctas"
           }
         }
       }
     },
-    "day" : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "día"
+    "day": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "día"
           }
         }
       }
     },
-    "iOS allows 64 scheduled notifications per app, so Lexi plans about 6 days ahead and refreshes each time you open it." : {
-      "localizations" : {
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "iOS permite 64 notificaciones programadas por app, así que Lexi planifica unos 6 días y se actualiza cada vez que la abres."
+    "iOS allows 64 scheduled notifications per app, so Lexi plans about 6 days ahead and refreshes each time you open it.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "iOS permite 64 notificaciones programadas por app, así que Lexi planifica unos 6 días y se actualiza cada vez que la abres."
           }
         }
       }
     },
-    "·" : {
-      "shouldTranslate" : false
+    "·": {
+      "shouldTranslate": false
     },
-    "“%@”" : {
-      "shouldTranslate" : false
+    "“%@”": {
+      "shouldTranslate": false
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }

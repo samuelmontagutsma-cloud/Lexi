@@ -1,0 +1,17 @@
+== app
+{
+  "com.apple.security.application-groups" => [
+    0 => "group.com.samuelmontagut.lexi"
+  ]
+}
+== LexiWidgets.appex
+{
+  "com.apple.security.application-groups" => [
+    0 => "group.com.samuelmontagut.lexi"
+  ]
+}
+== UIBackgroundModes
+["audio"]
+== sizes
+ 20M	Payload/Lexi.app
+1.2M	Payload/Lexi.app/PlugIns/LexiWidgets.appex
