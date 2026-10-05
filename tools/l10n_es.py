@@ -8,6 +8,22 @@ Reports keys still missing a Spanish value.
 import json, re, sys
 
 ES = {
+    "%lld day streak, %lld of %lld new words today": "Racha de %1$lld días, %2$lld de %3$lld palabras nuevas hoy",
+    "A word from your deck. Speak it, mark it as known, or go to the next word.":
+        "Una palabra de tu mazo. Escúchala, márcala como sabida o pasa a la siguiente.",
+    "All done for today": "Todo listo por hoy",
+    "Choose deck": "Elegir mazo",
+    "Deck": "Mazo",
+    "Got it": "Ya la sé",
+    "Next word": "Siguiente palabra",
+    "Open Lexi": "Abrir Lexi",
+    "Open Lexi to set up a deck": "Abre Lexi para crear un mazo",
+    "Pick the deck this widget shows words from.": "Elige el mazo del que este widget muestra palabras.",
+    "Speak": "Escuchar",
+    "Speak word": "Pronunciar palabra",
+    "Streak": "Racha",
+    "Text": "Texto",
+    "Your day streak, with today's new words as a ring.": "Tu racha de días, con las palabras nuevas de hoy como anillo.",
     "%@ · %lld new/day · %lld learned · %lld due": "%1$@ · %2$lld nuevas/día · %3$lld aprendidas · %4$lld pendientes",
     "%lld due": "%lld pendientes",
     "%lld learned": "%lld aprendidas",

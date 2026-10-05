@@ -54,7 +54,10 @@ jobs:
             ent="Widgets/LexiWidgets.entitlements"; [ -f "$ent" ] && codesign -f -s - --entitlements "$ent" "$ext"
           done
           codesign -f -s - --entitlements App/Lexi.entitlements Payload/Lexi.app
-          codesign -d --entitlements - Payload/Lexi.app 2>&1 | tail -5
+          { echo "== app"; codesign -d --entitlements - --xml Payload/Lexi.app 2>/dev/null | plutil -p - ;
+            for ext in Payload/Lexi.app/PlugIns/*.appex; do echo "== $(basename "$ext")"; codesign -d --entitlements - --xml "$ext" 2>/dev/null | plutil -p - ; done;
+            echo "== UIBackgroundModes"; plutil -extract UIBackgroundModes json -o - Payload/Lexi.app/Info.plist;
+            echo; echo "== sizes"; du -sh Payload/Lexi.app Payload/Lexi.app/PlugIns/* ; } 2>&1 | tee sign.log
           zip -qry Lexi.ipa Payload
           ls -l Lexi.ipa
       - uses: actions/upload-artifact@v4
@@ -73,4 +76,4 @@ jobs:
           grep -E "error:" build.log | sort -u | head -80 > build_errors.log || true
           grep -E "error:|failed|LEXI_METRIC|Executed|TEST (SUCCEEDED|FAILED)" test.log 2>/dev/null | head -80 > test_summary.log || true
           echo "tests: ${{ steps.tests.outcome }}" >> test_summary.log
-          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log synced.xcstrings l10n.log
+          .github/scripts/publish_results.sh ios versions.log build_errors.log test_summary.log synced.xcstrings l10n.log sign.log

@@ -4,6 +4,9 @@
     "": {
       "shouldTranslate": false
     },
+    "%@": {
+      "shouldTranslate": false
+    },
     "%@ %@": {
       "shouldTranslate": false
     },
@@ -11,6 +14,9 @@
       "shouldTranslate": false
     },
     "%@ (%lld)": {
+      "shouldTranslate": false
+    },
+    "%@ · %@": {
       "shouldTranslate": false
     },
     "%@ · %lld new/day · %lld learned · %lld due": {
@@ -35,6 +41,22 @@
     "%lld / %lld": {
       "shouldTranslate": false
     },
+    "%lld day streak, %lld of %lld new words today": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "%1$lld day streak, %2$lld of %3$lld new words today"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha de %1$lld días, %2$lld de %3$lld palabras nuevas hoy"
+          }
+        }
+      }
+    },
     "%lld due": {
       "localizations": {
         "es": {
@@ -45,12 +67,25 @@
         }
       }
     },
+    "%lld h": {
+      "shouldTranslate": false
+    },
     "%lld learned": {
       "localizations": {
         "es": {
           "stringUnit": {
             "state": "translated",
             "value": "%lld aprendidas"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
           }
         }
       }
@@ -124,6 +159,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "90 días"
+          }
+        }
+      }
+    },
+    "A word from your deck. Speak it, mark it as known, or go to the next word.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Una palabra de tu mazo. Escúchala, márcala como sabida o pasa a la siguiente."
           }
         }
       }
@@ -207,6 +252,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Todos"
+          }
+        }
+      }
+    },
+    "All done for today": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Todo listo por hoy"
           }
         }
       }
@@ -411,6 +466,16 @@
         }
       }
     },
+    "Choose deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elegir mazo"
+          }
+        }
+      }
+    },
     "Classic": {
       "localizations": {
         "es": {
@@ -547,6 +612,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Racha de días"
+          }
+        }
+      }
+    },
+    "Deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mazo"
           }
         }
       }
@@ -827,6 +902,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bien"
+          }
+        }
+      }
+    },
+    "Got it": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ya la sé"
           }
         }
       }
@@ -1170,6 +1255,16 @@
         }
       }
     },
+    "Next word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Siguiente palabra"
+          }
+        }
+      }
+    },
     "No custom words": {
       "localizations": {
         "es": {
@@ -1270,6 +1365,26 @@
         }
       }
     },
+    "Open Lexi": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abrir Lexi"
+          }
+        }
+      }
+    },
+    "Open Lexi to set up a deck": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Abre Lexi para crear un mazo"
+          }
+        }
+      }
+    },
     "Paper": {
       "localizations": {
         "es": {
@@ -1296,6 +1411,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Elige los tonos correctos"
+          }
+        }
+      }
+    },
+    "Pick the deck this widget shows words from.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige el mazo del que este widget muestra palabras."
           }
         }
       }
@@ -1746,6 +1871,26 @@
         }
       }
     },
+    "Speak": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escuchar"
+          }
+        }
+      }
+    },
+    "Speak word": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pronunciar palabra"
+          }
+        }
+      }
+    },
     "Speech speed: %lld %%": {
       "localizations": {
         "es": {
@@ -1816,6 +1961,16 @@
         }
       }
     },
+    "Streak": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Racha"
+          }
+        }
+      }
+    },
     "Study": {
       "localizations": {
         "es": {
@@ -1865,6 +2020,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Probar voz"
+          }
+        }
+      }
+    },
+    "Text": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Texto"
           }
         }
       }
@@ -2185,6 +2350,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Puedes añadir o cambiar mazos luego en Ajustes."
+          }
+        }
+      }
+    },
+    "Your day streak, with today's new words as a ring.": {
+      "localizations": {
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tu racha de días, con las palabras nuevas de hoy como anillo."
           }
         }
       }
