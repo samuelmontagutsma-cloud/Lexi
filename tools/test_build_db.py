@@ -260,3 +260,15 @@ class GlossCleanup(unittest.TestCase):
         self.assertIsNone(b.clean_mt("method", "method"))                     # untranslated
         self.assertIsNone(b.clean_mt("and its", "y su .., y su"))             # garbage
         self.assertEqual(b.clean_mt("China", "China"), None)
+
+
+class Clitics(unittest.TestCase):
+    def test_strip_added_pronoun(self):
+        self.assertEqual(b.clean_mt("I want to wear.", "Quiero llevarme."), "llevar")
+        self.assertEqual(b.clean_mt("I want to refuse politely.", "Quiero rechazarla educadamente."),
+                         "rechazar educadamente")
+        self.assertEqual(b.clean_mt("I want to help someone.", "Quiero ayudarle."), "ayudarle")  # real object
+
+    def test_truncation_at_word_end(self):
+        g = "pitchpipe one of the twelve semitones in the traditional tone system of the ancient world"
+        self.assertEqual(b.clean_glosses([g])[0], "pitchpipe one of the twelve semitones in the traditional tone system")

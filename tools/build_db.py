@@ -930,6 +930,9 @@ def clean_mt(src: str, out: str | None) -> str | None:
             return None  # frame lost: verb meaning not reliable
         out = m.group(1)
         src = src[len(VERB_FRAME[0]):]
+        if not re.search(r"\b(someone|something|it|him|her|them|me|us|you|oneself)\b", src):
+            # the frame makes Argos attach an object pronoun the gloss does not have: "llevarme" -> "llevar"
+            out = re.sub(r"^(\w+?(?:ar|er|ir|ír))(?:me|te|lo|la|los|las|le|les|nos)\b", r"\1", out)
     out = out.strip(" .;,!¡¿?")
     if out and out[0].isupper() and not src[:1].isupper():
         out = out[0].lower() + out[1:]
@@ -994,7 +997,7 @@ def machine_translate_en_es(texts: list[str]) -> dict[str, str]:
 def clean_glosses(glosses: list[str]) -> list[str]:
     """Drop CC-CEDICT cross-references ('...[pin1 yin1]...') and very long usage notes."""
     out = [g for g in glosses if "[" not in g and len(g) <= 70]
-    return out or [g[:70] for g in glosses[:1] if "[" not in g]
+    return out or [g[:70].rsplit(" ", 1)[0] for g in glosses[:1] if "[" not in g]  # cut at a word end
 
 
 def simplified_part(text: str) -> str:
