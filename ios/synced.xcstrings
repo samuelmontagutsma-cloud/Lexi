@@ -1,0 +1,742 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
+    "%@ %@ → %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ → %3$@"
+          }
+        }
+      }
+    },
+    "%@ (%lld)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$lld)"
+          }
+        }
+      }
+    },
+    "%@ · %lld new/day · %lld learned · %lld due" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$lld new/day · %3$lld learned · %4$lld due"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "%lld / %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld / %2$lld"
+          }
+        }
+      }
+    },
+    "%lld due" : {
+
+    },
+    "%lld learned" : {
+
+    },
+    "%lld new words per day" : {
+
+    },
+    "%lld reminders per day" : {
+
+    },
+    "%lld seen" : {
+
+    },
+    "%lld words at this level and above" : {
+
+    },
+    "%lld." : {
+
+    },
+    "30 days" : {
+
+    },
+    "7 days" : {
+
+    },
+    "90 days" : {
+
+    },
+    "Aa" : {
+
+    },
+    "About 1 in 4 words has a topic tag. With topics selected, the deck only shows tagged words." : {
+
+    },
+    "Add" : {
+
+    },
+    "Add a deck" : {
+
+    },
+    "Add a word" : {
+
+    },
+    "Add to collection" : {
+
+    },
+    "Advanced" : {
+
+    },
+    "Again" : {
+
+    },
+    "All" : {
+
+    },
+    "All my words" : {
+
+    },
+    "All words" : {
+
+    },
+    "Already know" : {
+
+    },
+    "App Group not available: widgets cannot read your progress." : {
+
+    },
+    "Appearance" : {
+
+    },
+    "Art" : {
+
+    },
+    "Audio" : {
+
+    },
+    "Back" : {
+
+    },
+    "Backup" : {
+
+    },
+    "Backup saved." : {
+
+    },
+    "Beginner" : {
+
+    },
+    "Beyond HSK 6" : {
+
+    },
+    "Body" : {
+
+    },
+    "Business" : {
+
+    },
+    "CSV columns: word, definition, example, translation, pos, pronunciation. Only “word” and “definition” are required." : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Change word every" : {
+
+    },
+    "Check" : {
+
+    },
+    "Check the accents." : {
+
+    },
+    "Chinese" : {
+
+    },
+    "Classic" : {
+
+    },
+    "Close" : {
+
+    },
+    "Collections" : {
+
+    },
+    "Correct" : {
+
+    },
+    "Credits" : {
+
+    },
+    "Credits and licenses" : {
+
+    },
+    "Current deck" : {
+
+    },
+    "Current deck: %@" : {
+
+    },
+    "Custom words" : {
+
+    },
+    "Daily goal" : {
+
+    },
+    "Daily goal done" : {
+
+    },
+    "Dark" : {
+
+    },
+    "Day" : {
+
+    },
+    "Day streak" : {
+
+    },
+    "Decks" : {
+
+    },
+    "Definition" : {
+
+    },
+    "Delete %@" : {
+
+    },
+    "Delete this deck and its progress?" : {
+
+    },
+    "Done" : {
+
+    },
+    "Double tap to hear the example" : {
+
+    },
+    "Due for review" : {
+
+    },
+    "Each reminder shows one word from your deck." : {
+
+    },
+    "Easy" : {
+
+    },
+    "Edit word" : {
+
+    },
+    "Education" : {
+
+    },
+    "Elementary" : {
+
+    },
+    "Emotions" : {
+
+    },
+    "English" : {
+
+    },
+    "Every answer updates the review schedule. Fast and correct = Easy, slow = Hard, wrong = Again." : {
+
+    },
+    "Example sentence (optional)" : {
+
+    },
+    "Export backup (JSON)" : {
+
+    },
+    "Export deck words as CSV" : {
+
+    },
+    "FSRS-6 algorithm, ported from py-fsrs (MIT License), open-spaced-repetition." : {
+
+    },
+    "Favorite" : {
+
+    },
+    "Favorites" : {
+
+    },
+    "Fill in the blank" : {
+
+    },
+    "Food" : {
+
+    },
+    "Forest" : {
+
+    },
+    "Forgot" : {
+
+    },
+    "From" : {
+
+    },
+    "Games" : {
+
+    },
+    "Good" : {
+
+    },
+    "Hard" : {
+
+    },
+    "Health" : {
+
+    },
+    "Higher retention = shorter intervals and more reviews per day. 90 % is the FSRS default." : {
+
+    },
+    "Hint" : {
+
+    },
+    "Home" : {
+
+    },
+    "Import failed: %@" : {
+
+    },
+    "Import words from CSV" : {
+
+    },
+    "Imported %lld words. Skipped %lld (duplicates or missing word/definition)." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Imported %1$lld words. Skipped %2$lld (duplicates or missing word/definition)."
+          }
+        }
+      }
+    },
+    "Intermediate" : {
+
+    },
+    "Language" : {
+
+    },
+    "Learn 5 more words" : {
+
+    },
+    "Learn new words with translations" : {
+
+    },
+    "Level" : {
+
+    },
+    "Lexi" : {
+
+    },
+    "Lexi is a personal, offline app. Word data comes from these free sources. Text from Wiktionary and CC-CEDICT is shared under CC BY-SA 4.0: you may share and adapt it with attribution, under the same license." : {
+
+    },
+    "Light" : {
+
+    },
+    "Listen" : {
+
+    },
+    "Listening" : {
+
+    },
+    "Machine translated" : {
+
+    },
+    "Manage decks" : {
+
+    },
+    "Match the pairs" : {
+
+    },
+    "Matching pairs" : {
+
+    },
+    "Meaning" : {
+
+    },
+    "Meaning → word" : {
+
+    },
+    "Memory" : {
+
+    },
+    "Mexico (es-MX)" : {
+
+    },
+    "Mistakes" : {
+
+    },
+    "Mixed" : {
+
+    },
+    "My word" : {
+
+    },
+    "My words" : {
+
+    },
+    "My words (%lld)" : {
+
+    },
+    "Nature" : {
+
+    },
+    "New collection" : {
+
+    },
+    "Next" : {
+
+    },
+    "No custom words" : {
+
+    },
+    "No decks" : {
+
+    },
+    "No reminders" : {
+
+    },
+    "No rows found. The first row must be a header." : {
+
+    },
+    "No topic selected = all words, most common first. With topics, only words tagged with those topics appear." : {
+
+    },
+    "No words in “%@” yet. Swipe through new words in the feed first." : {
+
+    },
+    "No words yet" : {
+
+    },
+    "Not quite" : {
+
+    },
+    "Notifications are off. Open iOS Settings" : {
+
+    },
+    "Ocean" : {
+
+    },
+    "Paper" : {
+
+    },
+    "Part of speech (optional)" : {
+
+    },
+    "Pick the correct tones" : {
+
+    },
+    "Pick the meaning" : {
+
+    },
+    "Pick the word" : {
+
+    },
+    "Pinyin (optional)" : {
+
+    },
+    "Play again" : {
+
+    },
+    "Play pronunciation" : {
+
+    },
+    "Play the word" : {
+
+    },
+    "Practice" : {
+
+    },
+    "Practice your words with games, or learn 5 more words today." : {
+
+    },
+    "Proficient" : {
+
+    },
+    "Prompt" : {
+
+    },
+    "Pronunciation (optional)" : {
+
+    },
+    "Range" : {
+
+    },
+    "Recent mistakes" : {
+
+    },
+    "Reinstall the app. The bundled lexicon could not be opened." : {
+
+    },
+    "Remembered" : {
+
+    },
+    "Reminders" : {
+
+    },
+    "Remove background image" : {
+
+    },
+    "Remove favorite" : {
+
+    },
+    "Replace all data with this backup?" : {
+
+    },
+    "Restore" : {
+
+    },
+    "Restore failed: %@" : {
+
+    },
+    "Restore from backup" : {
+
+    },
+    "Restore replaces all decks, progress, favorites, collections and custom words on this phone." : {
+
+    },
+    "Restored %lld decks, %lld words and %lld reviews." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Restored %1$lld decks, %2$lld words and %3$lld reviews."
+          }
+        }
+      }
+    },
+    "Retention" : {
+
+    },
+    "Retention = share of reviews of learned words (not learning steps) that you remembered, over the selected range (n = %lld). Your target is set per deck." : {
+
+    },
+    "Reviews" : {
+
+    },
+    "Reviews of words you already saw come on top of this, as the spaced-repetition schedule asks." : {
+
+    },
+    "Reviews per day" : {
+
+    },
+    "Rose" : {
+
+    },
+    "Save" : {
+
+    },
+    "Science" : {
+
+    },
+    "Search" : {
+
+    },
+    "Settings" : {
+
+    },
+    "Share" : {
+
+    },
+    "Show meaning" : {
+
+    },
+    "Shown in English: no data in your language" : {
+
+    },
+    "Simplified: %@" : {
+
+    },
+    "Society" : {
+
+    },
+    "Sources" : {
+
+    },
+    "Spaced repetition" : {
+
+    },
+    "Spain (es-ES)" : {
+
+    },
+    "Spanish" : {
+
+    },
+    "Spanish voice" : {
+
+    },
+    "Speech speed: %lld %%" : {
+
+    },
+    "Spelling" : {
+
+    },
+    "Sports" : {
+
+    },
+    "Start at" : {
+
+    },
+    "Start learning" : {
+
+    },
+    "Stats" : {
+
+    },
+    "Storage error: %@" : {
+
+    },
+    "Study" : {
+
+    },
+    "Sunset" : {
+
+    },
+    "Target retention: %lld %%" : {
+
+    },
+    "Technology" : {
+
+    },
+    "Terminal" : {
+
+    },
+    "Test voice" : {
+
+    },
+    "Theme" : {
+
+    },
+    "Themes" : {
+
+    },
+    "Time" : {
+
+    },
+    "To" : {
+
+    },
+    "Today's new words" : {
+
+    },
+    "Tone trainer" : {
+
+    },
+    "Topics" : {
+
+    },
+    "Topics (optional)" : {
+
+    },
+    "Traditional Chinese characters" : {
+
+    },
+    "Traditional characters" : {
+
+    },
+    "Traditional: %@" : {
+
+    },
+    "Translation (optional)" : {
+
+    },
+    "Travel" : {
+
+    },
+    "Type the pinyin (tone numbers optional)" : {
+
+    },
+    "Type the word" : {
+
+    },
+    "Undo already know" : {
+
+    },
+    "Upper intermediate" : {
+
+    },
+    "Use my own background image" : {
+
+    },
+    "Welcome to Lexi" : {
+
+    },
+    "What do you want to study?" : {
+
+    },
+    "Which word do you hear?" : {
+
+    },
+    "Widgets" : {
+
+    },
+    "Word" : {
+
+    },
+    "Word database" : {
+
+    },
+    "Word database missing" : {
+
+    },
+    "Word not found" : {
+
+    },
+    "Word → meaning" : {
+
+    },
+    "Word, pinyin or translation" : {
+
+    },
+    "Words" : {
+
+    },
+    "Words from" : {
+
+    },
+    "Words, definitions and examples in one language" : {
+
+    },
+    "You can add or change decks later in Settings." : {
+
+    },
+    "correct" : {
+
+    },
+    "day" : {
+
+    },
+    "iOS allows 64 scheduled notifications per app, so Lexi plans about 6 days ahead and refreshes each time you open it." : {
+
+    },
+    "·" : {
+
+    },
+    "“%@”" : {
+
+    }
+  },
+  "version" : "1.0"
+}
