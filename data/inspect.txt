@@ -1,0 +1,5159 @@
+### wikt_en_English the
+{
+ "pos": "article",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "en",
+    "2": "article"
+   },
+   "expansion": "the"
+  }
+ ],
+ "wikipedia": [
+  "British Broadcasting Corporation",
+  "Country Women's Association",
+  "Department of Labor",
+  "Lexikon der indogermanischen Partikeln und Pronominalstämme",
+  "Roman Catholic Church",
+  "Salvation Army",
+  "The Beatles",
+  "The Rolling Stones",
+  "United Nations",
+  "World Health Organisation"
+ ],
+ "etymology_number": "1",
+ "etymology_text": "From Middle English þe, from Old English þē m (“the, that”, demonstrative pronoun), a late variant of sē, the s- (which occurred in the masculine and feminine nominative singular only) having been replaced by the þ- from the oblique stem.\nreplaced words, cognates\nOriginally neutral nominative, in Middle English it superseded all previous Old English nominative forms (sē m, sēo f, þæt n, þā pl); sē is from Proto-West Germanic *siz, from Proto-Germanic *sa, ultimately from Proto-Indo-European *só.\nCognate with Saterland Frisian die (“the”), West Frisian de (“the”), Dutch de (“the”), German Low German de (“the”), German der (“the”), Danish de (“the”), Swedish de (“the”), Icelandic sá (“that”) within Germanic and with Sanskrit स (sá, “the, that”), Ancient Greek ὁ (ho, “the”), Tocharian B se (“this”) among other Indo-European languages.",
+ "etymology_links": [
+  [
+   "þe",
+   "þe#Middle_English"
+  ],
+  [
+   "þē",
+   "þe#Old_English"
+  ],
+  [
+   "demonstrative pronoun",
+   "demonstrative pronoun"
+  ],
+  [
+   "sē",
+   "se#Old_English"
+  ],
+  [
+   "sē",
+   "se#Old_English"
+  ],
+  [
+   "sēo",
+   "seo#Old_English"
+  ],
+  [
+   "þæt",
+   "þæt#Old_English"
+  ],
+  [
+   "þā",
+   "þa#Old_English"
+  ],
+  [
+   "sē",
+   "se#Old_English"
+  ],
+  [
+   "*siz",
+   "Reconstruction:Proto-West Germanic/siz"
+  ],
+  [
+   "*sa",
+   "Reconstruction:Proto-Germanic/sa"
+  ],
+  [
+   "*só",
+   "Reconstruction:Proto-Indo-European/só"
+  ],
+  [
+   "die",
+   "die#Saterland_Frisian"
+  ],
+  [
+   "de",
+   "de#West_Frisian"
+  ],
+  [
+   "de",
+   "de#Dutch"
+  ],
+  [
+   "de",
+   "de#Low_German"
+  ],
+  [
+   "der",
+   "der#German"
+  ],
+  [
+   "de",
+   "de#Danish"
+  ],
+  [
+   "de",
+   "de#Swedish"
+  ],
+  [
+   "sá",
+   "sá#Icelandic"
+  ],
+  [
+   "स",
+   "स#Sanskrit"
+  ],
+  [
+   "ὁ",
+   "ὁ#Ancient_Greek"
+  ],
+  [
+   "se",
+   "se#Tocharian_B"
+  ]
+ ],
+ "word": "the",
+ "lang": "English",
+ "lang_code": "en",
+ "sounds": [
+  {
+   "note": "weak form before consonants",
+   "ipa": "/ðə/"
+  },
+  {
+   "enpr": "thə",
+   "note": "weak form before consonants"
+  },
+  {
+   "note": "weak form before vowels",
+   "ipa": "/ði/ [ðɪj]"
+  },
+  {
+   "enpr": "thē",
+   "note": "weak form before vowels"
+  },
+  {
+   "note": "strong form",
+   "ipa": "/ðiː/"
+  },
+  {
+   "enpr": "thē",
+   "note": "strong form"
+  },
+  {
+   "note": "weak form before vowels",
+   "ipa": "/ðə/"
+  },
+  {
+   "enpr": "thə",
+   "note": "weak form before vowels"
+  },
+  {
+   "note": "strong form",
+   "ipa": "/ði/ [ðɪj]"
+  },
+  {
+   "audio": "LL-Q1860 (eng)-Back ache-The.wav",
+   "tags": [
+    "UK"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/LL-Q1860_%28eng%29-Back_ache-The.wav/LL-Q1860_%28eng%29-Back_ache-The.wav.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/LL-Q1860_%28eng%29-Back_ache-The.wav/LL-Q1860_%28eng%29-Back_ache-The.wav.mp3"
+  },
+  {
+   "audio": "en-uk-the-stressed.ogg",
+   "tags": [
+    "UK"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/En-uk-the-stressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/En-uk-the-stressed.ogg/En-uk-the-stressed.ogg.mp3"
+  },
+  {
+   "audio": "en-us-the-unstressed.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/En-us-the-unstressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/95/En-us-the-unstressed.ogg/En-us-the-unstressed.ogg.mp3"
+  },
+  {
+   "audio": "en-us-the-stressed.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/En-us-the-stressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/db/En-us-the-stressed.ogg/En-us-the-stressed.ogg.mp3"
+  },
+  {
+   "audio": "en-ca-the.ogg",
+   "tags": [
+    "Canada"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/En-ca-the.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/En-ca-the.ogg/En-ca-the.ogg.mp3"
+  },
+  {
+   "rhymes": "-iː"
+  },
+  {
+   "homophone": "thee"
+  },
+  {
+   "other": "/ðə/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/ðə/"
+  },
+  {
+   "other": "/ðiː/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/jiː/"
+  },
+  {
+   "other": "/θeː/"
+  },
+  {
+   "other": "/ðeː/"
+  },
+  {
+   "other": "/jiː/"
+  }
+ ],
+ "synonyms": [
+  {
+   "word": "le",
+   "_dis1": "0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+  }
+ ],
+ "senses": [
+  {
+   "examples": [
+    {
+     "text": "I’m reading the book Mary reviewed. (Compare I’m reading a book Mary reviewed.)"
+    },
+    {
+     "text": "You live on Main Street, don't you? You know, you should tell the mayor the street needs cleaning."
+    },
+    {
+     "text": "The men and women watched the man give the birdseed to the bird."
+    },
+    {
+     "text": "the street that runs all the way through my hometown"
+    },
+    {
+     "text": "A car is parked right outside my house. Since it's difficult to find a parking space, I hope the car won't be there later.\nthe cow jumped over the moon (1760 (date first published), Mother Goose's Melody (the book title), \"Hey Diddle Diddle\" (the rhyme title))"
+    },
+    {
+     "text": "I sleep in the bedroom!",
+     "ref": "2016, VOA Learning English, archived from the original on 30 Sep 2017:",
+     "type": "quotation",
+     "bold_text_offsets": [
+      [
+       11,
+       14
+      ]
+     ]
+    }
+   ],
+   "glosses": [
+    "Used before a noun phrase, inclu
+### wikt_en_English the
+{
+ "pos": "adv",
+ "head_templates": [
+  {
+   "name": "en-adv",
+   "args": {
+    "1": "-"
+   },
+   "expansion": "the (not comparable)"
+  }
+ ],
+ "etymology_number": "2",
+ "etymology_text": "From Middle English the, thy, thi, from Old English þē̆, probably a neuter instrumental form (\"by that, thereby\")—alongside the more common þȳ and þon—of the demonstrative pronoun sē (\"that\"). Compare Dutch des te (\"the, the more\"), German desto (\"the, all the more\"), Norwegian fordi and Norwegian av di (\"because\"), Icelandic því (“the; because”), Faroese tí, Swedish ty.",
+ "etymology_links": [
+  [
+   "the",
+   "the#Middle_English"
+  ],
+  [
+   "thy",
+   "thy#Middle_English"
+  ],
+  [
+   "thi",
+   "thi#Middle_English"
+  ],
+  [
+   "þē̆",
+   "þe#Old_English"
+  ],
+  [
+   "þȳ",
+   "þy#Old_English"
+  ],
+  [
+   "þon",
+   "þon#Old_English"
+  ],
+  [
+   "sē",
+   "se#Old_English"
+  ],
+  [
+   "des te",
+   "des te#Dutch"
+  ],
+  [
+   "desto",
+   "desto#German"
+  ],
+  [
+   "fordi",
+   "fordi#Norwegian"
+  ],
+  [
+   "av di",
+   "av di#Norwegian"
+  ],
+  [
+   "því",
+   "því#Icelandic"
+  ],
+  [
+   "tí",
+   "tí#Faroese"
+  ],
+  [
+   "ty",
+   "ty#Swedish"
+  ]
+ ],
+ "word": "the",
+ "lang": "English",
+ "lang_code": "en",
+ "sounds": [
+  {
+   "note": "weak form before consonants",
+   "ipa": "/ðə/"
+  },
+  {
+   "enpr": "thə",
+   "note": "weak form before consonants"
+  },
+  {
+   "note": "weak form before vowels",
+   "ipa": "/ði/ [ðɪj]"
+  },
+  {
+   "enpr": "thē",
+   "note": "weak form before vowels"
+  },
+  {
+   "note": "strong form",
+   "ipa": "/ðiː/"
+  },
+  {
+   "enpr": "thē",
+   "note": "strong form"
+  },
+  {
+   "note": "weak form before vowels",
+   "ipa": "/ðə/"
+  },
+  {
+   "enpr": "thə",
+   "note": "weak form before vowels"
+  },
+  {
+   "note": "strong form",
+   "ipa": "/ði/ [ðɪj]"
+  },
+  {
+   "audio": "LL-Q1860 (eng)-Back ache-The.wav",
+   "tags": [
+    "UK"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/LL-Q1860_%28eng%29-Back_ache-The.wav/LL-Q1860_%28eng%29-Back_ache-The.wav.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/LL-Q1860_%28eng%29-Back_ache-The.wav/LL-Q1860_%28eng%29-Back_ache-The.wav.mp3"
+  },
+  {
+   "audio": "en-uk-the-stressed.ogg",
+   "tags": [
+    "UK"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/En-uk-the-stressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/En-uk-the-stressed.ogg/En-uk-the-stressed.ogg.mp3"
+  },
+  {
+   "audio": "en-us-the-unstressed.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/En-us-the-unstressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/95/En-us-the-unstressed.ogg/En-us-the-unstressed.ogg.mp3"
+  },
+  {
+   "audio": "en-us-the-stressed.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/En-us-the-stressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/db/En-us-the-stressed.ogg/En-us-the-stressed.ogg.mp3"
+  },
+  {
+   "audio": "en-ca-the.ogg",
+   "tags": [
+    "Canada"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/En-ca-the.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/En-ca-the.ogg/En-ca-the.ogg.mp3"
+  },
+  {
+   "rhymes": "-iː"
+  },
+  {
+   "homophone": "thee"
+  },
+  {
+   "other": "/ðə/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/ðə/"
+  },
+  {
+   "other": "/ðiː/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/jiː/"
+  },
+  {
+   "other": "/θeː/"
+  },
+  {
+   "other": "/ðeː/"
+  },
+  {
+   "other": "/jiː/"
+  }
+ ],
+ "senses": [
+  {
+   "examples": [
+    {
+     "text": "The hotter(,) the better. (comma usually omitted in such very short expressions)"
+    },
+    {
+     "text": "The more I think about it, the weaker it looks.",
+     "bold_text_offsets": [
+      [
+       0,
+       3
+      ],
+      [
+       27,
+       30
+      ]
+     ],
+     "type": "example"
+    },
+    {
+     "text": "The more money donated, the more books purchased, and the more happy children.",
+     "bold_text_offsets": [
+      [
+       0,
+       3
+      ],
+      [
+       24,
+       27
+      ],
+      [
+       54,
+       57
+      ]
+     ],
+     "type": "example"
+    },
+    {
+     "text": "It looks weaker and weaker, the more I think about it.",
+     "bold_text_offsets": [
+      [
+       28,
+       31
+      ]
+     ],
+     "type": "example"
+    }
+   ],
+   "glosses": [
+    "With a comparative or with more and a verb phrase, establishes a correlation with one or more other such comparatives."
+   ],
+   "tags": [
+    "not-comparable"
+   ],
+   "id": "en-the-en-adv-cJ-jCUlP",
+   "categories": [
+    {
+     "name": "Terms with Old English translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "10 5 2 5 5 5 6 5 6 5 5 8 10 5 6 5 8"
+    },
+    {
+     "name": "Old English links with redundant target parameters",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "61 30 9"
+    },
+    {
+     "name": "Terms with Cimbrian translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "60 26 14"
+    },
+    {
+     "name": "Terms with Czech translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "39 37 24"
+    },
+    {
+     "name": "Terms with Korean translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "44 30 27"
+    },
+    {
+     "name": "Terms with Mandarin translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "40 40 20"
+    },
+    {
+     "name": "Terms with Norwegian translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "39 37 24"
+    },
+    {
+     "name": "Terms with Russian translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+   
+### wikt_en_English the
+{
+ "pos": "prep",
+ "head_templates": [
+  {
+   "name": "en-head",
+   "args": {
+    "1": "prep"
+   },
+   "expansion": "the"
+  }
+ ],
+ "etymology_number": "3",
+ "word": "the",
+ "lang": "English",
+ "lang_code": "en",
+ "sounds": [
+  {
+   "note": "weak form before consonants",
+   "ipa": "/ðə/"
+  },
+  {
+   "enpr": "thə",
+   "note": "weak form before consonants"
+  },
+  {
+   "note": "weak form before vowels",
+   "ipa": "/ði/ [ðɪj]"
+  },
+  {
+   "enpr": "thē",
+   "note": "weak form before vowels"
+  },
+  {
+   "note": "strong form",
+   "ipa": "/ðiː/"
+  },
+  {
+   "enpr": "thē",
+   "note": "strong form"
+  },
+  {
+   "note": "weak form before vowels",
+   "ipa": "/ðə/"
+  },
+  {
+   "enpr": "thə",
+   "note": "weak form before vowels"
+  },
+  {
+   "note": "strong form",
+   "ipa": "/ði/ [ðɪj]"
+  },
+  {
+   "audio": "LL-Q1860 (eng)-Back ache-The.wav",
+   "tags": [
+    "UK"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/LL-Q1860_%28eng%29-Back_ache-The.wav/LL-Q1860_%28eng%29-Back_ache-The.wav.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/LL-Q1860_%28eng%29-Back_ache-The.wav/LL-Q1860_%28eng%29-Back_ache-The.wav.mp3"
+  },
+  {
+   "audio": "en-uk-the-stressed.ogg",
+   "tags": [
+    "UK"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/En-uk-the-stressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/En-uk-the-stressed.ogg/En-uk-the-stressed.ogg.mp3"
+  },
+  {
+   "audio": "en-us-the-unstressed.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/En-us-the-unstressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/95/En-us-the-unstressed.ogg/En-us-the-unstressed.ogg.mp3"
+  },
+  {
+   "audio": "en-us-the-stressed.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/En-us-the-stressed.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/db/En-us-the-stressed.ogg/En-us-the-stressed.ogg.mp3"
+  },
+  {
+   "audio": "en-ca-the.ogg",
+   "tags": [
+    "Canada"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/En-ca-the.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/En-ca-the.ogg/En-ca-the.ogg.mp3"
+  },
+  {
+   "rhymes": "-iː"
+  },
+  {
+   "homophone": "thee"
+  },
+  {
+   "other": "/ðə/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/ðə/"
+  },
+  {
+   "other": "/ðiː/"
+  },
+  {
+   "other": "/ði/"
+  },
+  {
+   "other": "/jiː/"
+  },
+  {
+   "other": "/θeː/"
+  },
+  {
+   "other": "/ðeː/"
+  },
+  {
+   "other": "/jiː/"
+  }
+ ],
+ "senses": [
+  {
+   "examples": [
+    {
+     "text": "valued at half a pound the bushel; paying seven dollars the year interest",
+     "bold_text_offsets": [
+      [
+       23,
+       26
+      ],
+      [
+       56,
+       59
+      ]
+     ],
+     "type": "example"
+    },
+    {
+     "text": "Next morning I was up at an early hour, to see the market held near the water gate. The beef was excellent: but at the high prices of ten-pence and one shilling the pound; mutton at the same price; fowls a dollar the couple, and showing “more feathers than flesh.”",
+     "ref": "1837, James Edward Alexander, Narrative of a Voyage of Observation Among the Colonies of Western Africa, in the Flag-ship Thalia; and of a Campaign in Kaffir-land, on the Staff of the Commander-in-Chief, in 1835, volume 1, London: Henry Colburn, pages 251–2:",
+     "type": "quotation",
+     "bold_text_offsets": [
+      [
+       47,
+       50
+      ],
+      [
+       68,
+       71
+      ],
+      [
+       115,
+       118
+      ],
+      [
+       161,
+       164
+      ],
+      [
+       182,
+       185
+      ],
+      [
+       213,
+       216
+      ],
+      [
+       246,
+       249
+      ]
+     ]
+    }
+   ],
+   "glosses": [
+    "For each; per."
+   ],
+   "id": "en-the-en-prep-jPn4-fL2",
+   "categories": [
+    {
+     "name": "English prepositions",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb"
+    }
+   ]
+  }
+ ]
+}
+### wikt_en_English financial
+{
+ "pos": "adj",
+ "head_templates": [
+  {
+   "name": "en-adj",
+   "args": {
+    "1": "-"
+   },
+   "expansion": "financial (not comparable)"
+  }
+ ],
+ "etymology_text": "Etymology tree\nEnglish finance\nProto-Indo-European *h₂el-\nProto-Indo-European *-is\nProto-Indo-European *h₂élisder.?\nProto-Italic *-ālis\nLatin -ālisder.\nOld French -ialder.\nMiddle English -ial\nEnglish -ial\nEnglish financial\nFrom finance + -ial.",
+ "etymology_links": [
+  [
+   "finance",
+   "finance#English"
+  ],
+  [
+   "*h₂el-",
+   "Reconstruction:Proto-Indo-European/h₂el-#Proto-Indo-European:_grow"
+  ],
+  [
+   "*-is",
+   "Reconstruction:Proto-Indo-European/-is"
+  ],
+  [
+   "*-ālis",
+   "Reconstruction:Proto-Italic/-ālis"
+  ],
+  [
+   "-ālis",
+   "-alis#Latin"
+  ],
+  [
+   "-ial",
+   "-ial#Old_French"
+  ],
+  [
+   "-ial",
+   "-ial#Middle_English"
+  ],
+  [
+   "-ial",
+   "-ial#English"
+  ],
+  [
+   "finance",
+   "finance#English"
+  ],
+  [
+   "-ial",
+   "-ial#English"
+  ]
+ ],
+ "sounds": [
+  {
+   "tags": [
+    "Received-Pronunciation"
+   ],
+   "ipa": "/faɪˈnæn.ʃəl/"
+  },
+  {
+   "tags": [
+    "Received-Pronunciation"
+   ],
+   "ipa": "[faɪˈnæn.ʃɫ̩]"
+  },
+  {
+   "tags": [
+    "Received-Pronunciation"
+   ],
+   "ipa": "/fɪˈnæn.ʃəl/"
+  },
+  {
+   "tags": [
+    "Received-Pronunciation"
+   ],
+   "ipa": "[fɪˈnæn.ʃɫ̩]"
+  },
+  {
+   "tags": [
+    "Canada",
+    "General-American"
+   ],
+   "ipa": "/faɪˈnæn.ʃəl/"
+  },
+  {
+   "tags": [
+    "Canada",
+    "General-American"
+   ],
+   "ipa": "[faɪˈnæn.ʃɫ̩]"
+  },
+  {
+   "audio": "En-us-financial.ogg",
+   "tags": [
+    "US"
+   ],
+   "ogg_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/En-us-financial.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a1/En-us-financial.ogg/En-us-financial.ogg.mp3"
+  },
+  {
+   "tags": [
+    "Australia"
+   ],
+   "ipa": "/fɑeˈnæn.ʃəl/"
+  },
+  {
+   "tags": [
+    "Australia"
+   ],
+   "ipa": "[fɑeˈnæn.ʃɫ̩]"
+  },
+  {
+   "tags": [
+    "New-Zealand"
+   ],
+   "ipa": "/faɪˈnɛn.ʃəl/"
+  },
+  {
+   "tags": [
+    "New-Zealand"
+   ],
+   "ipa": "[fɑe̯ˈnɛn.ʃɫ̩]"
+  }
+ ],
+ "word": "financial",
+ "lang": "English",
+ "lang_code": "en",
+ "senses": [
+  {
+   "examples": [
+    {
+     "text": "For financial reasons, we're not going to be able to continue to fund this program.",
+     "bold_text_offsets": [
+      [
+       4,
+       13
+      ]
+     ],
+     "type": "example"
+    },
+    {
+     "text": "Private-equity nabobs bristle at being dubbed mere financiers.[…]Much of their pleading is public-relations bluster. Clever financial ploys are what have made billionaires of the industry’s veterans. “Operational improvement” in a portfolio company has often meant little more than promising colossal bonuses to sitting chief executives if they meet ambitious growth targets. That model is still prevalent today.",
+     "ref": "2013 June 22, “Engineers of a different kind”, in The Economist, volume 407, number 8841, page 70:",
+     "type": "quotation",
+     "bold_text_offsets": [
+      [
+       124,
+       133
+      ]
+     ]
+    },
+    {
+     "text": "A Cultural Revolution is a movement designed to preserve the political and financial power of a ruling elite by social rather than political or financial means.",
+     "ref": "2019 January 18, Charles Hugh Smith, The West's Descent into 'Cultural Revolution':",
+     "type": "quotation",
+     "bold_text_offsets": [
+      [
+       75,
+       84
+      ],
+      [
+       144,
+       153
+      ]
+     ]
+    }
+   ],
+   "glosses": [
+    "Related to finances."
+   ],
+   "tags": [
+    "not-comparable"
+   ],
+   "id": "en-financial-en-adj-Q6JRvMvF",
+   "categories": []
+  },
+  {
+   "examples": [
+    {
+     "text": "Jerry is a financial member of the club.",
+     "bold_text_offsets": [
+      [
+       11,
+       20
+      ]
+     ],
+     "type": "example"
+    }
+   ],
+   "glosses": [
+    "Having dues and fees paid up to date for a club or society."
+   ],
+   "tags": [
+    "not-comparable"
+   ],
+   "id": "en-financial-en-adj-NwikJpe~",
+   "categories": [
+    {
+     "name": "English entries referencing missing etymons",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "19 81"
+    },
+    {
+     "name": "English entries with etymology texts",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "18 82"
+    },
+    {
+     "name": "English entries with etymology trees",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "18 82"
+    },
+    {
+     "name": "English entries with etymon",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "16 84"
+    },
+    {
+     "name": "English entries with incorrect language header",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "11 89"
+    },
+    {
+     "name": "English terms suffixed with -ial",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "30 70"
+    },
+    {
+     "name": "Entries with translation boxes",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "9 91"
+    },
+    {
+     "name": "Pages using etymon with no ID",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "17 83"
+    },
+    {
+     "name": "Pages with 1 entry",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "8 92"
+    },
+    {
+     "name": "Pages with entries",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "7 93"
+    },
+    {
+     "name": "Pages with etymology trees",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "19 81"
+    },
+    {
+     "name": "Pages with etymon",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "16 84"
+    },
+    {
+     "name": "Terms with Afrikaans translations",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "17 83"
+    },
+    {
+     "name": "Terms with Albanian translations",
+     "kind": "ot
+### wikt_en_English casas
+{
+ "pos": "noun",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "en",
+    "2": "noun form"
+   },
+   "expansion": "casas"
+  }
+ ],
+ "word": "casas",
+ "lang": "English",
+ "lang_code": "en",
+ "senses": [
+  {
+   "glosses": [
+    "plural of casa"
+   ],
+   "tags": [
+    "form-of",
+    "plural"
+   ],
+   "form_of": [
+    {
+     "word": "casa"
+    }
+   ],
+   "id": "en-casas-en-noun-8qTpJlK~",
+   "categories": [
+    {
+     "name": "English entries with incorrect language header",
+     "kind": "other",
+     "parents": [],
+     "source": "w"
+    },
+    {
+     "name": "Pages with 9 entries",
+     "kind": "other",
+     "parents": [],
+     "source": "w"
+    },
+    {
+     "name": "Pages with entries",
+     "kind": "other",
+     "parents": [],
+     "source": "w"
+    },
+    {
+     "name": "Pages with 9 entries",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "14 15 15 0 7 12 11 12 0 7 0 7"
+    },
+    {
+     "name": "Pages with entries",
+     "kind": "other",
+     "parents": [],
+     "source": "w+disamb",
+     "_dis": "12 13 12 0 10 11 10 11 0 10 0 10"
+    }
+   ]
+  }
+ ]
+}
+### wikt_es_raw naturaleza
+{
+ "word": "naturaleza",
+ "pos": "noun",
+ "pos_title": "Sustantivo femenino",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "El sistema de todo lo natural, es decir, todo aquello no creado por el hombre."
+   ],
+   "sense_index": "1"
+  }
+ ],
+ "categories": [
+  "ES:Lemas",
+  "ES:Palabras de etimología sin precisar",
+  "ES:Palabras llanas",
+  "ES:Palabras pentasílabas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:e.sa",
+  "ES:Rimas:e.θa",
+  "ES:Sustantivos",
+  "ES:Sustantivos femeninos",
+  "ES:Sustantivos solo en singular",
+  "Español",
+  "Español-Alemán",
+  "Español-Asturiano",
+  "Español-Búlgaro",
+  "Español-Esperanto",
+  "Español-Francés",
+  "Español-Inglés",
+  "Español-Italiano",
+  "Lemas"
+ ],
+ "sounds": [
+  {
+   "ipa": "[nat̪uɾaˈlesa]",
+   "raw_tags": [
+    "seseante"
+   ]
+  },
+  {
+   "ipa": "[nat̪uɾaˈleθa]",
+   "raw_tags": [
+    "no seseante"
+   ]
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "pentasílaba"
+  },
+  {
+   "rhymes": "e.θa, e.sa"
+  }
+ ],
+ "tags": [
+  "feminine"
+ ],
+ "raw_tags": [
+  "singularia tantum"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "na",
+    "tu",
+    "ra",
+    "le",
+    "za"
+   ]
+  }
+ ]
+}
+### wikt_es_raw casas
+{
+ "word": "casas",
+ "pos": "noun",
+ "pos_title": "Sustantivo femenino",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Edificio para habitar."
+   ],
+   "tags": [
+    "outdated"
+   ],
+   "categories": [
+    "ES:Términos anticuados"
+   ],
+   "sense_index": "1"
+  },
+  {
+   "glosses": [
+    "Conjunto de casas de una estancia."
+   ],
+   "tags": [
+    "Argentina"
+   ],
+   "categories": [
+    "ES:América",
+    "ES:Argentina"
+   ],
+   "sense_index": "2"
+  },
+  {
+   "glosses": [
+    "Construcción principal que incluye las habitaciones y dependencias de un fundo."
+   ],
+   "tags": [
+    "Chile"
+   ],
+   "categories": [
+    "ES:América",
+    "ES:Chile"
+   ],
+   "sense_index": "3"
+  }
+ ],
+ "categories": [
+  "ES:Lemas",
+  "ES:Palabras bisílabas",
+  "ES:Palabras llanas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:a.sas",
+  "ES:Sustantivos",
+  "ES:Sustantivos femeninos",
+  "ES:Sustantivos solo en plural",
+  "Español",
+  "Lemas"
+ ],
+ "sounds": [
+  {
+   "ipa": "[ˈkasas]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "bisílaba"
+  },
+  {
+   "homophone": "Casas"
+  },
+  {
+   "note": "seseante",
+   "homophone": "cazas"
+  },
+  {
+   "rhymes": "a.sas"
+  }
+ ],
+ "etymology_links": [
+  [
+   "casa",
+   "casa#Español"
+  ],
+  [
+   "sufijo flexivo",
+   "sufijo flexivo"
+  ]
+ ],
+ "etymology_texts": [
+  "De casa y el sufijo flexivo -s para el plural."
+ ],
+ "synonyms": [
+  {
+   "word": "casa",
+   "sense_index": "1",
+   "sense": "Edificio para habitar."
+  }
+ ],
+ "tags": [
+  "feminine"
+ ],
+ "raw_tags": [
+  "pluralia tantum"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "ca",
+    "sas"
+   ]
+  }
+ ]
+}
+### wikt_es_raw casas
+{
+ "word": "casas",
+ "pos": "noun",
+ "pos_title": "Forma sustantiva femenina",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Forma del plural de casa."
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas sustantivas en plural"
+   ],
+   "sense_index": "1",
+   "form_of": [
+    {
+     "word": "casa"
+    }
+   ]
+  }
+ ],
+ "categories": [
+  "ES:Palabras bisílabas",
+  "ES:Palabras llanas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:a.sas",
+  "Español"
+ ],
+ "sounds": [
+  {
+   "ipa": "[ˈkasas]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "bisílaba"
+  },
+  {
+   "homophone": "Casas"
+  },
+  {
+   "note": "seseante",
+   "homophone": "cazas"
+  },
+  {
+   "rhymes": "a.sas"
+  }
+ ],
+ "tags": [
+  "feminine",
+  "form-of",
+  "substantive"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "ca",
+    "sas"
+   ]
+  }
+ ]
+}
+### wikt_es_raw casas
+{
+ "word": "casas",
+ "pos": "verb",
+ "pos_title": "Forma verbal",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Segunda persona del singular (tú) del presente de indicativo de casar."
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas verbales en indicativo"
+   ],
+   "sense_index": "2",
+   "form_of": [
+    {
+     "word": "casar"
+    }
+   ]
+  }
+ ],
+ "categories": [
+  "ES:Palabras bisílabas",
+  "ES:Palabras llanas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:a.sas",
+  "Español"
+ ],
+ "sounds": [
+  {
+   "ipa": "[ˈkasas]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "bisílaba"
+  },
+  {
+   "homophone": "Casas"
+  },
+  {
+   "note": "seseante",
+   "homophone": "cazas"
+  },
+  {
+   "rhymes": "a.sas"
+  }
+ ],
+ "tags": [
+  "form-of"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "ca",
+    "sas"
+   ]
+  }
+ ]
+}
+### wikt_es_raw años
+{
+ "word": "años",
+ "pos": "noun",
+ "pos_title": "Forma sustantiva",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Forma del plural de año"
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas sustantivas en plural"
+   ],
+   "sense_index": "1",
+   "form_of": [
+    {
+     "word": "año"
+    }
+   ]
+  }
+ ],
+ "categories": [
+  "ES:Palabras bisílabas",
+  "ES:Palabras llanas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:a.ɲos",
+  "Español"
+ ],
+ "sounds": [
+  {
+   "ipa": "[ˈaɲos]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "bisílaba"
+  },
+  {
+   "rhymes": "a.ɲos"
+  }
+ ],
+ "tags": [
+  "form-of",
+  "substantive"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "a",
+    "ños"
+   ]
+  }
+ ]
+}
+### wikt_es_raw años
+{
+ "word": "años",
+ "pos": "noun",
+ "pos_title": "Sustantivo masculino y plural",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Día en que se cumplen años."
+   ],
+   "raw_tags": [
+    "en plural"
+   ],
+   "examples": [
+    {
+     "text": "Celebró los años en un restaurante típico del país.",
+     "bold_text_offsets": [
+      [
+       12,
+       16
+      ]
+     ]
+    }
+   ],
+   "sense_index": "2"
+  },
+  {
+   "glosses": [
+    "Cantidad de tiempo vivido desde el nacimiento o tiempo pasado desde el origen de algo."
+   ],
+   "raw_tags": [
+    "en plural"
+   ],
+   "examples": [
+    {
+     "text": "Que digan lo que digan nuestros hijos y nietos, que puede que lleven nuestra sangre pero no nuestros sentimientos . Que a tus años y a los míos vamos a amarnos hasta el último suspiro.",
+     "bold_text_offsets": [
+      [
+       126,
+       130
+      ]
+     ],
+     "ref": "Antonio Rodríguez Dosantos. A mis años y a tus años."
+    }
+   ],
+   "sense_index": "3"
+  },
+  {
+   "glosses": [
+    "Periodo del siglo que abarca desde el inicio de una decena hasta la siguiente."
+   ],
+   "raw_tags": [
+    "en plural"
+   ],
+   "examples": [
+    {
+     "text": "Desde la década de los años 40 hasta la segunda mitad de los años 70, Argentina adoptó un modelo de desarrollo denominado Industrialización Sustitutiva de Importaciones (ISI), cuya característica distintiva fue la adopción de un régimen basado en la acumulación surgida de la actividad industrial, con una dinámica que se apoyaba en el mercado interno.",
+     "bold_text_offsets": [
+      [
+       23,
+       27
+      ],
+      [
+       61,
+       65
+      ]
+     ],
+     "ref": "Pablo Vinocur & Leopoldo Halperin. Pobreza y políticas sociales en Argentina de los años noventa. Editorial: United Nations Publications. 2004. ISBN: 9789213225097."
+    }
+   ],
+   "sense_index": "4"
+  }
+ ],
+ "categories": [
+  "ES:Lemas",
+  "ES:Palabras bisílabas",
+  "ES:Palabras llanas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:a.ɲos",
+  "ES:Sustantivos",
+  "ES:Sustantivos masculinos",
+  "ES:Sustantivos plurales",
+  "Español",
+  "Lemas"
+ ],
+ "sounds": [
+  {
+   "ipa": "[ˈaɲos]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "bisílaba"
+  },
+  {
+   "rhymes": "a.ɲos"
+  }
+ ],
+ "synonyms": [
+  {
+   "word": "cumpleaños",
+   "sense_index": "2",
+   "sense": "Día en que se cumplen años."
+  },
+  {
+   "word": "edad",
+   "sense_index": "3",
+   "sense": "Cantidad de tiempo vivido desde el nacimiento o tiempo pasado desde el origen de algo."
+  },
+  {
+   "word": "década",
+   "sense_index": "4",
+   "sense": "Periodo del siglo que abarca desde el inicio de una decena hasta la siguiente."
+  }
+ ],
+ "tags": [
+  "masculine",
+  "plural"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "a",
+    "ños"
+   ]
+  }
+ ]
+}
+### wikt_es_raw fue
+{
+ "word": "fue",
+ "pos": "verb",
+ "pos_title": "Forma verbal",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Tercera persona del singular (él, ella, ello; usted, 2.ª persona) del pretérito perfecto simple de indicativo de ir."
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas verbales en indicativo"
+   ],
+   "sense_index": "1",
+   "form_of": [
+    {
+     "word": "ir"
+    }
+   ]
+  },
+  {
+   "glosses": [
+    "Tercera persona del singular (él, ella, ello; usted, 2.ª persona) del pretérito perfecto simple de indicativo de ser."
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas verbales en indicativo"
+   ],
+   "sense_index": "2",
+   "form_of": [
+    {
+     "word": "ser"
+    }
+   ]
+  }
+ ],
+ "categories": [
+  "ES:Palabras monosílabas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:e",
+  "Español"
+ ],
+ "sounds": [
+  {
+   "ipa": "[ˈfwe]"
+  },
+  {
+   "ipa": "[fuˈe]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "monosílaba"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "monosílaba"
+  },
+  {
+   "rhymes": "e"
+  }
+ ],
+ "tags": [
+  "form-of"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "fue"
+   ]
+  }
+ ]
+}
+### wikt_es_raw hablamos
+{
+ "word": "hablamos",
+ "pos": "verb",
+ "pos_title": "Forma verbal",
+ "lang_code": "es",
+ "lang": "Español",
+ "senses": [
+  {
+   "glosses": [
+    "Primera persona del plural (nosotros, nosotras) del presente de indicativo de hablar."
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas verbales en indicativo"
+   ],
+   "sense_index": "1",
+   "form_of": [
+    {
+     "word": "hablar"
+    },
+    {
+     "word": "hablarse"
+    }
+   ]
+  },
+  {
+   "glosses": [
+    "Primera persona del plural (nosotros, nosotras) del pretérito perfecto simple de indicativo de hablar."
+   ],
+   "tags": [
+    "form-of"
+   ],
+   "categories": [
+    "ES:Formas verbales en indicativo"
+   ],
+   "sense_index": "2",
+   "form_of": [
+    {
+     "word": "hablar"
+    },
+    {
+     "word": "hablarse"
+    }
+   ]
+  }
+ ],
+ "categories": [
+  "ES:Palabras llanas",
+  "ES:Palabras trisílabas",
+  "ES:Páginas sin audios",
+  "ES:Rimas:a.mos",
+  "Español"
+ ],
+ "sounds": [
+  {
+   "ipa": "[aˈβ̞lamos]"
+  },
+  {
+   "raw_tags": [
+    "acentuación"
+   ],
+   "other": "llana"
+  },
+  {
+   "raw_tags": [
+    "longitud silábica"
+   ],
+   "other": "trisílaba"
+  },
+  {
+   "rhymes": "a.mos"
+  }
+ ],
+ "tags": [
+  "form-of"
+ ],
+ "hyphenations": [
+  {
+   "parts": [
+    "ha",
+    "bla",
+    "mos"
+   ]
+  }
+ ]
+}
+### wikt_en_Chinese 的
+{
+ "pos": "character",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "hanzi"
+   },
+   "expansion": "的"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "dí (di⁴, di²)",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˋ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "audio": "zh-dì.ogg",
+   "ogg_url": "https://commons.wikimedia.org/wiki/Special:FilePath/zh-dì.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Zh-dì.ogg/Zh-dì.ogg.mp3",
+   "tags": [
+    "Mandarin",
+    "Standard"
+   ]
+  },
+  {
+   "zh_pron": "di⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di²",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "dǐ",
+   "tags": [
+    "Mandarin",
+    "Xi'an",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Guanzhong"
+   ]
+  },
+  {
+   "zh_pron": "di̊q",
+   "tags": [
+    "Mandarin",
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ди (di, II)",
+   "tags": [
+    "Mandarin",
+    "Dungan",
+    "Cyrillic",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dik¹",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "et²",
+   "tags": [
+    "Cantonese",
+    "Taishan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dit⁶",
+   "tags": [
+    "Gan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "tit",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "did⁵",
+   "tags": [
+    "Hakka",
+    "Meixian",
+    "Guangdong"
+   ]
+  },
+  {
+   "zh_pron": "dieh⁴",
+   "tags": [
+    "Jin",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dĭ",
+   "tags": [
+    "Min-Bei",
+    "Kienning-Colloquial-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "dék",
+   "tags": [
+    "Min-Dong",
+    "Foochow-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "deh⁶",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "tek",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tiak",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tit",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "dêg⁸",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "⁷tiq",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "di⁶",
+   "tags": [
+    "Xiang",
+    "Changsha",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˋ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ti⁴",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "dih",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "ди",
+   "roman": "di",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ti⁵¹/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ti²",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "dyi",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "ди",
+   "roman": "di",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ti³⁵/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "di⁴",
+   "tags": [
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di²",
+   "tags": [
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di",
+   "tags": [
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "zh_pron": "di",
+   "tags": [
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "ipa": "/ti²¹³/",
+   "tags": [
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "ipa": "/ti²¹/",
+   "tags": [
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dǐ",
+   "tags": [
+    "Xi'an",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Guanzhong"
+   ]
+  },
+  {
+   "ipa": "/ti²¹/",
+   "tags": [
+    "Xi'an",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "di̊q",
+   "tags": [
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "diq⁵",
+   "raw_tags": [
+    "numbered"
+   ],
+   "tags": [
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "ipa": "/tiʔ⁵/",
+   "tags": [
+    "Nanjing",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "ди (di, II)",
+   "tags": [
+    "Dungan",
+    "Cyrillic",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "ipa": "/ti⁵¹/",
+   "tags": [
+    "Dungan",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dik¹",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "dīk",
+   "tags": [
+ 
+### wikt_en_Chinese 的
+{
+ "pos": "character",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "hanzi"
+   },
+   "expansion": "的"
+  },
+  {
+   "name": "tlb",
+   "args": {
+    "1": "zh",
+    "2": "chiefly",
+    "3": "Mandarin",
+    "4": "Jin",
+    "5": "Xiang"
+   },
+   "expansion": "(chiefly Mandarin, Jin, Xiang)"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "dí (di⁴, di²)",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˋ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "audio": "zh-dì.ogg",
+   "ogg_url": "https://commons.wikimedia.org/wiki/Special:FilePath/zh-dì.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Zh-dì.ogg/Zh-dì.ogg.mp3",
+   "tags": [
+    "Mandarin",
+    "Standard"
+   ]
+  },
+  {
+   "zh_pron": "di⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di²",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "dǐ",
+   "tags": [
+    "Mandarin",
+    "Xi'an",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Guanzhong"
+   ]
+  },
+  {
+   "zh_pron": "di̊q",
+   "tags": [
+    "Mandarin",
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ди (di, II)",
+   "tags": [
+    "Mandarin",
+    "Dungan",
+    "Cyrillic",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dik¹",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "et²",
+   "tags": [
+    "Cantonese",
+    "Taishan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dit⁶",
+   "tags": [
+    "Gan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "tit",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "did⁵",
+   "tags": [
+    "Hakka",
+    "Meixian",
+    "Guangdong"
+   ]
+  },
+  {
+   "zh_pron": "dieh⁴",
+   "tags": [
+    "Jin",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dĭ",
+   "tags": [
+    "Min-Bei",
+    "Kienning-Colloquial-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "dék",
+   "tags": [
+    "Min-Dong",
+    "Foochow-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "deh⁶",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "tek",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tiak",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tit",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "dêg⁸",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "⁷tiq",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "di⁶",
+   "tags": [
+    "Xiang",
+    "Changsha",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˋ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ti⁴",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "dih",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "ди",
+   "roman": "di",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ti⁵¹/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ti²",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "dyi",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "ди",
+   "roman": "di",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ti³⁵/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "di⁴",
+   "tags": [
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di²",
+   "tags": [
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di",
+   "tags": [
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "zh_pron": "di",
+   "tags": [
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "ipa": "/ti²¹³/",
+   "tags": [
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "ipa": "/ti²¹/",
+   "tags": [
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dǐ",
+   "tags": [
+    "Xi'an",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Guanzhong"
+   ]
+  },
+  {
+   "ipa": "/ti²¹/",
+   "tags": [
+    "Xi'an",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "di̊q",
+   "tags": [
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "diq⁵",
+   "raw_tags": [
+    "numbered"
+   ],
+   "tags": [
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "ipa": "/tiʔ⁵/",
+   "tags": [
+    "Nanjing",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "ди (di, II)",
+   "tags": [
+    "Dungan",
+    "Cyrillic",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "ipa": "/ti⁵¹/",
+   "tags": [
+    "Dungan",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": 
+### wikt_en_Chinese 的
+{
+ "pos": "character",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "hanzi"
+   },
+   "expansion": "的"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "dí (di⁴, di²)",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˋ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "audio": "zh-dì.ogg",
+   "ogg_url": "https://commons.wikimedia.org/wiki/Special:FilePath/zh-dì.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Zh-dì.ogg/Zh-dì.ogg.mp3",
+   "tags": [
+    "Mandarin",
+    "Standard"
+   ]
+  },
+  {
+   "zh_pron": "di⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di²",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "dǐ",
+   "tags": [
+    "Mandarin",
+    "Xi'an",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Guanzhong"
+   ]
+  },
+  {
+   "zh_pron": "di̊q",
+   "tags": [
+    "Mandarin",
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ди (di, II)",
+   "tags": [
+    "Mandarin",
+    "Dungan",
+    "Cyrillic",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dik¹",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "et²",
+   "tags": [
+    "Cantonese",
+    "Taishan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dit⁶",
+   "tags": [
+    "Gan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "tit",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "did⁵",
+   "tags": [
+    "Hakka",
+    "Meixian",
+    "Guangdong"
+   ]
+  },
+  {
+   "zh_pron": "dieh⁴",
+   "tags": [
+    "Jin",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dĭ",
+   "tags": [
+    "Min-Bei",
+    "Kienning-Colloquial-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "dék",
+   "tags": [
+    "Min-Dong",
+    "Foochow-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "deh⁶",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "tek",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tiak",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tit",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "dêg⁸",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "⁷tiq",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "di⁶",
+   "tags": [
+    "Xiang",
+    "Changsha",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˋ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ti⁴",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "dì",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "dih",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "ди",
+   "roman": "di",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ti⁵¹/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄉㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ti²",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "dí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "dyi",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "ди",
+   "roman": "di",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ti³⁵/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "di⁴",
+   "tags": [
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di²",
+   "tags": [
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "di",
+   "tags": [
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "zh_pron": "di",
+   "tags": [
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "ipa": "/ti²¹³/",
+   "tags": [
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "ipa": "/ti²¹/",
+   "tags": [
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dǐ",
+   "tags": [
+    "Xi'an",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Guanzhong"
+   ]
+  },
+  {
+   "ipa": "/ti²¹/",
+   "tags": [
+    "Xi'an",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "di̊q",
+   "tags": [
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "diq⁵",
+   "raw_tags": [
+    "numbered"
+   ],
+   "tags": [
+    "Nanjing",
+    "Nanjing",
+    "Pinyin"
+   ]
+  },
+  {
+   "ipa": "/tiʔ⁵/",
+   "tags": [
+    "Nanjing",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "ди (di, II)",
+   "tags": [
+    "Dungan",
+    "Cyrillic",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "ipa": "/ti⁵¹/",
+   "tags": [
+    "Dungan",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "dik¹",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "dīk",
+   "tags": [
+ 
+### wikt_en_Chinese 讓
+{
+ "pos": "character",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "hanzi"
+   },
+   "expansion": "讓"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "ràng (rang⁴)",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄖㄤˋ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "audio": "zh-ràng.ogg",
+   "ogg_url": "https://commons.wikimedia.org/wiki/Special:FilePath/zh-ràng.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/ba/Zh-ràng.ogg/Zh-ràng.ogg.mp3",
+   "tags": [
+    "Mandarin",
+    "Standard"
+   ]
+  },
+  {
+   "zh_pron": "rang⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "joeng⁶",
+   "tags": [
+    "Cantonese",
+    "Jyutping"
+   ]
+  },
+  {
+   "zh_pron": "ngiong",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "ngiong^ˇ",
+   "tags": [
+    "Hakka",
+    "Hailu",
+    "Hakka-Romanization-System"
+   ]
+  },
+  {
+   "zh_pron": "ron³",
+   "tags": [
+    "Jin",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "niōng",
+   "tags": [
+    "Min-Bei",
+    "Kienning-Colloquial-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "niông",
+   "tags": [
+    "Min-Dong",
+    "Foochow-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "zieo⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "niao⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "nieo⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "niu⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zyorng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zoeng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zyoeng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zieng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "niū",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "niō͘",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "niāu",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "jiōng",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "liōng",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "jiāng",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "niên⁷",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "nion⁷",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "riang⁶",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "⁶gnian",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "⁶zan",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "ràng",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄖㄤˋ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "ràng",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "jang⁴",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "ràng",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "ranq",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "жан",
+   "roman": "žan",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ɻɑŋ⁵¹/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "rang⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "rhang",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "ipa": "/ɹaŋ²¹³/",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "joeng⁶",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "yeuhng",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Yale"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "joeng⁶",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Cantonese",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "yêng⁶",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Guangdong-Romanization"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "ipa": "/jœːŋ²²/",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Sinological-IPA"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "ngiong",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "ngiong",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Hakka-Romanization-System"
+   ]
+  },
+  {
+   "zh_pron": "ngiong⁴",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Hagfa-Pinyim"
+   ]
+  },
+  {
+   "ipa": "/ŋi̯oŋ⁵⁵/",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "ngiong^ˇ",
+   "tags": [
+    "Hakka",
+    "Hailu",
+    "Zhudong",
+    "Hakka-Romanization-System"
+   ]
+  },
+  {
+   "ipa": "/ŋioŋ¹¹/",
+   "tags": [
+    "Hakka",
+    "Hailu",
+ 
+### wikt_en_Chinese 讓
+{
+ "pos": "character",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "hanzi"
+   },
+   "expansion": "讓"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "ràng (rang⁴)",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄖㄤˋ",
+   "tags": [
+    "Mandarin",
+    "Standard",
+    "Bopomofo"
+   ]
+  },
+  {
+   "audio": "zh-ràng.ogg",
+   "ogg_url": "https://commons.wikimedia.org/wiki/Special:FilePath/zh-ràng.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/ba/Zh-ràng.ogg/Zh-ràng.ogg.mp3",
+   "tags": [
+    "Mandarin",
+    "Standard"
+   ]
+  },
+  {
+   "zh_pron": "rang⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "joeng⁶",
+   "tags": [
+    "Cantonese",
+    "Jyutping"
+   ]
+  },
+  {
+   "zh_pron": "ngiong",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "ngiong^ˇ",
+   "tags": [
+    "Hakka",
+    "Hailu",
+    "Hakka-Romanization-System"
+   ]
+  },
+  {
+   "zh_pron": "ron³",
+   "tags": [
+    "Jin",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "niōng",
+   "tags": [
+    "Min-Bei",
+    "Kienning-Colloquial-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "niông",
+   "tags": [
+    "Min-Dong",
+    "Foochow-Romanized"
+   ]
+  },
+  {
+   "zh_pron": "zieo⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "niao⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "nieo⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "niu⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zyorng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zoeng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zyoeng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "zieng⁵",
+   "tags": [
+    "Puxian-Min"
+   ],
+   "raw_tags": [
+    "Pouseng-Ping'ing"
+   ]
+  },
+  {
+   "zh_pron": "niū",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "niō͘",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "niāu",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "jiōng",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "liōng",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "jiāng",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "niên⁷",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "nion⁷",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "riang⁶",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "⁶gnian",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "⁶zan",
+   "tags": [
+    "Wu",
+    "Northern"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "ràng",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄖㄤˋ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "ràng",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "jang⁴",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "ràng",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "ranq",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "жан",
+   "roman": "žan",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ɻɑŋ⁵¹/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "rang⁴",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sichuanese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "rhang",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Latinxua-Sin-Wenz"
+   ]
+  },
+  {
+   "ipa": "/ɹaŋ²¹³/",
+   "tags": [
+    "Mandarin",
+    "Chengdu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "joeng⁶",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "yeuhng",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Yale"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "joeng⁶",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Cantonese",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "yêng⁶",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Guangdong-Romanization"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "ipa": "/jœːŋ²²/",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Sinological-IPA"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "ngiong",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Phak-fa-su"
+   ]
+  },
+  {
+   "zh_pron": "ngiong",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Hakka-Romanization-System"
+   ]
+  },
+  {
+   "zh_pron": "ngiong⁴",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Hagfa-Pinyim"
+   ]
+  },
+  {
+   "ipa": "/ŋi̯oŋ⁵⁵/",
+   "tags": [
+    "Hakka",
+    "Sixian",
+    "Miaoli",
+    "Neipu",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "ngiong^ˇ",
+   "tags": [
+    "Hakka",
+    "Hailu",
+    "Zhudong",
+    "Hakka-Romanization-System"
+   ]
+  },
+  {
+   "ipa": "/ŋioŋ¹¹/",
+   "tags": [
+    "Hakka",
+    "Hailu",
+ 
+### wikt_en_Chinese 让
+{
+ "pos": "character",
+ "redirects": [
+  "讓"
+ ],
+ "etymology_text": "Simplified from 讓 (襄 → 上 and 言 → 讠)\nSimplification derived from various Wu dialects, in which 上 and 讓／让 are homophonous.",
+ "etymology_links": [
+  [
+   "讓",
+   "讓#Chinese"
+  ],
+  [
+   "襄",
+   "襄#Chinese"
+  ],
+  [
+   "上",
+   "上#Chinese"
+  ],
+  [
+   "言",
+   "言#Chinese"
+  ],
+  [
+   "讠",
+   "讠#Chinese"
+  ],
+  [
+   "Wu",
+   "Wu"
+  ],
+  [
+   "上",
+   "上#Chinese"
+  ],
+  [
+   "讓",
+   "讓#Chinese"
+  ],
+  [
+   "让",
+   "让#Chinese"
+  ]
+ ],
+ "word": "让",
+ "lang": "Chinese",
+ "lang_code": "zh",
+ "senses": [
+  {
+   "tags": [
+    "no-gloss"
+   ],
+   "id": "en-让-zh-character-47DEQpj8",
+   "categories": [
+    {
+     "name": "CJKV simplified characters",
+     "kind": "other",
+     "parents": [],
+     "source": "w"
+    }
+   ]
+  }
+ ]
+}
+### wikt_en_Chinese 周期
+{
+ "word": "周期",
+ "lang": "Chinese",
+ "lang_code": "zh",
+ "redirects": [
+  "週期"
+ ],
+ "pos": "soft-redirect",
+ "senses": [
+  {
+   "tags": [
+    "no-gloss"
+   ],
+   "id": "en-周期-zh-soft-redirect-47DEQpj8"
+  }
+ ]
+}
+### wikt_en_Chinese 週期
+{
+ "pos": "noun",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "noun"
+   },
+   "expansion": "週期"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "zhōuqī",
+   "tags": [
+    "Mandarin",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "zhōuqí",
+   "tags": [
+    "Mandarin",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄓㄡ ㄑㄧ",
+   "tags": [
+    "Mandarin",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "ㄓㄡ ㄑㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "zau¹ kei⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "ziu¹ kei³",
+   "tags": [
+    "Cantonese",
+    "Taishan",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "zh_pron": "chiu-kî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "ziu¹ ki⁵",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "¹tseu-ji",
+   "tags": [
+    "Wu",
+    "Shanghai"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "zhōuqī",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄓㄡ ㄑㄧ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "jhouci",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "chou¹-chʻi¹",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "jōu-chī",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "jouchi",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "чжоуци",
+   "roman": "čžouci",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ʈ͡ʂoʊ̯⁵⁵ t͡ɕʰi⁵⁵/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Mainland-China",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "zhōuqí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄓㄡ ㄑㄧˊ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "jhoucí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "chou¹-chʻi²",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "jōu-chí",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "jouchyi",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "чжоуци",
+   "roman": "čžouci",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ʈ͡ʂoʊ̯⁵⁵ t͡ɕʰi³⁵/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Taiwan",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "zau¹ kei⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "jāu kèih",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Yale"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "dzau¹ kei⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Cantonese",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "zeo¹ kéi⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Guangdong-Romanization"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "ipa": "/t͡sɐu̯⁵⁵ kʰei̯²¹/",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Sinological-IPA"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "ziu¹ kei³",
+   "tags": [
+    "Cantonese",
+    "Taishanese",
+    "Taicheng",
+    "Wiktionary-specific"
+   ]
+  },
+  {
+   "ipa": "/t͡siu³³ kʰei²²/",
+   "tags": [
+    "Cantonese",
+    "Taishanese",
+    "Taicheng",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "chiu-kî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "tsiu-kî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Tai-lo"
+   ]
+  },
+  {
+   "zh_pron": "ciu'kii",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Phofsit-Daibuun"
+   ]
+  },
+  {
+   "ipa": "/t͡siu⁴⁴⁻²² ki²⁴/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Sinological-IPA",
+    "Xiamen"
+   ]
+  },
+  {
+   "ipa": "/t͡siu³³ ki²⁴/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Sinological-IPA",
+    "Quanzhou"
+   ]
+  },
+  {
+   "ipa": "/t͡siu⁴⁴⁻²² ki¹³/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Sinological-IPA",
+    "Zhangzhou"
+   ]
+  },
+  {
+   "ipa": "/t͡siu⁴⁴⁻³³ ki²⁴/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Sinological-IPA",
+    "Taipei"
+   ]
+  },
+  {
+   "ipa": "/t͡siu⁴⁴⁻³³ ki²³/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Sinological-IPA",
+    "Kaohsiung"
+   ]
+  },
+  {
+   "zh_pron": "ziu¹ ki⁵",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Peng'im"
+   ]
+  },
+  {
+   "zh_pron": "tsiu khî",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "POJ"
+   ]
+  },
+  {
+   "ipa": "/t͡siu³³⁻²³ kʰi⁵⁵/",
+   "tags": [
+    "Min-Nan",
+    "Teochew",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "¹tseu-ji",
+   "tags": [
+    "Wu",
+    "Northern",
+    "Shanghai"
+   ],
+   "raw_tags": [
+    "Wugniu"
+   ]
+  },
+  {
+   "zh_pron": "tseu^平 ji",
+   "tags": [
+    "Wu",
+    "Northern",
+    "Shanghai"
+   ],
+   "raw_tags": [
+    "MiniDict"
+   ]
+  },
+  {
+   "zh_pron": "¹tseu-jji",
+   "tags": [
+    "Wu",
+    "Northern",
+    "Shanghai",
+    "Wiktionary-specific",
+    "romanization"
+   ]
+  },
+  {
+   "ipa": "/t͡sɤ⁵⁵ d͡ʑi²¹/",
+   "tags": [
+    "Wu",
+    "Northern",
+    "Shanghai",
+    "Sinological-IPA"
+   ]
+### wikt_en_Chinese 常年
+{
+ "pos": "character",
+ "head_templates": [
+  {
+   "name": "head",
+   "args": {
+    "1": "zh",
+    "2": "hanzi"
+   },
+   "expansion": "常年"
+  }
+ ],
+ "sounds": [
+  {
+   "zh_pron": "chángnián",
+   "tags": [
+    "Mandarin",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄔㄤˊ ㄋㄧㄢˊ",
+   "tags": [
+    "Mandarin",
+    "Bopomofo"
+   ]
+  },
+  {
+   "audio": "Zh-chángnián.ogg",
+   "ogg_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Zh-chángnián.ogg",
+   "mp3_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/15/Zh-chángnián.ogg/Zh-chángnián.ogg.mp3",
+   "tags": [
+    "Mandarin",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "soeng⁴ nin⁴",
+   "tags": [
+    "Cantonese",
+    "Jyutping"
+   ]
+  },
+  {
+   "zh_pron": "siông-nî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siâng-nî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siông-liân",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siâng-liân",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siûⁿ-nî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "chángnián",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "ㄔㄤˊ ㄋㄧㄢˊ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Bopomofo"
+   ]
+  },
+  {
+   "zh_pron": "chángnián",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Tongyong-Pinyin"
+   ]
+  },
+  {
+   "zh_pron": "chʻang²-nien²",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Wade-Giles"
+   ]
+  },
+  {
+   "zh_pron": "cháng-nyán",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Yale"
+   ]
+  },
+  {
+   "zh_pron": "charngnian",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Gwoyeu-Romatsyh"
+   ]
+  },
+  {
+   "zh_pron": "чаннянь",
+   "roman": "čannjanʹ",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Palladius"
+   ]
+  },
+  {
+   "ipa": "/ʈ͡ʂʰɑŋ³⁵ ni̯ɛn³⁵/",
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "homophone": "常年",
+   "raw_tags": [
+    "Homophones"
+   ],
+   "tags": [
+    "Mandarin",
+    "Standard-Chinese"
+   ]
+  },
+  {
+   "homophone": "長年",
+   "raw_tags": [
+    "Homophones"
+   ],
+   "tags": [
+    "Traditional-Chinese",
+    "Mandarin",
+    "Standard-Chinese"
+   ]
+  },
+  {
+   "homophone": "长年",
+   "raw_tags": [
+    "Homophones"
+   ],
+   "tags": [
+    "Simplified-Chinese",
+    "Mandarin",
+    "Standard-Chinese"
+   ]
+  },
+  {
+   "zh_pron": "soeng⁴ nin⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Jyutping"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "sèuhng nìhn",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Yale"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "soeng⁴ nin⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Cantonese",
+    "Pinyin"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "sêng⁴ nin⁴",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Guangdong-Romanization"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "ipa": "/sœːŋ²¹ niːn²¹/",
+   "tags": [
+    "Cantonese",
+    "Guangzhou",
+    "Sinological-IPA"
+   ],
+   "raw_tags": [
+    "Standard-Cantonese",
+    "Hong Kong"
+   ]
+  },
+  {
+   "zh_pron": "siông-nî",
+   "raw_tags": [
+    "General Taiwanese"
+   ],
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siông-nî",
+   "raw_tags": [
+    "General Taiwanese"
+   ],
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Tai-lo"
+   ]
+  },
+  {
+   "zh_pron": "siongnii",
+   "raw_tags": [
+    "General Taiwanese"
+   ],
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Phofsit-Daibuun"
+   ]
+  },
+  {
+   "ipa": "/siɔŋ²⁴⁻¹¹ nĩ²⁴/",
+   "raw_tags": [
+    "General Taiwanese"
+   ],
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Sinological-IPA",
+    "Taipei"
+   ]
+  },
+  {
+   "ipa": "/siɔŋ²³⁻³³ nĩ²³/",
+   "raw_tags": [
+    "General Taiwanese"
+   ],
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Sinological-IPA",
+    "Kaohsiung"
+   ]
+  },
+  {
+   "ipa": "/siɔŋ²⁴⁻²² nĩ²⁴/",
+   "raw_tags": [
+    "General Taiwanese"
+   ],
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "siâng-nî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siâng-nî",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "Tai-lo"
+   ]
+  },
+  {
+   "zh_pron": "siangnii",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "Phofsit-Daibuun"
+   ]
+  },
+  {
+   "ipa": "/siaŋ¹³⁻²² nĩ¹³/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "siông-liân",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siông-liân",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Tai-lo"
+   ]
+  },
+  {
+   "zh_pron": "sionglieen",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Phofsit-Daibuun"
+   ]
+  },
+  {
+   "ipa": "/siɔŋ²⁴⁻²² liɛn²⁴/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Xiamen",
+    "Quanzhou",
+    "Sinological-IPA"
+   ]
+  },
+  {
+   "zh_pron": "siâng-liân",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "POJ"
+   ]
+  },
+  {
+   "zh_pron": "siâng-liân",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "Tai-lo"
+   ]
+  },
+  {
+   "zh_pron": "sianglieen",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "Phofsit-Daibuun"
+   ]
+  },
+  {
+   "ipa": "/siaŋ¹³⁻²² liɛn¹³/",
+   "tags": [
+    "Min-Nan",
+    "Hokkien",
+    "Zhangzhou",
+    "Sinological-IPA

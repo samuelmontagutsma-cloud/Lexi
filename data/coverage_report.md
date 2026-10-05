@@ -1,18 +1,18 @@
 # Lexi lexicon coverage report
 
-Built 2026-10-05 01:18 UTC. Database size: 14.9 MB.
+Built 2026-10-05 01:28 UTC. Database size: 14.9 MB.
 
 | Lang | Metric | Count | % | Flag |
 |---|---|---|---|---|
 | en | word count | 9,964 | | ⚠ < 10,000 |
 | en | monolingual definition (en) | 9,964 / 9,964 | 100.0% |  |
-| en | example sentence | 9,883 / 9,964 | 99.2% |  |
-| en | ≥1 category | 5,963 / 9,964 | 59.8% | ⚠ < 80% |
-| en | IPA | 8,767 / 9,964 | 88.0% |  |
+| en | example sentence | 9,886 / 9,964 | 99.2% |  |
+| en | ≥1 category | 5,961 / 9,964 | 59.8% | ⚠ < 80% |
+| en | IPA | 8,769 / 9,964 | 88.0% |  |
 | es | word count | 9,926 | | ⚠ < 10,000 |
 | es | monolingual definition (es) | 9,926 / 9,926 | 100.0% |  |
 | es | example sentence | 9,432 / 9,926 | 95.0% |  |
-| es | ≥1 category | 6,756 / 9,926 | 68.1% | ⚠ < 80% |
+| es | ≥1 category | 6,758 / 9,926 | 68.1% | ⚠ < 80% |
 | es | IPA | 9,924 / 9,926 | 100.0% |  |
 | zh | word count | 10,000 | |  |
 | zh | pinyin | 10,000 / 10,000 | 100.0% |  |
