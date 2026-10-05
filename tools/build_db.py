@@ -648,7 +648,9 @@ def choose_lemma(w: str, entries, redirects) -> str | None:
     entry of a lemma that exists (es: 'años' -> 'año'; en: 'left' stays 'left')."""
     own, red = entries.get(w), redirects.get(w)
     if own and red and red in entries and red != w:
-        plural_only = all("plural" in (e.get("pos_title") or "").lower() for e in own)
+        plural_only = all("plural" in (e.get("pos_title") or "").lower()
+                          or all({"plural", "plural-only"} & set(s.get("tags") or []) for s in e.get("senses") or [{}])
+                          for e in own)
         n_own = sum(1 for e in own for s in e.get("senses") or [] if not is_form_of(s) and sense_gloss(s))
         # a form with a tiny separate entry ('rode' = anchor rope) is learned as its lemma ('ride')
         return red if plural_only or n_own <= 2 else w
@@ -674,8 +676,9 @@ def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba
         seen.add(lemma)
         if not re.fullmatch(r"[^\W\d_]+(?:[-'’ ][^\W\d_]+)*", lemma):
             continue
-        if lemma in names and sum(len(e.get("senses") or []) for e in entries.get(lemma, [])) <= 2:
-            continue
+        if lemma in names and not (wordnet and lemma in wordnet) and \
+                sum(len(e.get("senses") or []) for e in entries.get(lemma, [])) <= 4:
+            continue  # 'barry', 'ellen': common only as names
         senses: list[Sense] = []
         cats: set[str] = set()
         ipa = None
