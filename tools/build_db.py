@@ -962,11 +962,14 @@ def inspect(words: list[str], out_path: str):
                 if w in want and n[w] < 3 and (lang != "es" or e.get("lang_code") == "es"):
                     n[w] += 1
                     e.pop("translations", None); e.pop("etymology_templates", None); e.pop("descendants", None)
-                    e.pop("derived", None); e.pop("related", None); e.pop("forms", None)
+                    for k in ("derived", "related", "forms", "head_templates", "etymology_text", "etymology_links",
+                              "wikipedia", "hyphenations", "synonyms", "hypernyms", "hyponyms", "coordinate_terms"):
+                        e.pop(k, None)
+                    e["sounds"] = [x for x in e.get("sounds", []) if "ipa" in x or "Pinyin" in (x.get("tags") or [])][:3]
                     for s_ in e.get("senses", [])[:4]:
                         s_.pop("links", None); s_.pop("translations", None)
                     e["senses"] = e.get("senses", [])[:4]
-                    out.write(f"### {src} {w}\n" + json.dumps(e, ensure_ascii=False, indent=1)[:6000] + "\n")
+                    out.write(f"### {src} {w}\n" + json.dumps(e, ensure_ascii=False)[:9000] + "\n")
     log(f"inspect -> {out_path}")
 
 
