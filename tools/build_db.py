@@ -887,7 +887,8 @@ def fill_spanish_with_mt(words: list[Word]):
         en = next(s for s in w.senses if s.def_lang == "en")
         es = next((s for s in w.senses if s.def_lang == "es"), None)
         if "es" not in w.translations:
-            gl = dedupe([tr.get(split_gloss(g)) for g in en.definition.split("; ") if g])
+            gl = dedupe([clean_mt(split_gloss(g), tr.get(split_gloss(g)))
+                         for g in en.definition.split("; ") if g])
             if gl:
                 w.translations["es"] = [short_gloss(g) for g in gl[:3]]
                 w.translations_mt.add("es")
@@ -904,8 +905,37 @@ def fill_spanish_with_mt(words: list[Word]):
     log(f"mt: filled {n_g} zh->es glosses, {n_s} es example translations")
 
 
+VERB_FRAME = ("I want to ", "Quiero ")  # MT context so "to X" becomes an infinitive, not "para X"
+
+
 def split_gloss(g: str) -> str:
-    return g.strip()
+    """English gloss -> MT source text: no parentheses, sb/sth expanded, verbs in an infinitive frame."""
+    g = strip_parens(g)
+    g = re.sub(r"\bsb\b", "someone", g)
+    g = re.sub(r"\bsth\b", "something", g)
+    g = re.sub(r"\s*(\.\.\.|…)\s*", " ", g).strip(" ,;.")
+    if g.lower().startswith("to "):
+        return f"{VERB_FRAME[0]}{g[3:]}."
+    return g
+
+
+def clean_mt(src: str, out: str | None) -> str | None:
+    """Undo the verb frame, drop end punctuation and false capitals; reject non-translations."""
+    if not out:
+        return None
+    out = out.strip()
+    if src.startswith(VERB_FRAME[0]):
+        m = re.match(r"^(?:yo\s+)?quiero\s+(.*)$", out, re.I)
+        if not m:
+            return None  # frame lost: verb meaning not reliable
+        out = m.group(1)
+        src = src[len(VERB_FRAME[0]):]
+    out = out.strip(" .;,!¡¿?")
+    if out and out[0].isupper() and not src[:1].isupper():
+        out = out[0].lower() + out[1:]
+    if not out or out.lower() == src.strip(" .").lower() or re.search(r"(\.\.|\b(\w+)\s+\2\b)", out):
+        return None
+    return out
 
 
 def dedupe(items):
@@ -975,9 +1005,20 @@ def simplified_part(text: str) -> str:
     return text
 
 
+def strip_parens(g: str) -> str:
+    """Remove (possibly nested) parentheses; drop an unmatched tail or head."""
+    prev = None
+    while prev != g:
+        prev, g = g, re.sub(r"\([^()]*\)", "", g)
+    g = g.split("(")[0]                 # unmatched "(" -> cut the tail
+    if ")" in g:
+        g = g.split(")")[-1]            # unmatched ")" -> cut the head
+    return re.sub(r"\s+", " ", g).strip(" ;,")
+
+
 def short_gloss(g: str) -> str:
-    g = re.sub(r"\([^)]*\)", "", g).strip(" ;,")
-    return g.split(";")[0].strip() or g
+    g2 = strip_parens(g)
+    return g2.split(";")[0].strip() or g
 
 
 def load_hsk(path: Path) -> dict[str, int]:
