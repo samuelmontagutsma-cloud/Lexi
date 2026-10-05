@@ -1,18 +1,18 @@
 # Lexi lexicon coverage report
 
-Built 2026-10-05 01:52 UTC. Database size: 14.2 MB.
+Built 2026-10-05 01:58 UTC. Database size: 14.6 MB.
 
 | Lang | Metric | Count | % | Flag |
 |---|---|---|---|---|
 | en | word count | 10,000 | |  |
 | en | monolingual definition (en) | 10,000 / 10,000 | 100.0% |  |
-| en | example sentence | 9,928 / 10,000 | 99.3% |  |
-| en | ≥1 topic category | 1,261 / 10,000 | 12.6% | info |
-| en | IPA | 8,744 / 10,000 | 87.4% |  |
+| en | example sentence | 9,959 / 10,000 | 99.6% |  |
+| en | ≥1 topic category | 2,160 / 10,000 | 21.6% | info |
+| en | IPA | 9,549 / 10,000 | 95.5% |  |
 | es | word count | 10,000 | |  |
 | es | monolingual definition (es) | 10,000 / 10,000 | 100.0% |  |
-| es | example sentence | 9,494 / 10,000 | 94.9% |  |
-| es | ≥1 topic category | 2,013 / 10,000 | 20.1% | info |
+| es | example sentence | 9,439 / 10,000 | 94.4% |  |
+| es | ≥1 topic category | 2,874 / 10,000 | 28.7% | info |
 | es | IPA | 9,998 / 10,000 | 100.0% |  |
 | zh | word count | 10,000 | |  |
 | zh | pinyin | 10,000 / 10,000 | 100.0% |  |
@@ -23,7 +23,7 @@ Built 2026-10-05 01:52 UTC. Database size: 14.2 MB.
 | zh | zh example (any) | 8,422 / 10,000 | 84.2% |  |
 | zh | part of speech | 8,788 / 10,000 | 87.9% |  |
 | zh | HSK 1–6 words included (of HSK list) | 3,828 / 4,991 | 76.7% | ⚠ < 80% |
-| zh | ≥1 topic category | 2,052 / 10,000 | 20.5% | info |
+| zh | ≥1 topic category | 2,407 / 10,000 | 24.1% | info |
 
 ## Flags (< 80%)
 
