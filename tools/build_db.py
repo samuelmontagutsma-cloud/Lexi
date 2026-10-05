@@ -947,7 +947,7 @@ def coverage(db_path: Path) -> tuple[str, list[str]]:
     def add(lang, metric, num, den, flagged=True):
         p = pct(num, den)
         flag = "⚠ < 80%" if p < 80 and flagged else ("info" if not flagged else "")
-        if flag:
+        if flag and flagged:
             flags.append(f"{lang}: {metric} = {p:.1f}%")
         rows.append(f"| {lang} | {metric} | {num:,} / {den:,} | {p:.1f}% | {flag} |")
 
