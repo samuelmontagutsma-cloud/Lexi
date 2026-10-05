@@ -1,44 +1,53 @@
-01:59:16 WordNet 3.1
-01:59:18 en: scanning English Wiktionary
-02:00:22 en: 31353 entries, 20299 form redirects, 109333 translation groups
-02:00:38 en: 19259 name-like forms
-02:00:40 es: scanning Spanish Wiktionary
-02:01:21 es: 20616 entries, 24799 redirects, 570 zh entries with es glosses
-02:01:27 zh: 121423 CC-CEDICT headwords
-02:01:27 zh: 4991 HSK 2.0 words
-02:01:27 zh: scanning Chinese entries in English Wiktionary
-02:01:58 zh: Tatoeba sentence pairs
+06:32:52 WordNet 3.1
+06:32:54 en: scanning English Wiktionary
+06:33:53 en: 31353 entries, 20299 form redirects, 109333 translation groups
+06:34:09 en: 19259 name-like forms
+06:34:11 es: scanning Spanish Wiktionary
+06:34:48 es: 20616 entries, 24799 redirects, 570 zh entries with es glosses
+06:34:53 zh: 121423 CC-CEDICT headwords
+06:34:54 zh: 4991 HSK 2.0 words
+06:34:54 zh: scanning Chinese entries in English Wiktionary
+06:35:20 zh: Tatoeba sentence pairs
+06:35:28 mt: 6909 glosses + 5274 sentences en->es
+06:35:30 mt: Argos en->es model 1.0 installed
+06:35:31 mt: 64/12170
+06:36:10 mt: 2112/12170
+06:36:51 mt: 4160/12170
+06:37:11 mt: 6208/12170
+06:37:42 mt: 8256/12170
+06:38:00 mt: 10304/12170
+06:38:16 mt: filled 3249 zh->es glosses, 5994 es example translations
 # Lexi lexicon coverage report
 
-Built 2026-10-05 02:02 UTC. Database size: 14.5 MB.
+Built 2026-10-05 06:38 UTC. Database size: 15.8 MB.
 
 | Lang | Metric | Count | % | Flag |
 |---|---|---|---|---|
 | en | word count | 10,000 | |  |
 | en | monolingual definition (en) | 10,000 / 10,000 | 100.0% |  |
 | en | example sentence | 9,912 / 10,000 | 99.1% |  |
-| en | ≥1 topic category | 2,008 / 10,000 | 20.1% | info |
-| en | IPA | 8,770 / 10,000 | 87.7% |  |
+| en | ≥1 topic category | 2,009 / 10,000 | 20.1% | info |
+| en | IPA | 8,772 / 10,000 | 87.7% |  |
 | es | word count | 10,000 | |  |
 | es | monolingual definition (es) | 10,000 / 10,000 | 100.0% |  |
 | es | example sentence | 9,407 / 10,000 | 94.1% |  |
-| es | ≥1 topic category | 2,788 / 10,000 | 27.9% | info |
+| es | ≥1 topic category | 2,791 / 10,000 | 27.9% | info |
 | es | IPA | 9,998 / 10,000 | 100.0% |  |
 | zh | word count | 10,000 | |  |
 | zh | pinyin | 10,000 / 10,000 | 100.0% |  |
-| zh | translation zh→en | 9,991 / 10,000 | 99.9% |  |
-| zh | zh example + en translation | 8,397 / 10,000 | 84.0% |  |
-| zh | translation zh→es | 6,687 / 10,000 | 66.9% | ⚠ < 80% |
-| zh | zh example + es translation | 2,411 / 10,000 | 24.1% | ⚠ < 80% |
-| zh | zh example (any) | 8,422 / 10,000 | 84.2% |  |
-| zh | part of speech | 8,788 / 10,000 | 87.9% |  |
-| zh | HSK 1–6 words included (of HSK list) | 3,828 / 4,991 | 76.7% | ⚠ < 80% |
-| zh | ≥1 topic category | 2,398 / 10,000 | 24.0% | info |
+| zh | translation zh→en | 9,990 / 10,000 | 99.9% |  |
+| zh | zh example + en translation | 8,376 / 10,000 | 83.8% |  |
+| zh | translation zh→es | 9,992 / 10,000 | 99.9% |  |
+| zh | zh example + es translation | 8,400 / 10,000 | 84.0% |  |
+| zh | zh→es translation that is machine translated | 3,241 / 10,000 | 32.4% | info |
+| zh | es example translation that is machine translated | 5,994 / 10,000 | 59.9% | info |
+| zh | zh example (any) | 8,400 / 10,000 | 84.0% |  |
+| zh | part of speech | 8,849 / 10,000 | 88.5% |  |
+| zh | HSK 1–6 words included (of HSK list) | 4,931 / 4,991 | 98.8% |  |
+| zh | ≥1 topic category | 2,324 / 10,000 | 23.2% | info |
 
 ## Flags (< 80%)
 
-- zh: translation zh→es = 66.9%
-- zh: zh example + es translation = 24.1%
-- zh: HSK 1–6 words included (of HSK list) = 76.7%
+- none
 
-02:02:08 done in 2.9 min -> ../Resources/lexi.sqlite
+06:38:18 done in 5.4 min -> ../Resources/lexi.sqlite
