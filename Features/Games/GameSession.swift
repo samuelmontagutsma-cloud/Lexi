@@ -127,7 +127,7 @@ struct GameSessionView: View {
     @ViewBuilder
     private func question(card: WordCard, kind: GameKind) -> some View {
         switch kind {
-        case .wordToMeaning, .meaningToWord, .listening, .fillBlank, .toneTrainer, .flashcard, .matching:
+        case .wordToMeaning, .meaningToWord, .listening, .fillBlank, .toneTrainer, .flashcard, .matching, .widget:
             ChoiceQuestionView(session: session, card: card, kind: kind)
         case .spelling:
             SpellingQuestionView(session: session, card: card)

@@ -148,3 +148,36 @@ final class TextMatchTests: XCTestCase {
         XCTAssertEqual(TextMatch.blank("我听不清楚。", word: "清楚", isChinese: true), "我听不_____。")
     }
 }
+
+final class WidgetRotationTests: XCTestCase {
+    func testScheduleHourly() {
+        let now = Date(timeIntervalSince1970: 3600 * 1000 + 1234)   // 20:34 into an hour slot
+        let s = WidgetRotation.schedule(now: now, intervalMinutes: 60)
+        XCTAssertEqual(s.count, 25)                                 // 1440/60 + 1
+        XCTAssertEqual(s[0].date, now)
+        XCTAssertEqual(s[0].slot, 1000)
+        XCTAssertEqual(s[1].date, Date(timeIntervalSince1970: 3600 * 1001))
+        XCTAssertEqual(s.last!.slot, 1024)
+    }
+
+    func testScheduleBounds() {
+        let now = Date(timeIntervalSince1970: 1_790_000_000)
+        XCTAssertEqual(WidgetRotation.schedule(now: now, intervalMinutes: 5).count, 96)      // clamped to 15 min → 97 → 96
+        XCTAssertEqual(WidgetRotation.schedule(now: now, intervalMinutes: 1440).count, 2)
+        let s = WidgetRotation.schedule(now: now, intervalMinutes: 15)
+        XCTAssertEqual(s[2].date.timeIntervalSince(s[1].date), 900)
+    }
+
+    func testIndex() {
+        XCTAssertEqual(WidgetRotation.index(slot: 10, offset: 0, count: 3), 1)
+        XCTAssertEqual(WidgetRotation.index(slot: 10, offset: 1, count: 3), 2)
+        XCTAssertEqual(WidgetRotation.index(slot: -4, offset: 0, count: 3), 2)
+        XCTAssertEqual(WidgetRotation.index(slot: Int.max, offset: 5, count: 7),
+                       WidgetRotation.index(slot: Int.max, offset: 5, count: 7))
+    }
+
+    func testWidgetGradeIsGoodWhenCorrect() {
+        XCTAssertEqual(Grader.rating(kind: .widget, correct: true, seconds: 0), .good)
+        XCTAssertEqual(Grader.rating(kind: .widget, correct: true, seconds: 999), .good)
+    }
+}

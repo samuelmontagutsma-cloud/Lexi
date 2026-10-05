@@ -67,6 +67,15 @@ struct FeedView: View {
         .onChange(of: model.deckID) { _, _ in reload() }
         .onChange(of: model.refreshToken) { _, _ in reloadKeepingPosition() }
         .onChange(of: position) { _, id in introduceIfNew(id) }
+        .sheet(item: Binding(get: { model.openWord }, set: { model.openWord = $0 }), onDismiss: reloadKeepingPosition) { w in
+            NavigationStack {
+                WordDetailView(key: w.key)
+                    .toolbar { ToolbarItem(placement: .confirmationAction) { Button("Done") { model.openWord = nil } } }
+            }
+        }
+        .onChange(of: model.showStats) { _, show in
+            if show { sheet = .stats; model.showStats = false }
+        }
         .sheet(item: $sheet, onDismiss: reloadKeepingPosition) { s in
             switch s {
             case .practice: PracticeHomeView()

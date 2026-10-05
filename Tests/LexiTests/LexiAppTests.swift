@@ -106,3 +106,67 @@ final class StudyServiceTests: XCTestCase {
         XCTAssertEqual(study.nextNewKeys(deck: deck, count: 1).first?.hasPrefix("custom:"), true)
     }
 }
+
+@MainActor
+final class WidgetSupportTests: XCTestCase {
+    var container: ModelContainer!
+    var study: StudyService!
+    var deck: Deck!
+    var defaults: UserDefaults!
+    var clock = Date(timeIntervalSince1970: 1_790_000_000)
+
+    override func setUp() async throws {
+        container = try LexiStore.makeContainer(inMemory: true)
+        study = StudyService(context: container.mainContext)
+        study.now = { [unowned self] in self.clock }
+        deck = Deck(mode: .learn, study: .zh, explanation: .en, minLevel: 1, dailyNewWords: 5)
+        container.mainContext.insert(deck)
+        defaults = UserDefaults(suiteName: "lexi-tests-\(UUID().uuidString)")!
+    }
+
+    func testGotItQueueGradesWithTapTime() {
+        let k = study.nextNewKeys(deck: deck, count: 1)[0]
+        let ctx = container.mainContext
+        // new word → introduced and graded Good at the tap time
+        WidgetActionQueue.append(WidgetAction(deckID: deck.id, key: k, date: clock), defaults)
+        XCTAssertEqual(WidgetActionQueue.apply(context: ctx, defaults: defaults), 1)
+        XCTAssertTrue(WidgetActionQueue.pending(defaults).isEmpty)
+        let s = study.state(deck: deck, key: k)!
+        XCTAssertEqual(s.reps, 1)
+        XCTAssertEqual(s.introducedAt, clock)
+        XCTAssertEqual(s.due, clock.addingTimeInterval(600))          // learning step 2 = 10 min
+        // seen and not yet due → no change
+        WidgetActionQueue.append(WidgetAction(deckID: deck.id, key: k, date: clock.addingTimeInterval(60)), defaults)
+        XCTAssertEqual(WidgetActionQueue.apply(context: ctx, defaults: defaults), 0)
+        XCTAssertEqual(study.state(deck: deck, key: k)!.reps, 1)
+        // due → graded
+        WidgetActionQueue.append(WidgetAction(deckID: deck.id, key: k, date: clock.addingTimeInterval(86_400 * 30)), defaults)
+        XCTAssertEqual(WidgetActionQueue.apply(context: ctx, defaults: defaults), 1)
+        XCTAssertEqual(study.state(deck: deck, key: k)!.reps, 2)
+        XCTAssertEqual(Set(study.logs(since: .distantPast).map(\.source)), ["widget"])
+        // unknown deck → ignored
+        WidgetActionQueue.append(WidgetAction(deckID: UUID(), key: k, date: clock), defaults)
+        XCTAssertEqual(WidgetActionQueue.apply(context: ctx, defaults: defaults), 0)
+    }
+
+    func testCandidatesPreferDueAndSkipAcked() {
+        let keys = study.nextNewKeys(deck: deck, count: 3)
+        study.introduce(deck: deck, key: keys[1])                     // due now
+        let c = WidgetFeed.candidates(study: study, deck: deck, acked: [])
+        XCTAssertEqual(c.first, keys[1])
+        XCTAssertTrue(c.contains(keys[0]) && c.contains(keys[2]))
+        XCTAssertEqual(c.count, Set(c).count)
+        let c2 = WidgetFeed.candidates(study: study, deck: deck, acked: [keys[1], keys[0]])
+        XCTAssertFalse(c2.contains(keys[1]) || c2.contains(keys[0]))
+        XCTAssertGreaterThanOrEqual(c2.count, 5)                       // refilled with upcoming new words
+    }
+
+    func testAckLastsOneDay() {
+        WidgetState.ack("zh:清楚", deck: deck.id, now: clock, defaults)
+        XCTAssertEqual(WidgetState.ackedToday(deck.id, now: clock, defaults), ["zh:清楚"])
+        XCTAssertEqual(WidgetState.ackedToday(deck.id, now: clock.addingTimeInterval(86_400), defaults), [])
+        XCTAssertEqual(WidgetState.offset(deck.id, defaults), 0)
+        WidgetState.bumpOffset(deck.id, defaults)
+        XCTAssertEqual(WidgetState.offset(deck.id, defaults), 1)
+    }
+}

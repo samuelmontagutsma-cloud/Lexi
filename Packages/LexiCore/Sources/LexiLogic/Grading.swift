@@ -6,6 +6,8 @@ import FSRS
 /// A hint or a second try caps the rating at Hard.
 public enum GameKind: String, Codable, CaseIterable, Sendable {
     case wordToMeaning, meaningToWord, matching, spelling, listening, fillBlank, toneTrainer, flashcard
+    /// "Got it" on a widget: the meaning is visible, so it is a self-report graded Good (never timed).
+    case widget
 }
 
 public struct GradeThresholds: Equatable, Sendable {
@@ -29,6 +31,7 @@ public struct GradeThresholds: Equatable, Sendable {
         case .fillBlank: return .init(fast: 4, slow: 12)
         case .spelling: return .init(fast: 1.5 + 0.35 * n, slow: 6 + 1.0 * n)
         case .flashcard: return .init(fast: 2, slow: 10)
+        case .widget: return .init(fast: -1, slow: 1e9)   // always Good when correct
         }
     }
 }

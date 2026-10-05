@@ -34,6 +34,8 @@ targets:
         product: FSRS
       - package: LexiCore
         product: LexiLogic
+      - target: LexiWidgets
+        embed: true
     info:
       path: App/Info.plist
       properties:
@@ -48,6 +50,7 @@ targets:
         UIApplicationSceneManifest:
           UIApplicationSupportsMultipleScenes: false
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIBackgroundModes: [audio]          # widget "Speak" (AudioPlaybackIntent) runs in the app in the background
         ITSAppUsesNonExemptEncryption: false
         LexiAppGroup: group.com.samuelmontagut.lexi
     entitlements:
@@ -58,6 +61,38 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.samuelmontagut.lexi
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  LexiWidgets:
+    type: app-extension
+    platform: iOS
+    sources:
+      - Widgets
+      - Shared
+      - path: Resources/Localizable.xcstrings
+        buildPhase: resources
+    dependencies:
+      - package: LexiCore
+        product: FSRS
+      - package: LexiCore
+        product: LexiLogic
+      - sdk: WidgetKit.framework
+      - sdk: SwiftUI.framework
+    info:
+      path: Widgets/Info.plist
+      properties:
+        CFBundleDisplayName: Lexi
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+        LexiAppGroup: group.com.samuelmontagut.lexi
+    entitlements:
+      path: Widgets/LexiWidgets.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.samuelmontagut.lexi]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.samuelmontagut.lexi.widgets
+        SKIP_INSTALL: "YES"
   LexiTests:
     type: bundle.unit-test
     platform: iOS
@@ -74,5 +109,6 @@ schemes:
     build:
       targets:
         Lexi: all
+        LexiWidgets: all
     test:
       targets: [LexiTests]
