@@ -194,3 +194,11 @@ class RealShapes(unittest.TestCase):
     def test_parent_gloss_for_ellipsis(self):
         s = {"glosses": ["Definite article.", "...because it has already been mentioned."]}
         self.assertEqual(b.sense_gloss(s), "Definite article.")
+
+
+class ExampleFilter(unittest.TestCase):
+    def test_example_has_word(self):
+        self.assertFalse(b.example_has_word("Near-synonym: port", "left"))
+        self.assertTrue(b.example_has_word("Rotate the bolt to the left.", "left"))
+        self.assertTrue(b.example_has_word("Dejé de fumar hace un año.", "año"))
+        self.assertTrue(b.example_has_word("They were running late.", "run"))

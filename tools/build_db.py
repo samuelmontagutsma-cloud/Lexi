@@ -477,6 +477,19 @@ def sense_example(sense: dict) -> tuple[str | None, str | None]:
     return None, None
 
 
+EXAMPLE_NOTE = re.compile(r"^(near-)?(synonyms?|antonyms?|hypernyms?|hyponyms?|coordinate terms?|see also|"
+                          r"sinónimos?|antónimos?|véase)\b", re.I)
+
+
+def example_has_word(example: str, lemma: str) -> bool:
+    """Reject notes like 'Near-synonym: port' and examples that do not use the word.
+    Inflections pass: the first 4 letters of the lemma (or the whole lemma if shorter) must appear."""
+    if EXAMPLE_NOTE.match(example.strip()):
+        return False
+    stem = lemma.lower()[: max(3, min(4, len(lemma)))]
+    return stem in example.lower()
+
+
 ZH_POS_FROM_CATEGORY = {
     "verbs": "verb", "nouns": "noun", "adjectives": "adj", "adverbs": "adv", "prepositions": "prep",
     "particles": "particle", "pronouns": "pron", "conjunctions": "conj", "classifiers": "classifier",
@@ -659,9 +672,11 @@ def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba
                 if not g:
                     continue
                 primary_pos = primary_pos or pos
-                if len(senses) < 3:
-                    cats |= categories_from_labels(sense_labels(s))  # topical labels of main senses only
+                if not senses:  # topical labels of the main sense only
+                    cats |= categories_from_labels(sense_labels(s))
                 ex, _ = sense_example(s)
+                if ex and not example_has_word(ex, lemma):
+                    ex = None
                 senses.append(Sense(pos, lang, g, ex, None, None, "wiktionary" if ex else None))
         if wordnet and lemma in wordnet and wordnet[lemma]:
             wn = wordnet[lemma]
@@ -677,6 +692,7 @@ def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba
                 if ex:
                     senses[0].example, senses[0].example_source = ex, "wordnet"
         senses = senses[:3]
+        cats = set(sorted(cats)[:2]) if len(cats) > 2 else cats  # >2 topics = ambiguous; keep it small
         if senses and not any(s.example for s in senses) and lemma.lower() in tatoeba_best:
             senses[0].example, senses[0].example_source = tatoeba_best[lemma.lower()], "tatoeba"
         if not senses:
@@ -787,7 +803,7 @@ def build_chinese(en_words, tables, zh_es_wikt) -> list[Word]:
         ex, ex_en = zh_wikt_example(entries, w)
         cats = set()
         for e in entries:
-            for s in (e.get("senses") or [])[:3]:
+            for s in (e.get("senses") or [])[:1]:
                 cats |= categories_from_labels(sense_labels(s))
         en_gl = clean_glosses(ce.glosses)[:4]
         key = re.sub(r"^to ", "", short_gloss(en_gl[0])).strip()
@@ -809,6 +825,12 @@ def build_chinese(en_words, tables, zh_es_wikt) -> list[Word]:
             elif e_ex:
                 s_ex, s_src = e_ex, e_src  # zh example without a Spanish translation
             senses.append(Sense(pos, "es", "; ".join(es_gl[:3]), s_ex, s_tr, "es" if s_tr else None, s_src))
+        if len(cats) > 2:
+            cats = set()  # too ambiguous to be useful as a topic filter
+        if pos is None and en_gl and sum(g.startswith("to ") for g in en_gl) * 2 > len(en_gl):
+            pos = "verb"  # CC-CEDICT writes verb glosses as "to ..."
+            for sn in senses:
+                sn.pos = pos
         word = Word("zh", w, pos, rank, hsk.get(w, 7), None, ce.pinyin,
                     ce.trad if ce.trad != w else None, cats, senses,
                     {"en": [short_gloss(g) for g in en_gl[:3]]})
