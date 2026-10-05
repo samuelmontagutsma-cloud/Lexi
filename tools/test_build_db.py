@@ -144,8 +144,10 @@ class Misc(unittest.TestCase):
         self.assertEqual([b.rank_band_level(r) for r in (1, 500, 501, 3000, 5001, 9999)], [1, 1, 2, 3, 5, 6])
 
     def test_categories(self):
-        self.assertEqual(b.categories_from_labels(["en:Foods", "Medicine", "card games"]),
-                         {"food", "health", "sports"})
+        self.assertEqual(b.categories_from_labels(["en:Foods", "Medicine", "Time", "chemistry"]),
+                         {"food", "health", "time", "science"})
+        # regression: maintenance categories must not match by token
+        self.assertEqual(b.categories_from_labels(["Pages with etymology trees", "Chinese hanzi"]), set())
 
     def test_simplified_part(self):
         self.assertEqual(b.simplified_part("我聽不清楚。／我听不清楚。"), "我听不清楚。")
@@ -153,3 +155,42 @@ class Misc(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RealShapes(unittest.TestCase):
+    """Record shapes copied from the 2026-10-05 wiktextract dumps (see tools/inspect.txt)."""
+
+    def test_spanish_plural_merges_into_lemma(self):
+        entries = {"años": [{"pos": "noun", "pos_title": "Sustantivo masculino y plural",
+                             "senses": [{"glosses": ["Día en que se cumplen años."]}]}],
+                   "año": [{"pos": "noun", "pos_title": "Sustantivo masculino", "senses": [{"glosses": ["x"]}]}],
+                   "left": [{"pos": "noun", "senses": [{"glosses": ["The left side."]}]}],
+                   "leave": [{"pos": "verb", "senses": [{"glosses": ["To go away."]}]}]}
+        redirects = {"años": "año", "left": "leave", "fue": "ir"}
+        self.assertEqual(b.choose_lemma("años", entries, redirects), "año")
+        self.assertEqual(b.choose_lemma("left", entries, redirects), "left")
+        self.assertIsNone(b.choose_lemma("fue", entries, redirects))  # 'ir' not collected
+
+    def test_zh_pos_and_example(self):
+        trad = {"pos": "character", "senses": [
+            {"glosses": ["to allow; to let; to permit"],
+             "categories": [{"name": "Chinese hanzi"}, {"name": "Chinese verbs"}],
+             "examples": [
+                 {"tags": ["Traditional-Chinese"], "translation": "Mum won't let me go.", "text": "媽媽不讓我去。"},
+                 {"tags": ["Simplified-Chinese"], "translation": "Mum won't let me go.", "text": "妈妈不让我去。"}]},
+            {"glosses": ["a transliteration of the French name Jean"],
+             "examples": [{"tags": ["Simplified-Chinese"], "translation": "Jean-Jacques Rousseau",
+                           "text": "让-雅克·卢梭"}]}]}
+        simp = {"pos": "character", "senses": [{"tags": ["no-gloss"]}]}
+        self.assertEqual(b.zh_pos([simp, trad]), "verb")
+        self.assertEqual(b.zh_wikt_example([simp, trad], "让"), ("妈妈不让我去。", "Mum won't let me go."))
+        self.assertEqual(b.zh_pos([{"pos": "soft-redirect"}, {"pos": "noun"}]), "noun")
+
+    def test_cedict_gloss_cleaning(self):
+        g = ["of", "~'s (possessive particle)",
+             "(used after a noun, verb or adjective to form a nominal expression, as in 皮革的[pi2 ge2 de5])"]
+        self.assertEqual(b.clean_glosses(g), ["of", "~'s (possessive particle)"])
+
+    def test_parent_gloss_for_ellipsis(self):
+        s = {"glosses": ["Definite article.", "...because it has already been mentioned."]}
+        self.assertEqual(b.sense_gloss(s), "Definite article.")

@@ -35,6 +35,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 CACHE = Path(os.environ.get("LEXI_CACHE", HERE / ".cache"))
 TOP_N = 10_000
+INCLUDE_ALL_HSK = False  # decision pending: include all HSK 1-6 words in the zh list
 UA = {"User-Agent": "Lexi-build/1.0 (personal offline vocabulary app)"}
 
 # ---------------------------------------------------------------- sources
@@ -115,37 +116,34 @@ TOPIC_KEYWORDS = {
                 "sociology", "society", "history", "war", "crime", "derecho", "política"],
     "sports": ["sports", "sport", "games", "football", "soccer", "baseball", "basketball",
                "tennis", "athletics", "deportes"],
-    "education": ["education", "school", "university", "linguistics", "grammar",
-                  "educación"],
-    "home": ["furniture", "household", "clothing", "clothes", "tools", "kitchen",
-             "housing", "home", "ropa", "hogar"],
-    "body": ["anatomy", "body", "physiology", "body parts", "anatomía"],
-    "time": ["time", "calendar", "chronology", "days of the week", "months", "tiempo"],
+    "education": ["education", "school", "schools", "university", "universities", "educación"],
+    "home": ["furniture", "household", "clothing", "clothes", "tools", "kitchen", "kitchenware",
+             "housing", "home", "ropa", "hogar", "vestimenta", "muebles"],
+    "body": ["anatomy", "body", "physiology", "body parts", "anatomía", "cuerpo"],
+    "time": ["time", "calendar", "chronology", "days of the week", "months", "tiempo",
+             "units of time"],
 }
+# Exact matches only. Token matching caused false hits ("Pages with etymology trees" -> nature).
 KEYWORD_TO_CAT = {k: c for c, ks in TOPIC_KEYWORDS.items() for k in ks}
+KEYWORD_TO_CAT.update({"natural-sciences": "science", "physical-sciences": "science",
+                       "life-sciences": "science", "food and drink": "food", "occupations": "business"})
 
+# Only the first (most frequent) WordNet synset is used, and only clearly topical lexicographer files.
 WORDNET_LEXFILE_TO_CAT = {
     "noun.food": "food", "noun.plant": "nature", "noun.animal": "nature",
-    "noun.phenomenon": "nature", "noun.object": "nature", "noun.feeling": "emotions",
-    "verb.emotion": "emotions", "noun.body": "body", "verb.body": "body",
-    "noun.time": "time", "noun.location": "travel", "verb.motion": "travel",
-    "noun.group": "society", "verb.social": "society", "noun.possession": "business",
-    "verb.possession": "business", "verb.competition": "sports",
-    "verb.consumption": "food", "verb.weather": "nature", "noun.state": "health",
+    "noun.feeling": "emotions", "verb.emotion": "emotions", "noun.body": "body",
+    "noun.time": "time", "verb.weather": "nature", "verb.consumption": "food",
+    "verb.competition": "sports", "noun.possession": "business",
 }
 
 
 def categories_from_labels(labels) -> set[str]:
+    """Map wiktextract sense topics / sense category names to Lexi categories (exact match)."""
     out = set()
     for lab in labels:
-        s = str(lab).lower()
-        s = re.sub(r"^[a-z]{2,3}:", "", s)  # "en:Foods" -> "foods"
+        s = re.sub(r"^[a-z]{2,3}:", "", str(lab).strip().lower())  # "en:Foods" -> "foods"
         if s in KEYWORD_TO_CAT:
             out.add(KEYWORD_TO_CAT[s])
-            continue
-        for tok in re.split(r"[\s_/-]+", s):
-            if tok in KEYWORD_TO_CAT:
-                out.add(KEYWORD_TO_CAT[tok])
     return out
 
 
@@ -441,9 +439,22 @@ def sense_gloss(sense: dict) -> str | None:
     g = sense.get("glosses") or sense.get("raw_glosses") or []
     if not g:
         return None
-    text = g[-1] if len(g) > 1 else g[0]  # last gloss is the most specific in wiktextract
-    text = re.sub(r"\s+", " ", str(text)).strip()
+    text = str(g[-1] if len(g) > 1 else g[0])  # last gloss is the most specific in wiktextract
+    if text.startswith(("...", "…")):            # sub-sense continues its parent; use the parent
+        text = str(g[0])
+    text = re.sub(r"\s+", " ", text).strip()
     return text or None
+
+
+SKIP_SENSE_TAGS = {"obsolete", "archaic", "rare", "no-gloss"}
+
+
+def sense_labels(sense: dict) -> list[str]:
+    """Sense-level topics + category names. Entry-level categories are maintenance noise."""
+    labs = list(sense.get("topics") or [])
+    for c in sense.get("categories") or []:
+        labs.append(c.get("name") if isinstance(c, dict) else c)
+    return [l for l in labs if l]
 
 
 def sense_example(sense: dict) -> tuple[str | None, str | None]:
@@ -466,6 +477,57 @@ def sense_example(sense: dict) -> tuple[str | None, str | None]:
     return None, None
 
 
+ZH_POS_FROM_CATEGORY = {
+    "verbs": "verb", "nouns": "noun", "adjectives": "adj", "adverbs": "adv", "prepositions": "prep",
+    "particles": "particle", "pronouns": "pron", "conjunctions": "conj", "classifiers": "classifier",
+    "measure words": "classifier", "interjections": "intj", "numerals": "num", "determiners": "det",
+    "postpositions": "postp", "idioms": "idiom", "chengyu": "idiom",
+}
+ZH_SKIP_GLOSS = re.compile(r"transliteration|transcription|surname|given name|used in names|^Used in", re.I)
+
+
+def zh_pos(entries: list[dict]) -> str | None:
+    """POS from real entries; for hanzi ('character') entries, from 'Chinese <pos>' sense categories."""
+    for e in entries:
+        p = (e.get("pos") or "").lower()
+        if p and p not in ("character", "soft-redirect", "romanization", "syllable", "name"):
+            return p
+    votes = collections.Counter()
+    for e in entries:
+        for s in (e.get("senses") or [])[:3]:
+            if ZH_SKIP_GLOSS.search(sense_gloss(s) or ""):
+                continue
+            for c in s.get("categories") or []:
+                name = (c.get("name") if isinstance(c, dict) else str(c)) or ""
+                m = re.fullmatch(r"(?:Chinese|Mandarin) (.+)", name)
+                if m and m.group(1).lower() in ZH_POS_FROM_CATEGORY:
+                    votes[ZH_POS_FROM_CATEGORY[m.group(1).lower()]] += 1
+    return votes.most_common(1)[0][0] if votes else None
+
+
+def zh_wikt_example(entries: list[dict], word: str) -> tuple[str | None, str | None]:
+    """Best simplified-script example containing the word, with its English translation."""
+    best = None
+    for e in entries:
+        for s in e.get("senses") or []:
+            if ZH_SKIP_GLOSS.search(sense_gloss(s) or ""):
+                continue
+            for ex in s.get("examples") or []:
+                if not isinstance(ex, dict) or ex.get("ref") or ex.get("type") == "quotation":
+                    continue
+                tags = ex.get("tags") or []
+                if "Traditional-Chinese" in tags and "Simplified-Chinese" not in tags:
+                    continue
+                t = simplified_part((ex.get("text") or "").strip())
+                tr = ex.get("translation") or ex.get("english")
+                if not t or word not in t or not tr:
+                    continue
+                sc = zh_example_score(t) + (0 if re.search(r"[。！？?!]$", t) else 30)
+                if best is None or sc < best[0]:
+                    best = (sc, t, tr)
+    return (best[1], best[2]) if best and best[0] < 1000 else (None, None)
+
+
 def entry_ipa(entry: dict, prefer_tags=("US", "General-American", "General American")) -> str | None:
     ipas = [(s.get("ipa"), s.get("tags") or []) for s in entry.get("sounds") or [] if s.get("ipa")]
     if not ipas:
@@ -474,15 +536,6 @@ def entry_ipa(entry: dict, prefer_tags=("US", "General-American", "General Ameri
         if any(t in tags for t in prefer_tags):
             return ipa
     return ipas[0][0]
-
-
-def entry_labels(entry: dict, sense: dict | None = None) -> list[str]:
-    labs = []
-    for src in ([sense] if sense else []) + [entry]:
-        for key in ("topics", "categories"):
-            for c in src.get(key) or []:
-                labs.append(c.get("name") if isinstance(c, dict) else c)
-    return [l for l in labs if l]
 
 
 # ---------------------------------------------------------------- word model
@@ -565,53 +618,60 @@ def collect_wiktionary(path: Path, lang_code: str, candidates: set[str]):
     return entries, redirects, tables
 
 
+def choose_lemma(w: str, entries, redirects) -> str | None:
+    """Map an inflected form to its lemma. Keep a word's own entry unless it is only a plural
+    entry of a lemma that exists (es: 'años' -> 'año'; en: 'left' stays 'left')."""
+    own, red = entries.get(w), redirects.get(w)
+    if own and red and red in entries and red != w:
+        plural_only = all("plural" in (e.get("pos_title") or "").lower() for e in own)
+        return red if plural_only else w
+    if own:
+        return w
+    if red and red in entries:
+        return red
+    return None
+
+
 def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba_best):
-    """Rank lemmas by first appearance in the frequency list; keep TOP_N with a definition."""
-    words: dict[str, Word] = {}
-    order = []
+    """Walk the frequency list; map forms to lemmas; keep the first TOP_N lemmas with a definition."""
+    seen: set[str] = set()
+    out: list[Word] = []
     for w in freq_list:
-        lemma = w if w in entries else redirects.get(w, w)
-        if lemma in words or lemma not in entries and not (wordnet and lemma in wordnet):
+        lemma = choose_lemma(w, entries, redirects)
+        if lemma is None and wordnet and w in wordnet:
+            lemma = w
+        if lemma is None or lemma in seen:
             continue
+        seen.add(lemma)
         if not re.fullmatch(r"[^\W\d_]+(?:[-'’ ][^\W\d_]+)*", lemma):
             continue
-        words[lemma] = None
-        order.append(lemma)
-        if len(order) >= TOP_N:
-            break
-    out = []
-    for rank, lemma in enumerate(order, start=1):
-        es = entries.get(lemma, [])
         senses: list[Sense] = []
         cats: set[str] = set()
         ipa = None
         primary_pos = None
-        for e in es:
+        for e in entries.get(lemma, []):
             pos = (e.get("pos") or "").lower() or None
             ipa = ipa or entry_ipa(e)
-            cats |= categories_from_labels(entry_labels(e))
             for s in e.get("senses") or []:
-                if is_form_of(s):
+                if is_form_of(s) or SKIP_SENSE_TAGS & set(s.get("tags") or []):
                     continue
                 g = sense_gloss(s)
                 if not g:
                     continue
-                if "tags" in s and any(t in ("obsolete", "archaic", "rare") for t in s["tags"]):
-                    continue
                 primary_pos = primary_pos or pos
+                if len(senses) < 3:
+                    cats |= categories_from_labels(sense_labels(s))  # topical labels of main senses only
                 ex, _ = sense_example(s)
-                cats |= categories_from_labels(entry_labels({}, s))
                 senses.append(Sense(pos, lang, g, ex, None, None, "wiktionary" if ex else None))
-        if wordnet and lemma in wordnet:
+        if wordnet and lemma in wordnet and wordnet[lemma]:
             wn = wordnet[lemma]
-            for s in wn:
-                if s.category:
-                    cats.add(s.category)
+            if wn[0].category:
+                cats.add(wn[0].category)  # dominant synset only
             if not senses:
                 for s in wn[:3]:
                     senses.append(Sense(s.pos, lang, s.definition, s.example, None, None,
                                         "wordnet" if s.example else None))
-                primary_pos = primary_pos or (wn[0].pos if wn else None)
+                primary_pos = primary_pos or wn[0].pos
             elif not any(s.example for s in senses[:3]):
                 ex = next((s.example for s in wn if s.example and lemma in s.example.lower()), None)
                 if ex:
@@ -621,8 +681,11 @@ def build_dictionary_words(lang, freq_list, entries, redirects, wordnet, tatoeba
             senses[0].example, senses[0].example_source = tatoeba_best[lemma.lower()], "tatoeba"
         if not senses:
             continue
+        rank = len(out) + 1
         out.append(Word(lang, lemma, primary_pos, rank, rank_band_level(rank), ipa,
                         categories=cats, senses=senses))
+        if len(out) >= TOP_N:
+            break
     return out
 
 
@@ -658,8 +721,10 @@ def build_spanish(en_words: list[Word], tables) -> tuple[list[Word], dict[str, l
     en_cats = {w.lemma: w.categories for w in en_words}
     es_cats = collections.defaultdict(set)
     for en_word, _, g in tables:
-        for es_word in g.get("es", []):
-            es_cats[es_word] |= en_cats.get(en_word, set())
+        c = en_cats.get(en_word, set())
+        if len(c) == 1:  # only unambiguous topical English words
+            for es_word in g.get("es", []):
+                es_cats[es_word] |= c
     for w in words:
         w.categories |= es_cats.get(w.lemma, set())
     return words, zh_es
@@ -672,14 +737,20 @@ def build_chinese(en_words, tables, zh_es_wikt) -> list[Word]:
     hsk = load_hsk(fetch("hsk"))
     log(f"zh: {len(hsk)} HSK 2.0 words")
     freq = wordfreq.top_n_list("zh", 40_000)
+    usable = lambda w: (w in cedict and not cedict[w].proper and clean_glosses(cedict[w].glosses)
+                        and re.fullmatch(r"[\u3400-\u9fff]+", w))
     order = []
+    if INCLUDE_ALL_HSK:  # every HSK 1-6 word first, then fill by frequency
+        fr = {w: i for i, w in enumerate(freq)}
+        order = sorted((w for w in hsk if usable(w)), key=lambda w: (fr.get(w, 10**9), w))
+    have = set(order)
     for w in freq:
-        e = cedict.get(w)
-        if not e or e.proper or not e.glosses or not re.fullmatch(r"[㐀-鿿]+", w):
-            continue
-        order.append(w)
         if len(order) >= TOP_N:
             break
+        if w not in have and usable(w):
+            order.append(w); have.add(w)
+    fr_rank = {w: i + 1 for i, w in enumerate(freq)}
+    order.sort(key=lambda w: fr_rank.get(w, 10**9))
     targets = set(order)
     # en-wiktionary Chinese entries (simplified or traditional headword): pos + examples
     log("zh: scanning Chinese entries in English Wiktionary")
@@ -711,28 +782,24 @@ def build_chinese(en_words, tables, zh_es_wikt) -> list[Word]:
     out = []
     for rank, w in enumerate(order, start=1):
         ce = cedict[w]
-        pos, ex, ex_en = None, None, None
+        entries = wk.get(w, [])
+        pos = zh_pos(entries)
+        ex, ex_en = zh_wikt_example(entries, w)
         cats = set()
-        for e in wk.get(w, []):
-            pos = pos or (e.get("pos") or "").lower() or None
-            cats |= categories_from_labels(entry_labels(e))
-            for s in e.get("senses") or []:
-                if ex is None:
-                    t, tr = sense_example(s)
-                    if t and w in t:
-                        ex, ex_en = simplified_part(t), tr
-        en_gl = ce.glosses[:4]
-        for g in en_gl:  # bridge categories from single-word English glosses
-            key = re.sub(r"^to ", "", g.split(";")[0]).strip()
-            cats |= en_cats.get(key, set())
+        for e in entries:
+            for s in (e.get("senses") or [])[:3]:
+                cats |= categories_from_labels(sense_labels(s))
+        en_gl = clean_glosses(ce.glosses)[:4]
+        key = re.sub(r"^to ", "", short_gloss(en_gl[0])).strip()
+        if len(en_cats.get(key, ())) == 1:  # bridge only from an unambiguous English headword
+            cats |= en_cats[key]
         es_gl = zh_es_wikt.get(w) or zh_es_wikt.get(ce.trad) or []
         if not es_gl and bridge.get(w):
             es_gl = [sw for sw, _ in bridge[w].most_common(3)]
         senses = []
         tat_ex = tat.get(w)
-        # en sense
         e_ex, e_tr, e_src = ex, ex_en, "wiktionary" if ex else None
-        if (not e_ex or not e_tr) and tat_ex and "en" in tat_ex[1]:
+        if not e_ex and tat_ex and "en" in tat_ex[1]:
             e_ex, e_tr, e_src = tat_ex[0], tat_ex[1]["en"], "tatoeba"
         senses.append(Sense(pos, "en", "; ".join(en_gl), e_ex, e_tr, "en" if e_tr else None, e_src))
         if es_gl:
@@ -749,6 +816,12 @@ def build_chinese(en_words, tables, zh_es_wikt) -> list[Word]:
             word.translations["es"] = [short_gloss(g) for g in es_gl[:3]]
         out.append(word)
     return out
+
+
+def clean_glosses(glosses: list[str]) -> list[str]:
+    """Drop CC-CEDICT cross-references ('...[pin1 yin1]...') and very long usage notes."""
+    out = [g for g in glosses if "[" not in g and len(g) <= 70]
+    return out or [g[:70] for g in glosses[:1] if "[" not in g]
 
 
 def simplified_part(text: str) -> str:
@@ -825,7 +898,7 @@ CREATE TABLE word_search(word_id INTEGER PRIMARY KEY REFERENCES word(id), text T
 """
 
 
-def write_db(path: Path, words: list[Word]):
+def write_db(path: Path, words: list[Word], extra_meta: dict | None = None):
     if path.exists():
         path.unlink()
     db = sqlite3.connect(path)
@@ -854,7 +927,7 @@ def write_db(path: Path, words: list[Word]):
     db.executemany("INSERT INTO meta VALUES(?,?)", [
         ("schema_version", "1"), ("builder_version", "1.0.1"), ("built_at", time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())),
         ("top_n", str(TOP_N)), ("sources", json.dumps(SOURCES)),
-    ])
+    ] + [(k, str(v)) for k, v in (extra_meta or {}).items()])
     db.commit()
     db.execute("ANALYZE")
     db.commit()
@@ -865,15 +938,15 @@ def write_db(path: Path, words: list[Word]):
 # ---------------------------------------------------------------- coverage report
 def coverage(db_path: Path) -> tuple[str, list[str]]:
     db = sqlite3.connect(db_path)
-    q = lambda sql, *a: db.execute(sql, a).fetchone()[0]
+    q = lambda sql, *a: (db.execute(sql, a).fetchone() or [None])[0]
     rows, flags = [], []
 
     def pct(num, den):
         return 100.0 * num / den if den else 0.0
 
-    def add(lang, metric, num, den):
+    def add(lang, metric, num, den, flagged=True):
         p = pct(num, den)
-        flag = "⚠ < 80%" if p < 80 else ""
+        flag = "⚠ < 80%" if p < 80 and flagged else ("info" if not flagged else "")
         if flag:
             flags.append(f"{lang}: {metric} = {p:.1f}%")
         rows.append(f"| {lang} | {metric} | {num:,} / {den:,} | {p:.1f}% | {flag} |")
@@ -887,9 +960,9 @@ def coverage(db_path: Path) -> tuple[str, list[str]]:
         add(lang, "example sentence", q(
             "SELECT COUNT(DISTINCT w.id) FROM word w JOIN sense s ON s.word_id=w.id "
             "WHERE w.lang=? AND s.example IS NOT NULL", lang), n)
-        add(lang, "≥1 category", q(
+        add(lang, "≥1 topic category", q(
             "SELECT COUNT(DISTINCT w.id) FROM word w JOIN word_category c ON c.word_id=w.id WHERE w.lang=?",
-            lang), n)
+            lang), n, flagged=False)
         add(lang, "IPA", q("SELECT COUNT(*) FROM word WHERE lang=? AND ipa IS NOT NULL", lang), n)
     n = q("SELECT COUNT(*) FROM word WHERE lang='zh'")
     rows.append(f"| zh | word count | {n:,} | | {'⚠ < 10,000' if n < TOP_N else ''} |")
@@ -905,7 +978,12 @@ def coverage(db_path: Path) -> tuple[str, list[str]]:
         "SELECT COUNT(DISTINCT w.id) FROM word w JOIN sense s ON s.word_id=w.id "
         "WHERE w.lang='zh' AND s.example IS NOT NULL"), n)
     add("zh", "part of speech", q("SELECT COUNT(*) FROM word WHERE lang='zh' AND pos IS NOT NULL"), n)
-    add("zh", "HSK 1–6 level", q("SELECT COUNT(*) FROM word WHERE lang='zh' AND level<=6"), n)
+    hsk_total = int(q("SELECT value FROM meta WHERE key='hsk_total'") or 0)
+    add("zh", "HSK 1–6 words included (of HSK list)",
+        q("SELECT COUNT(*) FROM word WHERE lang='zh' AND level<=6"), hsk_total)
+    add("zh", "≥1 topic category", q(
+        "SELECT COUNT(DISTINCT w.id) FROM word w JOIN word_category c ON c.word_id=w.id WHERE w.lang='zh'"),
+        n, flagged=False)
     size = db_path.stat().st_size / 1e6
     db.close()
     md = ["# Lexi lexicon coverage report", "",
@@ -992,9 +1070,10 @@ def main():
     en = build_english(wordnet, tables)
     es, zh_es = build_spanish(en, tables)
     zh = build_chinese(en, tables, zh_es)
+    hsk_total = len(load_hsk(fetch("hsk")))
     out = Path(a.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    write_db(out, en + es + zh)
+    write_db(out, en + es + zh, {"hsk_total": hsk_total, "include_all_hsk": INCLUDE_ALL_HSK})
     md, flags = coverage(out)
     Path(a.report).write_text(md, encoding="utf-8")
     print(md)
